@@ -10,7 +10,7 @@ $(document).ready(function() {
         messagingSenderId: "434825884803"
     };
     firebase.initializeApp(config);
-     
+    
     $("html,body").animate({scrollTop: 0}, 100);
     
     const menuSlideSpeed = 300;
@@ -87,7 +87,7 @@ $(window).scroll(function(event){
 
     var yOffset = window.pageYOffset;
     var h = window.innerHeight;
-    var breakpoint = h/3;
+    var breakpoint = 50;
     
     if (yOffset > breakpoint){
         $(".navbar").addClass('scrolldown');

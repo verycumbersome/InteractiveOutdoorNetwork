@@ -10,6 +10,10 @@ $darken: 40%;
 $color: rgb(255,255,255);
 $color-alpha: darken( $color, $darken );
 
+$forestgreen: #228B22;
+$darkforestgreen: #0d3b02;
+$forestgreenalpha: rgba(34, 139, 34, 0.5);
+
 // Apply color here!
 // Todo el color que quieras!
 $color-base: rgb(0,0,0);
@@ -134,8 +138,11 @@ body {
 
 .navbar {
     border: 0px;
-    /*transition: 0.5s;*/
-    min-height:0;
+    transition: 0.5s;
+    // min-height: 60px;
+    color: white !important;
+    // background: linear-gradient(-45deg, $forestgreen, $darkforestgreen);
+    // background: -webkit-linear-gradient(-45deg, $forestgreen, $darkforestgreen);
 }
 
 @media only screen and (max-width: 767px) {
@@ -158,7 +165,8 @@ body {
 }
 
 .navbar.scrolldown {
-    /*background-color: #333;*/
+    background-color: #222;
+    background: #222;
 }
 
 .navbar-brand {
@@ -166,7 +174,7 @@ body {
 }
 
 .row {
-    position: fixed;
+    position: absolute;
     top: 100px;
     left: 0;
     width: 100%;
@@ -216,7 +224,7 @@ svg{
   }
   #alpha{
     fill: $color-alpha;
-    //animation: alpha 10s ease infinite;
+    // animation: alpha 10s ease infinite;
   }
   #title{
     letter-spacing: -2px;
@@ -387,8 +395,8 @@ svg{
     margin-bottom: 100px;
     position: relative;
     /*margin-bottom: 200px;*/
-    width: 75%;
-    background-color: rgba(0,53,95, 0.5);
+    width: 90%;
+    background-color: $forestgreenalpha;
 }
 
 .noselect {
@@ -432,5 +440,5 @@ footer a{
 }
 
 footer a:hover{
-    color: #448AFF;
+    color: $forestgreen;
 }
