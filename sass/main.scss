@@ -1,3 +1,19 @@
+@import "compass/css3";
+
+$height-mask: 250px;
+
+// To regulate alpha is recommended to use gray scale.
+// Recomiendo utilizar escala de grises
+
+$darken: 40%;
+
+$color: rgb(255,255,255);
+$color-alpha: darken( $color, $darken );
+
+// Apply color here!
+// Todo el color que quieras!
+$color-base: rgb(0,0,0);
+
 html {
     font-family: 'Roboto-thin', sans-serif;
     -ms-text-size-adjust: 100%;
@@ -6,7 +22,7 @@ html {
 
 body {
     margin: 0;
-    background-image: url("../Scenic Southern Oregon 2013  Beautifulvista.jpg");
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -129,16 +145,16 @@ body {
       border: 0px;
   }
   
-  .navbar-header {
-    float: left;
-    padding: 15px;
-    text-align: center;
-    width: 100%;
-  }
-  .navbar-brand {
-    float:none;
-    padding: 0;
-  }
+  // .navbar-header {
+  //   float: left;
+  //   padding: 15px;
+  //   text-align: center;
+  //   width: 100%;
+  // }
+  // .navbar-brand {
+  //   float:none;
+  //   padding: 0;
+  // }
 }
 
 .navbar.scrolldown {
@@ -146,14 +162,16 @@ body {
 }
 
 .navbar-brand {
-    padding: 0;
+    // padding: 0;
 }
 
 .row {
-    overflow: hidden;
-    display: inline-block;
+    position: fixed;
+    top: 100px;
+    left: 0;
     width: 100%;
-    margin: auto;
+    height: $height-mask;
+    z-index: 10;
 }
 
 #rowleft {
@@ -188,7 +206,36 @@ body {
     /*background-color: rgba(50, 50, 50, 0.7);*/
 }
 
-
+svg{
+  width: 100%;
+  height: inherit;
+  text{
+    // svg center text.
+    // centar text svg.
+    text-anchor: middle;
+  }
+  #alpha{
+    fill: $color-alpha;
+    //animation: alpha 10s ease infinite;
+  }
+  #title{
+    letter-spacing: -2px;
+    font-size: 6em;
+    font-weight: 800;
+  }
+  #subtitle{
+    letter-spacing: 8px;
+    font-size: 1.2em;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  #base{
+    fill: $color-base;
+    // add the mask.
+    // aplicar máscara.
+    mask: url(#mask);
+  }
+}
 
 .contentbody {
     margin-top: 0;
