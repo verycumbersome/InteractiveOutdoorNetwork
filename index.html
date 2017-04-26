@@ -6,7 +6,7 @@
     <meta name="google-site-verification" content="q5pMYCKHXXdw-TOgAO4i9PMiwcodukNgV0aIPpm_S6Q" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
 
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -41,10 +41,10 @@
                 <li class="dropdown people">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Stuff<span class="caret"></span></a>
                     <ul class="dropdown-menu people">
-                        <li><a href="/pages/people/susanjordan.html">hiking</a></li>
-                        <li><a href="#">rafting</a></li>
-                        <li><a href="#">climbing</a></li>
-                        <li><a href="#">other stuff</a></li>
+                        <li><a href="/pages/people/susanjordan.html">Hiking</a></li>
+                        <li><a href="#">Rafting</a></li>
+                        <li><a href="#">Climbing</a></li>
+                        <li><a href="#">FUCK</a></li>
                     </ul>
                 </li>
                 <li class="dropdown practices">
@@ -57,8 +57,48 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="mailto:susanjordan.attorney@gmail.com"><span class="glyphicon glyphicon-user"></span> Login</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-pencil"></span> Blog</a></li>
+                <li>
+                    <p class="navbar-text">Already have an account?</p>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                    <ul id="login-dp" class="dropdown-menu">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    Login via
+                                    <div class="social-buttons">
+                                        <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                        <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                    </div>
+                                    or
+                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                            <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+											 <input type="checkbox"> keep me logged-in
+											 </label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="bottom text-center">
+                                    New here ? <a href="#"><b>Join Us</b></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -66,10 +106,7 @@
     <!-- End Header -->
 
     <div id="content">
-        <!--<div id="slidein">-->
-        <!--    <h1 id="subtitle" class="animated fadeInLeft noselect noselect-recursive">Interactive Outdoors</h1>-->
-        <!--</div>-->
-        <div class="row">
+        <div class="title">
             <svg>
             <defs>
                 <mask id="mask" x="0" y="0" width="100%" height="100%">

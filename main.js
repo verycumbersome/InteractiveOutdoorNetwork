@@ -1,4 +1,34 @@
 /*global $*/
+
+function createAccount(email, password) {
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(function(user) {
+            console.log(user.uid)
+        })
+        .catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorCode)
+            console.log(errorMessage)
+            // ...
+        });
+}
+
+function signIn(email, password) {
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then(function(user) {
+            console.log(user.uid)
+            console.log(firebase.User.uidth)
+        })
+        .catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorCode)
+            console.log(errorMessage)
+        })
+}
+    
 $(document).ready(function() {
     // Initialize Firebase
     var config = {
@@ -9,22 +39,31 @@ $(document).ready(function() {
         storageBucket: "interactive-outdoors.appspot.com",
         messagingSenderId: "434825884803"
     };
+
     firebase.initializeApp(config);
+    
+    console.log(firebase.User.uid);
+    firebase.database().ref('/').on('value', function(all) {
+        console.log(all.val());
+        // firebase.database().ref('/blah').set(Math.random());
+    })
+    
+    firebase.auth().onAuthStateChanged(function(user) {
+        console.log(user)
+    })
     
     $("html,body").animate({scrollTop: 0}, 100);
     
     const menuSlideSpeed = 300;
     
-    // $(".navbar").fadeOut(0);
-    
     $(".header").fadeOut(0);
     
-    // $(".contentbody").animate({
-    //     "width" : "100%"
-    // }, 2000);
+    $(".row").fadeOut(0);
     
     $("#content p").fadeOut(0);
     $("#content h2").fadeOut(0);
+    
+    $(".row").fadeIn(2000);
     
     $(".navbar").find(".active").removeClass("active");
     
@@ -56,7 +95,7 @@ $(document).ready(function() {
            page.stop();
         });
     
-        page.stop().animate({scrollTop: $("footer").position().top}, 'slow', function(){
+        page.stop().animate({scrollTop: $("footer").position().top}, 1500, "easeInOutCubic", function(){
            page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
         });
     
@@ -74,27 +113,22 @@ $(document).ready(function() {
     }, function() {
         $(".dropdown-menu").stop().slideUp(menuSlideSpeed);
     });
-
-    $(function() {
-      adjustStyle($(this).width());
-      $(window).resize(function() {
-        adjustStyle($(this).width());
-      });
-    });
 });
 
 $(window).scroll(function(event){
 
     var yOffset = window.pageYOffset;
     var h = window.innerHeight;
-    var breakpoint = 50;
+    var breakpoint = 100;
     
     if (yOffset > breakpoint){
         $(".navbar").addClass('scrolldown');
         $("#content p").fadeIn(1000);
+        $(".row").addClass('scrolldown');
         
     }else{
         $(".navbar").removeClass('scrolldown');
+        $(".row").removeClass('scrolldown');
         
     }
     

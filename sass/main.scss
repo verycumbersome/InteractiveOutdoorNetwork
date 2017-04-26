@@ -12,19 +12,24 @@ $color-alpha: darken( $color, $darken );
 
 $forestgreen: #228B22;
 $darkforestgreen: #0d3b02;
+
 $forestgreenalpha: rgba(34, 139, 34, 0.5);
+$darkforestgreenalpha: rgba(13, 59, 2, 0.5);
 
 // Apply color here!
 // Todo el color que quieras!
 $color-base: rgb(0,0,0);
 
 html {
-    font-family: 'Roboto-thin', sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
 }
 
 body {
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg");
     background-size: cover;
@@ -165,21 +170,77 @@ body {
 }
 
 .navbar.scrolldown {
-    background-color: #222;
-    background: #222;
+    // background-color: $darkforestgreenalpha;
 }
 
 .navbar-brand {
     // padding: 0;
 }
 
-.row {
-    position: absolute;
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+.title {
+    position: fixed;
     top: 100px;
-    left: 0;
+    // left: 0;
+    margin: auto;
     width: 100%;
     height: $height-mask;
     z-index: 10;
+}
+
+.title.scrolldown {
+    position: absolute;
+    top: 200px;
 }
 
 #rowleft {
@@ -288,51 +349,6 @@ svg{
     font-weight: 400;
 }
 
-#title {
-    width: 100%;
-    border-bottom: 2px solid #fff;
-    display: inline-block;
-    padding: 0;
-    position: relative;
-    margin-left: 550px;
-    margin-top: 0;
-    /*border: 3px solid red;*/
-}
-
-#subtitle {
-    width: 100%;
-    border-bottom: 2px solid #fff;
-    display: inline-block;
-    padding: 0;
-    position: relative;
-    margin-left: -220px;
-    text-align: right;
-    /*border: 3px solid blue;*/
-}
-
-@media only screen and (max-width: 640px) {
-
-#title {
-    border-bottom: 0px;
-    text-align: center;
-    left: 0;
-    margin: auto;
-    padding-top: 8px;
-}
-
-}
-
-@media only screen and (max-width: 640px) {
-
-#subtitle {
-  border-bottom: 0px;
-  text-align: center;
-  left: 0;
-  margin: auto;
-}
-
-}
-
 #header {
     top: 0;
     color: white;
@@ -386,17 +402,18 @@ svg{
 
 #missionstatement {
     line-height: 30px;
-    font-size: 16px;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 200;
     color: #fff;
     margin: auto;
     text-align: center;
     padding: 20px;
-    margin-top:100px;
+    margin-top: 100px;
     margin-bottom: 100px;
     position: relative;
-    /*margin-bottom: 200px;*/
     width: 90%;
-    background-color: $forestgreenalpha;
+    background-color: $darkforestgreenalpha;
 }
 
 .noselect {
