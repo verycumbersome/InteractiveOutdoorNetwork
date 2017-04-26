@@ -42,6 +42,28 @@ $(document).ready(function() {
 
     firebase.initializeApp(config);
     
+    var provider = new firebase.auth.TwitterAuthProvider();
+    
+    $(".btn-tw").click(function() {
+        firebase.auth().signInWithPopup(provider).then(function(result) {
+            // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
+            // You can use these server side with your app's credentials to access the Twitter API.
+            var token = result.credential.accessToken;
+            var secret = result.credential.secret;
+            // The signed-in user info.
+            var user = result.user;
+        }).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+        });
+    });
+    
     console.log(firebase.User.uid);
     firebase.database().ref('/').on('value', function(all) {
         console.log(all.val());
@@ -90,12 +112,11 @@ $(document).ready(function() {
     var page = $("html, body");
 
     $("#scrolldown").click(function(e) {
-        
         page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
            page.stop();
         });
     
-        page.stop().animate({scrollTop: $("footer").position().top}, 1500, "easeInOutCubic", function(){
+        page.stop().animate({scrollTop: $("#activities").position().top - 50}, 1500, "easeInOutCubic", function(){
            page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
         });
     
@@ -113,6 +134,53 @@ $(document).ready(function() {
     }, function() {
         $(".dropdown-menu").stop().slideUp(menuSlideSpeed);
     });
+    
+    $(".dropdown.login").hover(function() {
+        $(".dropdown-menu.login").stop(false, false).slideDown(menuSlideSpeed);
+    }, function() {
+        $(".dropdown-menu.login").stop().slideUp(menuSlideSpeed);
+    });
+    
+    //Hiking tile hover SVG
+    $("#hiking").hover(function() {
+        $("#hikingbase").stop(false, false).fadeOut(300);
+    }, function() {
+        $("#hikingbase").stop(false, false).fadeIn(300);
+    });
+    
+    //Swimming tile hover SVG
+    $("#swimming").hover(function() {
+        $("#swimmingbase").stop(false, false).fadeOut(300);
+    }, function() {
+        $("#swimmingbase").stop(false, false).fadeIn(300);
+    });
+    
+    $("#rockclimbing").hover(function() {
+        $("#rockclimbingbase").stop(false, false).fadeOut(300);
+    }, function() {
+        $("#rockclimbingbase").stop(false, false).fadeIn(300);
+    });
+    
+    $("#running").hover(function() {
+        $("#runningbase").stop(false, false).fadeOut(300);
+    }, function() {
+        $("#runningbase").stop(false, false).fadeIn(300);
+    });
+
+    $("#sports").hover(function() {
+        $("#sportsbase").stop(false, false).fadeOut(300);
+    }, function() {
+        $("#sportsbase").stop(false, false).fadeIn(300);
+    });
+    
+    $("#skiing").hover(function() {
+        $("#skiingbase").stop(false, false).fadeOut(300);
+    }, function() {
+        $("#skiingbase").stop(false, false).fadeIn(300);
+    });
+    
+    
+    
 });
 
 $(window).scroll(function(event){
@@ -124,11 +192,11 @@ $(window).scroll(function(event){
     if (yOffset > breakpoint){
         $(".navbar").addClass('scrolldown');
         $("#content p").fadeIn(1000);
-        $(".row").addClass('scrolldown');
+        $(".title").addClass('scrolldown');
         
     }else{
         $(".navbar").removeClass('scrolldown');
-        $(".row").removeClass('scrolldown');
+        $(".title").removeClass('scrolldown');
         
     }
     

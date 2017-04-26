@@ -33,7 +33,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-            <a class="navbar-brand glyphicon glyphicon-tree-conifer" href="#">Interactive Outdoors</a>
+            <a class="navbar-brand glyphicon glyphicon-tree-conifer" href="#">InteractiveOutdoorNetwork</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
@@ -60,15 +60,15 @@
                 <li>
                     <p class="navbar-text">Already have an account?</p>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown login">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-                    <ul id="login-dp" class="dropdown-menu">
+                    <ul id="login-dp" class="dropdown-menu login">
                         <li>
                             <div class="row">
                                 <div class="col-md-12">
                                     Login via
                                     <div class="social-buttons">
-                                        <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                        <a href="#" class="btn btn-fb"><i class="fa fa-google"></i> Google</a>
                                         <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
                                     </div>
                                     or
@@ -93,7 +93,7 @@
                                     </form>
                                 </div>
                                 <div class="bottom text-center">
-                                    New here ? <a href="#"><b>Join Us</b></a>
+                                    New here? <a href="#"><b>Join Us</b></a>
                                 </div>
                             </div>
                         </li>
@@ -109,13 +109,13 @@
         <div class="title">
             <svg>
             <defs>
-                <mask id="mask" x="0" y="0" width="100%" height="100%">
+                <mask id="titlemask" x="0" y="0" width="100%" height="100%">
                     <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                    <text id="title" x="50%" y="0" dy="1.58em">Interactive Outdoors</text>
+                    <text id="title" x="50%" y="0" dy="1.58em">Interactive Outdoor Network</text>
                     <text id="subtitle" x="50%" y="0" dy="9.8em">Bringing People Together</text>
                 </mask>
                 </defs>
-                <rect id="base" x="0" y="0" width="100%" height="100%"/>
+                <rect id="titlebase" x="0" y="0" width="100%" height="100%"/>
             </svg>
         </div>
         <div id="autoscroll" class="animated slideInUp noselect noselect-recursive">
@@ -124,6 +124,96 @@
                 <a id="scrolldownarrow" class="glyphicon glyphicon-chevron-down"></a>
             </div>
         </div>
+    </div>
+    <div id="activities">
+        <table>
+            <tr>
+                <td>
+                <div id="hiking">
+                    <svg>
+                        <defs>
+                            <mask id="hikingmask" x="0" y="0" width="100%" height="100%">
+                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                                <text id="title" x="50%" y="0" dy="1.58em">Hiking</text>
+                                <text id="subtitle" x="50%" y="0" dy="9.8em">find someone</text>
+                            </mask>
+                        </defs>
+                        <rect id="hikingbase" x="0" y="0" width="100%" height="100%"/>
+                    </svg>
+                </div>
+                </td>
+                <td>
+                <div id="rockclimbing">
+                    <svg>
+                        <defs>
+                            <mask id="rockclimbingmask" x="0" y="0" width="100%" height="100%">
+                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                                <text id="title" x="50%" y="0" dy="1.58em">Climbing</text>
+                                <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
+                            </mask>
+                        </defs>
+                        <rect id="rockclimbingbase" x="0" y="0" width="100%" height="100%"/>
+                    </svg>
+                </div>
+                </td>
+                <td>
+                <div id="swimming">
+                    <svg>
+                        <defs>
+                            <mask id="swimmingmask" x="0" y="0" width="100%" height="100%">
+                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                                <text id="title" x="50%" y="0" dy="1.58em">Swimming</text>
+                                <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
+                            </mask>
+                        </defs>
+                        <rect id="swimmingbase" x="0" y="0" width="100%" height="100%"/>
+                    </svg>  
+                </div>
+                </td>
+            </tr>
+                <td>
+                <div id="running">
+                    <svg>
+                        <defs>
+                            <mask id="runningmask" x="0" y="0" width="100%" height="100%">
+                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                                <text id="title" x="50%" y="0" dy="1.58em">Running</text>
+                                <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
+                            </mask>
+                        </defs>
+                        <rect id="runningbase" x="0" y="0" width="100%" height="100%"/>
+                    </svg>
+                </div>
+                </td>
+                <td>
+                <div id="sports">
+                    <svg>
+                        <defs>
+                            <mask id="sportsmask" x="0" y="0" width="100%" height="100%">
+                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                                <text id="title" x="50%" y="0" dy="1.58em">Sports</text>
+                                <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
+                            </mask>
+                        </defs>
+                        <rect id="sportsbase" x="0" y="0" width="100%" height="100%"/>
+                    </svg>
+                </div>
+                </td>
+                <td>
+                <div id="skiing">
+                    <svg>
+                        <defs>
+                            <mask id="skiingmask" x="0" y="0" width="100%" height="100%">
+                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                                <text id="title" x="50%" y="0" dy="1.58em">Skiing</text>
+                                <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
+                            </mask>
+                        </defs>
+                        <rect id="skiingbase" x="0" y="0" width="100%" height="100%"/>
+                    </svg>
+                </div>
+                </td>
+        </table>
     </div>
     <div id="statement">
             <p id="missionstatement">

@@ -1,4 +1,4 @@
-/* line 23, ../sass/main.scss */
+/* line 15, ../sass/main.scss */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -7,14 +7,10 @@ html {
   text-rendering: optimizelegibility;
 }
 
-/* line 31, ../sass/main.scss */
+/* line 23, ../sass/main.scss */
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 @-webkit-keyframes slideInDown {
@@ -109,31 +105,31 @@ body {
     transform: none;
   }
 }
-/* line 113, ../sass/main.scss */
+/* line 128, ../sass/main.scss */
 .slideInDown {
   -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
 }
 
-/* line 117, ../sass/main.scss */
+/* line 133, ../sass/main.scss */
 .slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
 }
 
-/* line 121, ../sass/main.scss */
+/* line 138, ../sass/main.scss */
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
 
-/* line 126, ../sass/main.scss */
+/* line 143, ../sass/main.scss */
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
 
-/* line 130, ../sass/main.scss */
+/* line 148, ../sass/main.scss */
 .animated {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
@@ -141,19 +137,19 @@ body {
   animation-fill-mode: both;
 }
 
-/* line 136, ../sass/main.scss */
+/* line 155, ../sass/main.scss */
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-/* line 140, ../sass/main.scss */
+/* line 160, ../sass/main.scss */
 .animated.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 
-/* line 144, ../sass/main.scss */
+/* line 165, ../sass/main.scss */
 .navbar {
   border: 0px;
   transition: 0.5s;
@@ -161,86 +157,93 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 155, ../sass/main.scss */
+  /* line 175, ../sass/main.scss */
   .navbar {
     /*min-height: 65px;*/
     border: 0px;
   }
 }
-/* line 180, ../sass/main.scss */
+/* line 195, ../sass/main.scss */
+.navbar-brand {
+  word-spacing: 0.5em;
+  line-height: 0.76;
+}
+
+/* line 200, ../sass/main.scss */
 #login-dp {
   min-width: 250px;
   padding: 14px 14px 0;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* line 186, ../sass/main.scss */
+/* line 207, ../sass/main.scss */
 #login-dp .help-block {
   font-size: 12px;
 }
 
-/* line 189, ../sass/main.scss */
+/* line 211, ../sass/main.scss */
 #login-dp .bottom {
   background-color: rgba(255, 255, 255, 0.8);
   border-top: 1px solid #ddd;
+  color: #333;
   clear: both;
   padding: 14px;
 }
 
-/* line 195, ../sass/main.scss */
+/* line 219, ../sass/main.scss */
 #login-dp .social-buttons {
   margin: 12px 0;
 }
 
-/* line 198, ../sass/main.scss */
+/* line 223, ../sass/main.scss */
 #login-dp .social-buttons a {
   width: 49%;
 }
 
-/* line 201, ../sass/main.scss */
+/* line 227, ../sass/main.scss */
 #login-dp .form-group {
   margin-bottom: 10px;
 }
 
-/* line 204, ../sass/main.scss */
+/* line 231, ../sass/main.scss */
 .btn-fb {
   color: #fff;
   background-color: #3b5998;
 }
 
-/* line 208, ../sass/main.scss */
+/* line 236, ../sass/main.scss */
 .btn-fb:hover {
   color: #fff;
   background-color: #496ebc;
 }
 
-/* line 212, ../sass/main.scss */
+/* line 241, ../sass/main.scss */
 .btn-tw {
   color: #fff;
   background-color: #55acee;
 }
 
-/* line 216, ../sass/main.scss */
+/* line 246, ../sass/main.scss */
 .btn-tw:hover {
   color: #fff;
   background-color: #59b5fa;
 }
 
 @media (max-width: 768px) {
-  /* line 221, ../sass/main.scss */
+  /* line 252, ../sass/main.scss */
   #login-dp {
     background-color: inherit;
     color: #fff;
   }
 
-  /* line 225, ../sass/main.scss */
+  /* line 256, ../sass/main.scss */
   #login-dp .bottom {
     background-color: inherit;
     border-top: 0 none;
   }
 }
-/* line 231, ../sass/main.scss */
+/* line 262, ../sass/main.scss */
 .title {
   position: fixed;
   top: 100px;
@@ -250,13 +253,13 @@ body {
   z-index: 10;
 }
 
-/* line 241, ../sass/main.scss */
+/* line 272, ../sass/main.scss */
 .title.scrolldown {
   position: absolute;
   top: 200px;
 }
 
-/* line 246, ../sass/main.scss */
+/* line 277, ../sass/main.scss */
 #rowleft {
   height: 300px;
   width: 400px;
@@ -264,14 +267,14 @@ body {
   float: left;
 }
 
-/* line 253, ../sass/main.scss */
+/* line 284, ../sass/main.scss */
 #rowright {
   float: left;
   width: 50%;
   margin: auto;
 }
 
-/* line 259, ../sass/main.scss */
+/* line 290, ../sass/main.scss */
 #content {
   padding-top: 80px;
   margin: auto;
@@ -279,9 +282,13 @@ body {
   width: 100%;
   color: white;
   height: 100vh;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-/* line 268, ../sass/main.scss */
+/* line 303, ../sass/main.scss */
 #content h2 {
   text-align: center;
   font-size: 40px;
@@ -292,39 +299,69 @@ body {
   /*background-color: rgba(50, 50, 50, 0.7);*/
 }
 
-/* line 278, ../sass/main.scss */
+/* line 313, ../sass/main.scss */
 svg {
   width: 100%;
   height: inherit;
 }
-/* line 281, ../sass/main.scss */
+/* line 316, ../sass/main.scss */
 svg text {
   text-anchor: middle;
 }
-/* line 286, ../sass/main.scss */
+/* line 321, ../sass/main.scss */
 svg #alpha {
   fill: #999999;
 }
-/* line 290, ../sass/main.scss */
+/* line 325, ../sass/main.scss */
 svg #title {
   letter-spacing: -2px;
   font-size: 6em;
   font-weight: 800;
 }
-/* line 295, ../sass/main.scss */
+/* line 330, ../sass/main.scss */
 svg #subtitle {
   letter-spacing: 8px;
   font-size: 1.2em;
   font-weight: 300;
   text-transform: uppercase;
 }
-/* line 301, ../sass/main.scss */
-svg #base {
+/* line 336, ../sass/main.scss */
+svg #titlebase {
   fill: black;
-  mask: url(#mask);
+  mask: url(#titlemask);
+}
+/* line 340, ../sass/main.scss */
+svg #hikingbase {
+  fill: black;
+  mask: url(#hikingmask);
+}
+/* line 344, ../sass/main.scss */
+svg #swimmingbase {
+  fill: black;
+  mask: url(#swimmingmask);
+}
+/* line 348, ../sass/main.scss */
+svg #runningbase {
+  fill: black;
+  mask: url(#runningmask);
+}
+/* line 352, ../sass/main.scss */
+svg #sportsbase {
+  fill: black;
+  mask: url(#sportsmask);
+}
+/* line 356, ../sass/main.scss */
+svg #rockclimbingbase {
+  fill: black;
+  mask: url(#rockclimbingmask);
+}
+/* line 360, ../sass/main.scss */
+svg #skiingbase {
+  fill: black;
+  mask: url(#skiingmask);
 }
 
-/* line 309, ../sass/main.scss */
+/* line 367, ../sass/main.scss */
 .contentbody {
   margin-top: 0;
   background-color: rgba(200, 200, 200, 0.7);
@@ -333,7 +370,7 @@ svg #base {
   height: auto;
 }
 
-/* line 317, ../sass/main.scss */
+/* line 375, ../sass/main.scss */
 .contentbody p {
   line-height: 30px;
   font-size: 16px;
@@ -346,7 +383,7 @@ svg #base {
   background-color: rgba(0, 53, 95, 0.5);
 }
 
-/* line 329, ../sass/main.scss */
+/* line 387, ../sass/main.scss */
 .header {
   text-align: center;
   color: white;
@@ -355,7 +392,7 @@ svg #base {
   font-weight: 400;
 }
 
-/* line 337, ../sass/main.scss */
+/* line 395, ../sass/main.scss */
 #slidein {
   width: 100%;
   padding-bottom: 30px;
@@ -364,7 +401,7 @@ svg #base {
   /*border: 3px solid green;*/
 }
 
-/* line 345, ../sass/main.scss */
+/* line 403, ../sass/main.scss */
 #slidein h1 {
   color: white;
   font-size: 70px;
@@ -372,7 +409,7 @@ svg #base {
   font-weight: 400;
 }
 
-/* line 352, ../sass/main.scss */
+/* line 410, ../sass/main.scss */
 #header {
   top: 0;
   color: white;
@@ -383,7 +420,7 @@ svg #base {
   transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
 
-/* line 362, ../sass/main.scss */
+/* line 420, ../sass/main.scss */
 #autoscroll {
   /*padding-top: 400px;*/
   width: 100%;
@@ -393,7 +430,7 @@ svg #base {
   position: absolute;
 }
 
-/* line 371, ../sass/main.scss */
+/* line 429, ../sass/main.scss */
 #autoscroll a {
   /*font-size: 4em;*/
   bottom: 0;
@@ -401,17 +438,17 @@ svg #base {
   text-decoration: none;
 }
 
-/* line 378, ../sass/main.scss */
+/* line 436, ../sass/main.scss */
 #scrollbox {
   top: 0;
 }
 
-/* line 382, ../sass/main.scss */
+/* line 440, ../sass/main.scss */
 #scrollbox .glyphicon {
   font-size: 25px;
 }
 
-/* line 386, ../sass/main.scss */
+/* line 444, ../sass/main.scss */
 #scrolldown {
   /*position: absolute;*/
   font-size: 4em;
@@ -420,18 +457,106 @@ svg #base {
   margin-bottom: -14px;
 }
 
-/* line 394, ../sass/main.scss */
+/* line 452, ../sass/main.scss */
 #scrolldownarrow {
   z-index: -1;
   display: block;
 }
 
-/* line 399, ../sass/main.scss */
+/* line 457, ../sass/main.scss */
+.separator {
+  margin-top: 0;
+  background-color: #333;
+  font-size: 40px;
+  padding: 20px 0 20px 0;
+}
+
+/* line 464, ../sass/main.scss */
+.separator p {
+  font-size: 18px;
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+/* line 471, ../sass/main.scss */
+#activities {
+  text-align: center;
+  color: white;
+  width: 100%;
+  margin: auto;
+  background-color: #333;
+}
+
+/* line 480, ../sass/main.scss */
+#activities table {
+  width: 100%;
+  margin: auto;
+}
+
+/* line 485, ../sass/main.scss */
+#activities th {
+  width: 100%;
+  font-size: 30em;
+  text-align: center;
+}
+
+/* line 491, ../sass/main.scss */
+#activities tr {
+  padding: 30px;
+}
+
+/* line 496, ../sass/main.scss */
+#activities td div {
+  margin: auto;
+  width: 33vw;
+  height: 33vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* line 505, ../sass/main.scss */
+#hiking {
+  background: url("/images/hiking.jpg");
+}
+
+/* line 509, ../sass/main.scss */
+#rockclimbing {
+  background: url("/images/rockclimbing.jpg");
+}
+
+/* line 513, ../sass/main.scss */
+#running {
+  background: url("/images/running.jpg");
+}
+
+/* line 517, ../sass/main.scss */
+#sports {
+  background: url("/images/sports.jpg");
+}
+
+/* line 521, ../sass/main.scss */
+#swimming {
+  background: url("/images/swimming.jpg");
+}
+
+/* line 525, ../sass/main.scss */
+#swimming {
+  background: url("/images/swimming.jpg");
+}
+
+/* line 529, ../sass/main.scss */
+#skiing {
+  background: url("/images/skiing.jpg");
+}
+
+/* line 533, ../sass/main.scss */
 #statement {
   /*display: block;*/
 }
 
-/* line 403, ../sass/main.scss */
+/* line 537, ../sass/main.scss */
 #missionstatement {
   line-height: 30px;
   font-size: 20px;
@@ -445,10 +570,11 @@ svg #base {
   margin-bottom: 100px;
   position: relative;
   width: 90%;
-  background-color: rgba(13, 59, 2, 0.5);
+  border-radius: 15px;
+  background-color: rgba(13, 59, 2, 0.3);
 }
 
-/* line 419, ../sass/main.scss */
+/* line 554, ../sass/main.scss */
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -458,8 +584,10 @@ svg #base {
   user-select: none;
 }
 
-/* line 428, ../sass/main.scss */
-.noselect-recursive *, .noselect-recursive * *, .noselect-recursive {
+/* line 563, ../sass/main.scss */
+.noselect-recursive *,
+.noselect-recursive * *,
+.noselect-recursive {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -468,7 +596,7 @@ svg #base {
   user-select: none;
 }
 
-/* line 437, ../sass/main.scss */
+/* line 574, ../sass/main.scss */
 footer {
   color: #fff;
   text-align: center;
@@ -480,7 +608,7 @@ footer {
   background-color: rgba(50, 50, 50, 0.7);
 }
 
-/* line 448, ../sass/main.scss */
+/* line 585, ../sass/main.scss */
 footer a {
   display: inline;
   color: white;
@@ -492,7 +620,7 @@ footer a {
   transition: .25;
 }
 
-/* line 459, ../sass/main.scss */
+/* line 596, ../sass/main.scss */
 footer a:hover {
   color: #228B22;
 }

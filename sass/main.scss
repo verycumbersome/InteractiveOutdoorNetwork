@@ -1,162 +1,181 @@
 @import "compass/css3";
-
 $height-mask: 250px;
-
 // To regulate alpha is recommended to use gray scale.
 // Recomiendo utilizar escala de grises
-
 $darken: 40%;
-
-$color: rgb(255,255,255);
-$color-alpha: darken( $color, $darken );
-
+$color: rgb(255, 255, 255);
+$color-alpha: darken( $color, $darken);
 $forestgreen: #228B22;
 $darkforestgreen: #0d3b02;
-
 $forestgreenalpha: rgba(34, 139, 34, 0.5);
-$darkforestgreenalpha: rgba(13, 59, 2, 0.5);
-
+$darkforestgreenalpha: rgba(13, 59, 2, 0.3);
 // Apply color here!
 // Todo el color que quieras!
-$color-base: rgb(0,0,0);
-
+$color-base: rgb(0, 0, 0);
 html {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizelegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
 @-webkit-keyframes slideInDown {
   from {
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
-    visibility: visible; }
+    visibility: visible;
+  }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 @keyframes slideInDown {
   from {
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
-    visibility: visible; }
+    visibility: visible;
+  }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
+    transform: translate3d(0, 0, 0);
+  }
+}
 
 @-webkit-keyframes slideInUp {
   from {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
-    visibility: visible; }
+    visibility: visible;
+  }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
-    
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 @keyframes slideInUp {
   from {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
-    visibility: visible; }
+    visibility: visible;
+  }
   to {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); } }
+    transform: translate3d(0, 0, 0);
+  }
+}
 
 @-webkit-keyframes fadeInRight {
   from {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0); }
+    transform: translate3d(100%, 0, 0);
+  }
   to {
     opacity: 1;
     -webkit-transform: none;
-    transform: none; } }
+    transform: none;
+  }
+}
+
 @keyframes fadeInRight {
   from {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0); }
+    transform: translate3d(100%, 0, 0);
+  }
   to {
     opacity: 1;
     -webkit-transform: none;
-    transform: none; } }
+    transform: none;
+  }
+}
 
 @-webkit-keyframes fadeInLeft {
   from {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0); }
+    transform: translate3d(-100%, 0, 0);
+  }
   to {
     opacity: 1;
     -webkit-transform: none;
-    transform: none; } }
+    transform: none;
+  }
+}
+
 @keyframes fadeInLeft {
   from {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0); }
+    transform: translate3d(-100%, 0, 0);
+  }
   to {
     opacity: 1;
     -webkit-transform: none;
-    transform: none; } }
-    
-.slideInDown {
-    -webkit-animation-name: slideInDown;
-    animation-name: slideInDown; }
-  
-.slideInUp {
-    -webkit-animation-name: slideInUp;
-    animation-name: slideInUp; }
-    
-.fadeInRight {
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight; 
+    transform: none;
+  }
 }
-    
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft; }
+  animation-name: fadeInLeft;
+}
 
 .animated {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
+  animation-fill-mode: both;
+}
 
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+}
 
 .animated.hinge {
   -webkit-animation-duration: 2s;
-  animation-duration: 2s; }
+  animation-duration: 2s;
+}
 
 .navbar {
-    border: 0px;
-    transition: 0.5s;
-    // min-height: 60px;
-    color: white !important;
-    // background: linear-gradient(-45deg, $forestgreen, $darkforestgreen);
-    // background: -webkit-linear-gradient(-45deg, $forestgreen, $darkforestgreen);
+  border: 0px;
+  transition: 0.5s;
+  // min-height: 60px;
+  color: white !important;
+  // background: linear-gradient(-45deg, $forestgreen, $darkforestgreen);
+  // background: -webkit-linear-gradient(-45deg, $forestgreen, $darkforestgreen);
 }
 
 @media only screen and (max-width: 767px) {
-
   .navbar {
-      /*min-height: 65px;*/
-      border: 0px;
+    /*min-height: 65px;*/
+    border: 0px;
   }
-  
   // .navbar-header {
   //   float: left;
   //   padding: 15px;
@@ -170,230 +189,345 @@ body {
 }
 
 .navbar.scrolldown {
-    // background-color: $darkforestgreenalpha;
+  // background-color: $darkforestgreenalpha;
 }
 
 .navbar-brand {
-    // padding: 0;
+  word-spacing: 0.5em;
+  line-height: 0.76;
 }
 
-#login-dp{
-    min-width: 250px;
-    padding: 14px 14px 0;
-    overflow:hidden;
-    background-color:rgba(255,255,255,.8);
+#login-dp {
+  min-width: 250px;
+  padding: 14px 14px 0;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, .5);
 }
-#login-dp .help-block{
-    font-size:12px    
+
+#login-dp .help-block {
+  font-size: 12px
 }
-#login-dp .bottom{
-    background-color:rgba(255,255,255,.8);
-    border-top:1px solid #ddd;
-    clear:both;
-    padding:14px;
+
+#login-dp .bottom {
+  background-color: rgba(255, 255, 255, .8);
+  border-top: 1px solid #ddd;
+  color: #333;
+  clear: both;
+  padding: 14px;
 }
-#login-dp .social-buttons{
-    margin:12px 0    
+
+#login-dp .social-buttons {
+  margin: 12px 0
 }
-#login-dp .social-buttons a{
-    width: 49%;
+
+#login-dp .social-buttons a {
+  width: 49%;
 }
+
 #login-dp .form-group {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-.btn-fb{
+
+.btn-fb {
+  color: #fff;
+  background-color: #3b5998;
+}
+
+.btn-fb:hover {
+  color: #fff;
+  background-color: #496ebc
+}
+
+.btn-tw {
+  color: #fff;
+  background-color: #55acee;
+}
+
+.btn-tw:hover {
+  color: #fff;
+  background-color: #59b5fa;
+}
+
+@media(max-width: 768px) {
+  #login-dp {
+    background-color: inherit;
     color: #fff;
-    background-color:#3b5998;
-}
-.btn-fb:hover{
-    color: #fff;
-    background-color:#496ebc 
-}
-.btn-tw{
-    color: #fff;
-    background-color:#55acee;
-}
-.btn-tw:hover{
-    color: #fff;
-    background-color:#59b5fa;
-}
-@media(max-width:768px){
-    #login-dp{
-        background-color: inherit;
-        color: #fff;
-    }
-    #login-dp .bottom{
-        background-color: inherit;
-        border-top:0 none;
-    }
+  }
+  #login-dp .bottom {
+    background-color: inherit;
+    border-top: 0 none;
+  }
 }
 
 .title {
-    position: fixed;
-    top: 100px;
-    // left: 0;
-    margin: auto;
-    width: 100%;
-    height: $height-mask;
-    z-index: 10;
+  position: fixed;
+  top: 100px;
+  // left: 0;
+  margin: auto;
+  width: 100%;
+  height: $height-mask;
+  z-index: 10;
 }
 
 .title.scrolldown {
-    position: absolute;
-    top: 200px;
+  position: absolute;
+  top: 200px;
 }
 
 #rowleft {
-    height: 300px;
-    width: 400px;
-    display: block;
-    float: left;
+  height: 300px;
+  width: 400px;
+  display: block;
+  float: left;
 }
 
 #rowright {
-    float: left;
-    width: 50%;
-    margin: auto;
+  float: left;
+  width: 50%;
+  margin: auto;
 }
 
 #content {
-    padding-top: 80px;
-    margin: auto;
-    overflow: hidden;
-    width: 100%;
-    color: white;
-    height: 100vh;
+  padding-top: 80px;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  color: white;
+  height: 100vh;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 #content h2 {
-    text-align: center;
-    font-size: 40px;
-    padding: 10px;
-    margin: auto;
-    color: white;
-    bottom: 0;
-    /*background-color: rgba(50, 50, 50, 0.7);*/
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
+  margin: auto;
+  color: white;
+  bottom: 0;
+  /*background-color: rgba(50, 50, 50, 0.7);*/
 }
 
-svg{
+svg {
   width: 100%;
   height: inherit;
-  text{
+  text {
     // svg center text.
     // centar text svg.
     text-anchor: middle;
   }
-  #alpha{
+  #alpha {
     fill: $color-alpha;
     // animation: alpha 10s ease infinite;
   }
-  #title{
+  #title {
     letter-spacing: -2px;
     font-size: 6em;
     font-weight: 800;
   }
-  #subtitle{
+  #subtitle {
     letter-spacing: 8px;
     font-size: 1.2em;
     font-weight: 300;
     text-transform: uppercase;
   }
-  #base{
+  #titlebase {
     fill: $color-base;
-    // add the mask.
-    // aplicar máscara.
-    mask: url(#mask);
+    mask: url(#titlemask);
   }
+  #hikingbase {
+    fill: $color-base;
+    mask: url(#hikingmask);
+  }
+  #swimmingbase {
+    fill: $color-base;
+    mask: url(#swimmingmask);
+  }
+  #runningbase {
+    fill: $color-base;
+    mask: url(#runningmask);
+  }
+  #sportsbase {
+    fill: $color-base;
+    mask: url(#sportsmask);
+  }
+  #rockclimbingbase {
+    fill: $color-base;
+    mask: url(#rockclimbingmask);
+  }
+  #skiingbase {
+    fill: $color-base;
+    mask: url(#skiingmask);
+  }
+  
 }
 
 .contentbody {
-    margin-top: 0;
-    background-color: rgba(200, 200, 200, 0.7);
-    width: 90%;
-    margin: auto;
-    height: auto;
+  margin-top: 0;
+  background-color: rgba(200, 200, 200, 0.7);
+  width: 90%;
+  margin: auto;
+  height: auto;
 }
 
 .contentbody p {
-    line-height: 30px;
-    font-size: 16px;
-    color: #fff;
-    margin: auto;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    width: 75%;
-    background-color: rgba(0,53,95, 0.5);
+  line-height: 30px;
+  font-size: 16px;
+  color: #fff;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  width: 75%;
+  background-color: rgba(0, 53, 95, 0.5);
 }
 
-.header{
-    text-align: center;
-    color: white;
-    font-size: 60px;
-    line-height: 0.78;
-    font-weight: 400;
+.header {
+  text-align: center;
+  color: white;
+  font-size: 60px;
+  line-height: 0.78;
+  font-weight: 400;
 }
 
 #slidein {
-    width: 100%;
-    padding-bottom: 30px;
-    line-height: 0.69;
-    padding-top: 20vh;
-    /*border: 3px solid green;*/
+  width: 100%;
+  padding-bottom: 30px;
+  line-height: 0.69;
+  padding-top: 20vh;
+  /*border: 3px solid green;*/
 }
 
-#slidein h1{
-    color: white;
-    font-size: 70px;
-    line-height: 0.75;
-    font-weight: 400;
+#slidein h1 {
+  color: white;
+  font-size: 70px;
+  line-height: 0.75;
+  font-weight: 400;
 }
 
 #header {
-    top: 0;
-    color: white;
-    position: fixed;
-    display: inline-block;
-    width: 100%;
-    z-index: 1;
-    transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  top: 0;
+  color: white;
+  position: fixed;
+  display: inline-block;
+  width: 100%;
+  z-index: 1;
+  transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
 
 #autoscroll {
-    /*padding-top: 400px;*/
-    width: 100%;
-    /*margin:auto;*/
-    text-align: center;
-    bottom: 10px;
-    position: absolute;
+  /*padding-top: 400px;*/
+  width: 100%;
+  /*margin:auto;*/
+  text-align: center;
+  bottom: 10px;
+  position: absolute;
 }
 
 #autoscroll a {
-    /*font-size: 4em;*/
-    bottom: 0;
-    color: white;
-    text-decoration: none;
+  /*font-size: 4em;*/
+  bottom: 0;
+  color: white;
+  text-decoration: none;
 }
 
 #scrollbox {
-    top: 0;
+  top: 0;
 }
 
 #scrollbox .glyphicon {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 #scrolldown {
-    /*position: absolute;*/
-    font-size: 4em;
-    position: absolute;
-    margin-left: -23px;
-    margin-bottom: -14px;
+  /*position: absolute;*/
+  font-size: 4em;
+  position: absolute;
+  margin-left: -23px;
+  margin-bottom: -14px;
 }
 
 #scrolldownarrow {
-    z-index: -1;
-    display: block;
+  z-index: -1;
+  display: block;
+}
+
+.separator {
+  margin-top: 0;
+  background-color: #333;
+  font-size: 40px;
+  padding: 20px 0 20px 0;
+}
+
+.separator p {
+  font-size: 18px;
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+#activities {
+  text-align: center;
+  color: white;
+  width: 100%;
+  margin: auto;
+  background-color: #333;
+  // border: 3px solid purple;
+}
+
+#activities table{
+  width: 100%;
+  margin: auto;
+}
+
+#activities th {
+  width: 100%;
+  font-size: 30em;
+  text-align: center;
+}
+
+#activities tr {
+  padding: 30px;
+  
+}
+
+#activities td div{
+  margin: auto;
+  width: 33vw;
+  height: 33vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#hiking {
+  background: url("/images/hiking.jpg");
+}
+
+#rockclimbing {
+  background: url("/images/rockclimbing.jpg");
+}
+
+#running {
+  background: url("/images/running.jpg");
+}
+
+#sports {
+  background: url("/images/sports.jpg");
+}
+
+#swimming {
+  background: url("/images/swimming.jpg");
+}
+
+#swimming {
+  background: url("/images/swimming.jpg");
+}
+
+#skiing {
+  background: url("/images/skiing.jpg");
 }
 
 #statement {
@@ -401,61 +535,64 @@ svg{
 }
 
 #missionstatement {
-    line-height: 30px;
-    font-size: 20px;
-    font-style: italic;
-    font-weight: 200;
-    color: #fff;
-    margin: auto;
-    text-align: center;
-    padding: 20px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    position: relative;
-    width: 90%;
-    background-color: $darkforestgreenalpha;
+  line-height: 30px;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 200;
+  color: #fff;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+  width: 90%;
+  border-radius: 15px;
+  background-color: $darkforestgreenalpha;
 }
 
 .noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.noselect-recursive *, .noselect-recursive * *, .noselect-recursive {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.noselect-recursive *,
+.noselect-recursive * *,
+.noselect-recursive {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 footer {
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    bottom: 0;
-    width: 100%;
-    margin: auto;
-    position: relative;
-    background-color: rgba(50, 50, 50, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  background-color: rgba(50, 50, 50, 0.7);
 }
 
-footer a{
-    display: inline;
-    color: white;
-    text-decoration: none;
-    -o-transition:.25s;
-    -ms-transition:.25s;
-    -moz-transition:.25s;
-    -webkit-transition:.25s;
-    transition: .25;
+footer a {
+  display: inline;
+  color: white;
+  text-decoration: none;
+  -o-transition: .25s;
+  -ms-transition: .25s;
+  -moz-transition: .25s;
+  -webkit-transition: .25s;
+  transition: .25;
 }
 
-footer a:hover{
-    color: $forestgreen;
+footer a:hover {
+  color: $forestgreen;
 }
