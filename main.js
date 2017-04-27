@@ -99,7 +99,7 @@ $(document).ready(function() {
         console.log(user)
     })
     
-    $("html,body").animate({scrollTop: 0}, 100);
+    $("html,body").animate({scrollTop: 0}, 0);
     
     const menuSlideSpeed = 300;
     
@@ -180,24 +180,28 @@ $(document).ready(function() {
         $("#swimmingbase").stop(false, false).fadeIn(300);
     });
     
+    //Rock climbing tile hover SVG
     $("#rockclimbing").hover(function() {
         $("#rockclimbingbase").stop(false, false).fadeOut(300);
     }, function() {
         $("#rockclimbingbase").stop(false, false).fadeIn(300);
     });
     
+    //Running tile hover SVG
     $("#running").hover(function() {
         $("#runningbase").stop(false, false).fadeOut(300);
     }, function() {
         $("#runningbase").stop(false, false).fadeIn(300);
     });
-
+    
+    //Sports tile hover SVG
     $("#sports").hover(function() {
         $("#sportsbase").stop(false, false).fadeOut(300);
     }, function() {
         $("#sportsbase").stop(false, false).fadeIn(300);
     });
     
+    //Skiing tile hover SVG
     $("#skiing").hover(function() {
         $("#skiingbase").stop(false, false).fadeOut(300);
     }, function() {
@@ -213,7 +217,7 @@ $(window).scroll(function(event){
     var yOffset = window.pageYOffset;
     var h = window.innerHeight;
     var navbarbreakpoint = 100;
-    var geartradebreakpoint = 1200;
+    var geartradebreakpoint = 900;
     
     if (yOffset > navbarbreakpoint){
         $(".navbar").addClass('scrolldown');
