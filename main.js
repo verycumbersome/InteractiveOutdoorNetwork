@@ -92,10 +92,6 @@ $(document).ready(function() {
         firebase.auth().signOut();
     })
     
-    firebase.database().ref('/').on('value', function(all) {
-        // firebase.database().ref('/blah').set(Math.random());
-    })
-    
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             $("#login").hide();
@@ -106,6 +102,11 @@ $(document).ready(function() {
             
             $("#account-text").text("Welcome, " + user.displayName + "!");
             $("#account-image").attr("src", user.photoURL);
+
+            firebase.database().ref('/').on('value', function(all) {
+                console.log(all.val())
+                // firebase.database().ref('/blah').set(Math.random());
+            })
         } else {
             $("#login").show();
             $("#login-text").show();
