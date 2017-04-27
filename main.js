@@ -42,16 +42,17 @@ $(document).ready(function() {
 
     firebase.initializeApp(config);
     
-    var provider = new firebase.auth.TwitterAuthProvider();
+    var twitterProvider = new firebase.auth.TwitterAuthProvider();
     
     $(".btn-tw").click(function() {
-        firebase.auth().signInWithPopup(provider).then(function(result) {
+        firebase.auth().signInWithPopup(twitterProvider).then(function(result) {
             // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
             // You can use these server side with your app's credentials to access the Twitter API.
             var token = result.credential.accessToken;
             var secret = result.credential.secret;
             // The signed-in user info.
             var user = result.user;
+            console.log(token, secret, user)
         }).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
@@ -60,11 +61,35 @@ $(document).ready(function() {
             var email = error.email;
             // The firebase.auth.AuthCredential type that was used.
             var credential = error.credential;
+            console.log(errorCode, errorMessage, email, credential)
             // ...
         });
     });
     
-    console.log(firebase.User.uid);
+    var googleProvider = new firebase.auth.GoogleAuthProvider();
+    
+    $(".btn-go").click(function() {
+        firebase.auth().signInWithPopup(googleProvider).then(function(result) {
+            // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
+            // You can use these server side with your app's credentials to access the Twitter API.
+            var token = result.credential.accessToken;
+            var secret = result.credential.secret;
+            // The signed-in user info.
+            var user = result.user;
+            console.log(token, secret, user)
+        }).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            console.log(errorCode, errorMessage, email, credential)
+            // ...
+        });
+    });
+    
     firebase.database().ref('/').on('value', function(all) {
         console.log(all.val());
         // firebase.database().ref('/blah').set(Math.random());
@@ -187,9 +212,10 @@ $(window).scroll(function(event){
 
     var yOffset = window.pageYOffset;
     var h = window.innerHeight;
-    var breakpoint = 100;
+    var navbarbreakpoint = 100;
+    var geartradebreakpoint = 1200;
     
-    if (yOffset > breakpoint){
+    if (yOffset > navbarbreakpoint){
         $(".navbar").addClass('scrolldown');
         $("#content p").fadeIn(1000);
         $(".title").addClass('scrolldown');
@@ -197,7 +223,11 @@ $(window).scroll(function(event){
     }else{
         $(".navbar").removeClass('scrolldown');
         $(".title").removeClass('scrolldown');
-        
+    }
+    
+    if (yOffset > geartradebreakpoint){
+        $("#geartrade h1").addClass("animated slideInUp");
+    }else{
     }
     
 });

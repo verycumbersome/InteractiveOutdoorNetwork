@@ -1,5 +1,6 @@
 @import "compass/css3";
 $height-mask: 250px;
+$geartrademenuheight: 100px;
 // To regulate alpha is recommended to use gray scale.
 // Recomiendo utilizar escala de grises
 $darken: 40%;
@@ -27,6 +28,21 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
+}
+
+@mixin backgroundImage($imageUrl) {
+  background-image: $imageUrl;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin transitions($time) {
+  -o-transition: $time;
+  -ms-transition: $time;
+  -moz-transition: $time;
+  -webkit-transition: $time;
+  transition: $time;
 }
 
 @-webkit-keyframes slideInDown {
@@ -256,6 +272,16 @@ body {
   background-color: #496ebc
 }
 
+.btn-go {
+  color: #fff;
+  background-color: #3b5998;
+}
+
+.btn-go:hover {
+  color: #fff;
+  background-color: #496ebc
+}
+
 .btn-tw {
   color: #fff;
   background-color: #55acee;
@@ -292,19 +318,6 @@ body {
   top: 200px;
 }
 
-#rowleft {
-  height: 300px;
-  width: 400px;
-  display: block;
-  float: left;
-}
-
-#rowright {
-  float: left;
-  width: 50%;
-  margin: auto;
-}
-
 #content {
   padding-top: 80px;
   margin: auto;
@@ -312,10 +325,7 @@ body {
   width: 100%;
   color: white;
   height: 100vh;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  @include backgroundImage(url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg"));
 }
 
 #content h2 {
@@ -332,8 +342,6 @@ svg {
   width: 100%;
   height: inherit;
   text {
-    // svg center text.
-    // centar text svg.
     text-anchor: middle;
   }
   #alpha {
@@ -379,6 +387,15 @@ svg {
     fill: $color-base;
     mask: url(#skiingmask);
   }
+  #sellbase {
+    fill: $color-base;
+    mask: url(#sellmask);
+  }
+  
+  #buybase {
+    fill: $color-base;
+    mask: url(#buymask);
+  }
   
 }
 
@@ -423,16 +440,6 @@ svg {
   font-size: 70px;
   line-height: 0.75;
   font-weight: 400;
-}
-
-#header {
-  top: 0;
-  color: white;
-  position: fixed;
-  display: inline-block;
-  width: 100%;
-  z-index: 1;
-  transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
 
 #autoscroll {
@@ -518,55 +525,63 @@ svg {
   margin: auto;
   width: 33vw;
   height: 33vw;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 #hiking {
-  background: url("/images/hiking.jpg");
+  @include backgroundImage(url("/images/hiking.jpg"));
 }
 
 #rockclimbing {
-  background: url("/images/rockclimbing.jpg");
+  @include backgroundImage(url("/images/rockclimbing.jpg"));
 }
 
 #running {
-  background: url("/images/running.jpg");
+  @include backgroundImage(url("/images/running.jpg"));
 }
 
 #sports {
-  background: url("/images/sports.jpg");
+  @include backgroundImage(url("/images/sports.jpg"));
 }
 
 #swimming {
-  background: url("/images/swimming.jpg");
-}
-
-#swimming {
-  background: url("/images/swimming.jpg");
+  @include backgroundImage(url("/images/swimming.jpg"));
 }
 
 #skiing {
-  background: url("/images/skiing.jpg");
+  @include backgroundImage(url("/images/skiing.jpg"));
 }
 
-#statement {
-  line-height: 30px;
-  font-size: 20px;
-  font-style: italic;
-  font-weight: 200;
+#geartrade {
+  // line-height: 30px;
+  // font-style: italic;
   color: #fff;
   margin: auto;
   text-align: center;
   padding: 20px;
-  // margin-top: 100px;
   padding-bottom: 200px;
   position: relative;
   width: 100%;
-  // border-radius: 15px;
-  background: url("/images/pineforest.jpg");
+  background: url("/images/forest.jpg");
   background-attachment: fixed;
+  display: inline-block;
+}
+
+#geartrade h1{
+  letter-spacing: -2px;
+  font-size: 6em;
+  font-weight: 600;
+}
+
+#sell {
+  float: left;
+  height: $geartrademenuheight;
+  width: 50%;
+}
+
+#buy {
+  float: left;
+  height: $geartrademenuheight;
+  width: 50%;
 }
 
 #missionstatement {
@@ -603,18 +618,14 @@ footer {
   width: 100%;
   margin: auto;
   position: relative;
-  background-color: rgba(50, 50, 50, 0.7);
+  background-color: $darkforestgreen;
 }
 
 footer a {
   display: inline;
   color: white;
   text-decoration: none;
-  -o-transition: .25s;
-  -ms-transition: .25s;
-  -moz-transition: .25s;
-  -webkit-transition: .25s;
-  transition: .25;
+  @include transitions(0.25s);
 }
 
 footer a:hover {
