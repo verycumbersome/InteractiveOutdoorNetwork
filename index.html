@@ -56,11 +56,11 @@
                     </ul>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
+            <ul id="account" class="nav navbar-nav navbar-right">
+                <li id="login-text">
                     <p class="navbar-text">Already have an account?</p>
                 </li>
-                <li class="dropdown login">
+                <li id="login" class="dropdown login">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
                     <ul id="login-dp" class="dropdown-menu login">
                         <li>
@@ -68,7 +68,7 @@
                                 <div class="col-md-12">
                                     Login via
                                     <div class="social-buttons">
-                                        <a href="#" class="btn btn-fb btn-go"><i class="fa fa-google"></i> Google</a>
+                                        <a href="#" class="btn btn-go"><i class="fa fa-google"></i> Google</a>
                                         <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
                                     </div>
                                     or
@@ -98,6 +98,13 @@
                             </div>
                         </li>
                     </ul>
+                </li>
+                <li id="logout-text">
+                    <p id="account-text" class="navbar-text">Welcome, user!</p>
+                    <img id="account-image" src="" />
+                </li>
+                <li id="logout" class="logout" style="display: hidden;">
+                    <a href="#"><b>Logout</b></a>
                 </li>
             </ul>
         </div>

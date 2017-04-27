@@ -280,6 +280,11 @@ body {
   background-color: #59b5fa;
 }
 
+#account-image {
+  margin-top: 8px;
+  height: 32px;
+}
+
 @media(max-width: 768px) {
   #login-dp {
     background-color: inherit;
@@ -303,7 +308,7 @@ body {
 
 .title.scrolldown {
   position: absolute;
-  top: 200px;
+  top: 250px;
 }
 
 #content {

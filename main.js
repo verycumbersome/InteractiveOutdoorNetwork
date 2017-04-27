@@ -52,7 +52,6 @@ $(document).ready(function() {
             var secret = result.credential.secret;
             // The signed-in user info.
             var user = result.user;
-            console.log(token, secret, user)
         }).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
@@ -76,7 +75,6 @@ $(document).ready(function() {
             var secret = result.credential.secret;
             // The signed-in user info.
             var user = result.user;
-            console.log(token, secret, user)
         }).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
@@ -90,13 +88,31 @@ $(document).ready(function() {
         });
     });
     
+    $(".logout").click(function() {
+        firebase.auth().signOut();
+    })
+    
     firebase.database().ref('/').on('value', function(all) {
-        console.log(all.val());
         // firebase.database().ref('/blah').set(Math.random());
     })
     
     firebase.auth().onAuthStateChanged(function(user) {
-        console.log(user)
+        if (user) {
+            $("#login").hide();
+            $("#login-text").hide();
+            
+            $("#logout").show();
+            $("#logout-text").show();
+            
+            $("#account-text").text("Welcome, " + user.displayName + "!");
+            $("#account-image").attr("src", user.photoURL);
+        } else {
+            $("#login").show();
+            $("#login-text").show();
+            
+            $("#logout").hide();
+            $("#logout-text").hide();
+        }
     })
     
     $("html,body").animate({scrollTop: 0}, 0);
@@ -216,7 +232,7 @@ $(window).scroll(function(event){
 
     var yOffset = window.pageYOffset;
     var h = window.innerHeight;
-    var navbarbreakpoint = 100;
+    var navbarbreakpoint = 150;
     var geartradebreakpoint = 900;
     
     if (yOffset > navbarbreakpoint){
