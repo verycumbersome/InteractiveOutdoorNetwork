@@ -5,17 +5,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="google-site-verification" content="q5pMYCKHXXdw-TOgAO4i9PMiwcodukNgV0aIPpm_S6Q" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
-
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
     <link href="css/main.css" rel="stylesheet" type="text/css" media="screen" />
     <!-- <link id="size-stylesheet" rel="stylesheet" type="text/css" href="css/mobile.css" media="screen" /> -->
-
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -25,102 +21,101 @@
 </head>
 
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top animated slideInDown noselect noselect-recursive">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-            <a class="navbar-brand glyphicon glyphicon-tree-conifer" href="#">InteractiveOutdoorNetwork</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/index.html">Home</a></li>
-                <li class="dropdown people">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Stuff<span class="caret"></span></a>
-                    <ul class="dropdown-menu people">
-                        <li><a href="#">Hiking</a></li>
-                        <li><a href="#">Swimming</a></li>
-                        <li><a href="#">Climbing</a></li>
-                        <li><a href="#">FUCK</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown practices">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
-                    <ul class="dropdown-menu practices">
-                        <li><a href="#">Shirts</a></li>
-                        <li><a href="#">Shoes</a></li>
-                        <li><a href="#">Literal Shit</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul id="account" class="nav navbar-nav navbar-right">
-                <li id="login-text">
-                    <p class="navbar-text">Already have an account?</p>
-                </li>
-                <li id="login" class="dropdown login">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-                    <ul id="login-dp" class="dropdown-menu login">
-                        <li>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    Login via
-                                    <div class="social-buttons">
-                                        <a href="#" class="btn btn-go"><i class="fa fa-google"></i> Google</a>
-                                        <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+    <nav class="navbar navbar-inverse navbar-fixed-top animated slideInDown noselect noselect-recursive">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand glyphicon glyphicon-tree-conifer" href="#">InteractiveOutdoorNetwork</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/index.html">Home</a></li>
+                    <li class="dropdown people">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Stuff<span class="caret"></span></a>
+                        <ul class="dropdown-menu people">
+                            <li><a href="#">Hiking</a></li>
+                            <li><a href="#">Swimming</a></li>
+                            <li><a href="#">Climbing</a></li>
+                            <li><a href="#">FUCK</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown practices">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
+                        <ul class="dropdown-menu practices">
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Literal Shit</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul id="account" class="nav navbar-nav navbar-right">
+                    <li id="login-text">
+                        <p class="navbar-text">Already have an account?</p>
+                    </li>
+                    <li id="login" class="dropdown login">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                        <ul id="login-dp" class="dropdown-menu login">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        Login via
+                                        <div class="social-buttons">
+                                            <a href="#" class="btn btn-go"><i class="fa fa-google"></i> Google</a>
+                                            <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                        </div>
+                                        or
+                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                                <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                <input type="checkbox"> keep me logged-in
+                                                </label>
+                                            </div>
+                                        </form>
                                     </div>
-                                    or
-                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                        <div class="form-group">
-                                            <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                            <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label>
-											 <input type="checkbox"> keep me logged-in
-											 </label>
-                                        </div>
-                                    </form>
+                                    <div class="bottom text-center">
+                                        New here? <a href="#"><b>Join Us</b></a>
+                                    </div>
                                 </div>
-                                <div class="bottom text-center">
-                                    New here? <a href="#"><b>Join Us</b></a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li id="logout-text">
-                    <p id="account-text" class="navbar-text">Welcome, user!</p>
-                    <img id="account-image" src="" />
-                </li>
-                <li id="logout" class="logout" style="display: hidden;">
-                    <a href="#"><b>Logout</b></a>
-                </li>
-            </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="logout-text">
+                        <p id="account-text" class="navbar-text">Welcome, user!</p>
+                        <img id="account-image" src="" />
+                    </li>
+                    <li id="logout" class="logout" style="display: hidden;">
+                        <a href="#"><b>Logout</b></a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
     <!-- End Header -->
-
     <div id="content">
         <div class="title">
             <svg>
-            <defs>
-                <mask id="titlemask" x="0" y="0" width="100%" height="100%">
-                    <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                    <text id="title" x="50%" y="0" dy="1.58em">Interactive Outdoor Network</text>
-                    <text id="subtitle" x="50%" y="0" dy="9.8em">Bringing People Together</text>
-                </mask>
+                <defs>
+                    <mask id="titlemask" x="0" y="0" width="100%" height="100%">
+                        <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                        <text id="title" x="50%" y="0" dy="1.58em">Interactive Outdoor Network</text>
+                        <text id="subtitle" x="50%" y="0" dy="9.8em">Bringing People Together</text>
+                    </mask>
                 </defs>
                 <rect id="titlebase" x="0" y="0" width="100%" height="100%"/>
             </svg>
@@ -136,49 +131,49 @@
         <table>
             <tr>
                 <td>
-                <div id="hiking">
-                    <svg>
-                        <defs>
-                            <mask id="hikingmask" x="0" y="0" width="100%" height="100%">
-                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                                <text id="title" x="50%" y="0" dy="1.58em">Hiking</text>
-                                <text id="subtitle" x="50%" y="0" dy="9.8em">find someone</text>
-                            </mask>
-                        </defs>
-                        <rect id="hikingbase" x="0" y="0" width="100%" height="100%"/>
-                    </svg>
-                </div>
+                    <div id="hiking">
+                        <svg>
+                            <defs>
+                                <mask id="hikingmask" x="0" y="0" width="100%" height="100%">
+                                    <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                                    <text id="title" x="50%" y="0" dy="1.58em">Hiking</text>
+                                    <text id="subtitle" x="50%" y="0" dy="9.8em">find someone</text>
+                                </mask>
+                            </defs>
+                            <rect id="hikingbase" x="0" y="0" width="100%" height="100%"/>
+                        </svg>
+                    </div>
                 </td>
                 <td>
-                <div id="rockclimbing">
-                    <svg>
-                        <defs>
-                            <mask id="rockclimbingmask" x="0" y="0" width="100%" height="100%">
-                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                                <text id="title" x="50%" y="0" dy="1.58em">Climbing</text>
-                                <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
-                            </mask>
-                        </defs>
-                        <rect id="rockclimbingbase" x="0" y="0" width="100%" height="100%"/>
-                    </svg>
-                </div>
+                    <div id="rockclimbing">
+                        <svg>
+                            <defs>
+                                <mask id="rockclimbingmask" x="0" y="0" width="100%" height="100%">
+                                    <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                                    <text id="title" x="50%" y="0" dy="1.58em">Climbing</text>
+                                    <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
+                                </mask>
+                            </defs>
+                            <rect id="rockclimbingbase" x="0" y="0" width="100%" height="100%"/>
+                        </svg>
+                    </div>
                 </td>
                 <td>
-                <div id="swimming">
-                    <svg>
-                        <defs>
-                            <mask id="swimmingmask" x="0" y="0" width="100%" height="100%">
-                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                                <text id="title" x="50%" y="0" dy="1.58em">Swimming</text>
-                                <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
-                            </mask>
-                        </defs>
-                        <rect id="swimmingbase" x="0" y="0" width="100%" height="100%"/>
-                    </svg>  
-                </div>
+                    <div id="swimming">
+                        <svg>
+                            <defs>
+                                <mask id="swimmingmask" x="0" y="0" width="100%" height="100%">
+                                    <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                                    <text id="title" x="50%" y="0" dy="1.58em">Swimming</text>
+                                    <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
+                                </mask>
+                            </defs>
+                            <rect id="swimmingbase" x="0" y="0" width="100%" height="100%"/>
+                        </svg>
+                    </div>
                 </td>
             </tr>
-                <td>
+            <td>
                 <div id="running">
                     <svg>
                         <defs>
@@ -191,8 +186,8 @@
                         <rect id="runningbase" x="0" y="0" width="100%" height="100%"/>
                     </svg>
                 </div>
-                </td>
-                <td>
+            </td>
+            <td>
                 <div id="sports">
                     <svg>
                         <defs>
@@ -205,8 +200,8 @@
                         <rect id="sportsbase" x="0" y="0" width="100%" height="100%"/>
                     </svg>
                 </div>
-                </td>
-                <td>
+            </td>
+            <td>
                 <div id="skiing">
                     <svg>
                         <defs>
@@ -219,12 +214,12 @@
                         <rect id="skiingbase" x="0" y="0" width="100%" height="100%"/>
                     </svg>
                 </div>
-                </td>
+            </td>
         </table>
     </div>
     <div class="separator"></div>
     <div id="geartrade">
-        <h1>Gear Trade</h1> 
+        <h1>Gear Trade</h1>
         <div id="sell">
             <svg>
                 <defs>
@@ -237,10 +232,9 @@
             </svg>
         </div>
         <div id="buy">
-            
         </div>
     </div>
-    <footer>© 2016 by West Coast Design | <a href="#sitemap">Sitemap</a> | <a href="#legal disclaimer">Legal Disclaimer</a></footer>
+    <footer>© 2017 by West Coast Design | <a href="#sitemap">Sitemap</a> | <a href="#legal disclaimer">Legal Disclaimer</a></footer>
     <!-- End Content -->
 </body>
 
