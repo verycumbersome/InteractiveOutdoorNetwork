@@ -1,4 +1,6 @@
 @import "compass/css3";
+@import "signup";
+
 $height-mask: 250px;
 $geartrademenuheight: 100px;
 // To regulate alpha is recommended to use gray scale.
@@ -213,7 +215,7 @@ body {
 }
 
 .navbar-brand {
-  //word-spacing: 0.5em;
+  word-spacing: 0.5em;
   line-height: 0.76;
 }
 
@@ -250,11 +252,6 @@ body {
   margin-bottom: 10px;
 }
 
-.btn-fb {
-  color: #fff;
-  background-color: #3b5998;
-}
-
 .btn-fb:hover {
   color: #fff;
   background-color: #496ebc
@@ -278,11 +275,6 @@ body {
 .btn-tw:hover {
   color: #fff;
   background-color: #59b5fa;
-}
-
-#account-image {
-  margin-top: 8px;
-  height: 32px;
 }
 
 @media(max-width: 768px) {

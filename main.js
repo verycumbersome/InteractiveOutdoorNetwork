@@ -4,6 +4,7 @@ function createAccount(email, password) {
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function(user) {
             console.log(user.uid)
+            document.location.href = "/";
         })
         .catch(function(error) {
             // Handle Errors here.
@@ -11,8 +12,23 @@ function createAccount(email, password) {
             var errorMessage = error.message;
             console.log(errorCode)
             console.log(errorMessage)
+            alert(errorMessage)
             // ...
         });
+}
+
+function createAccountForm() {
+    var email = $("#email").val();
+    var password = $("#password").val();
+    var passwordRepeat = $("#password-rpt").val()
+    
+    console.log(password, passwordRepeat)
+    if (!email) return alert("No email provided")
+    if (!password) return alert("No password provided")
+    if (password === passwordRepeat) createAccount(email, password);
+    else alert("Passwords do not match")
+    
+    return false;
 }
 
 function signIn(email, password) {
@@ -26,9 +42,10 @@ function signIn(email, password) {
             var errorMessage = error.message;
             console.log(errorCode)
             console.log(errorMessage)
+            alert(errorMessage)
         })
 }
-    
+
 $(document).ready(function() {
     // Initialize Firebase
     var config = {
@@ -39,6 +56,7 @@ $(document).ready(function() {
         storageBucket: "interactive-outdoors.appspot.com",
         messagingSenderId: "434825884803"
     };
+    var userRef = null;
 
     firebase.initializeApp(config);
     
@@ -94,8 +112,10 @@ $(document).ready(function() {
     
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-            $("#login").hide();
-            $("#login-text").hide();
+            userRef = firebase.database().ref('users/' + user.uid);
+            
+            $(".login").hide();
+            $(".login-text").hide();
             
             $("#logout").show();
             $("#logout-text").show();
@@ -103,10 +123,13 @@ $(document).ready(function() {
             $("#account-text").text("Welcome, " + user.displayName + "!");
             $("#account-image").attr("src", user.photoURL);
 
-            firebase.database().ref('/').on('value', function(all) {
-                console.log(all.val())
-                // firebase.database().ref('/blah').set(Math.random());
+            userRef.on('value', function(snap) {
+                console.log(snap.val())
             })
+            
+            userRef.child('/lastVisit').set((new Date()).toLocaleString());
+            userRef.child('/name').set(user.displayName);
+            userRef.child('/photo').set(user.photoURL);
         } else {
             $("#login").show();
             $("#login-text").show();
