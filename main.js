@@ -133,8 +133,13 @@ $(document).ready(function() {
             
             $("#account-text").text("Welcome, " + user.displayName + "!");
             $(".account-image").show();
-            $(".account-image").attr("src", user.photoURL);
-
+            if (!user.photoURL) {
+                $(".account-image").attr("src", "https://cdn2.iconfinder.com/data/icons/metro-ui-dock/512/User_No-Frame.png");
+            }
+            else {
+                $(".account-image").attr("src", user.photoURL);
+            }
+            
             userRef.on('value', function(snap) {
                 console.log(snap.val())
             })

@@ -325,7 +325,7 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
 }
 /* line 295, ../sass/main.scss */
 .account-image {
-  padding-top: 2px;
+  top: 7px;
   height: 35px;
   border-radius: 20px;
 }
