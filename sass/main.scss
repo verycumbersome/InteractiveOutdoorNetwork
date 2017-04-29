@@ -219,6 +219,10 @@ body {
   line-height: 0.76;
 }
 
+input[type=text], input[type=password], input[type=email], input[type=tel] {
+    height: 28px !important;
+}
+
 #login-dp {
   min-width: 250px;
   padding: 14px 14px 0;
@@ -286,6 +290,12 @@ body {
     background-color: inherit;
     border-top: 0 none;
   }
+}
+
+.account-image {
+  padding-top: 2px;
+  height: 35px;
+  border-radius: 20px;
 }
 
 .title {

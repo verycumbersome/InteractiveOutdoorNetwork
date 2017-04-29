@@ -46,6 +46,17 @@ function signIn(email, password) {
         })
 }
 
+function loginForm() {
+    var email = $("#email").val();
+    var password = $("#password").val();
+
+    if (!email) return alert("No email provided")
+    if (!password) return alert("No password provided")
+    if (email) signIn(email, password);
+    
+    return false;
+}
+
 $(document).ready(function() {
     // Initialize Firebase
     var config = {
@@ -117,11 +128,12 @@ $(document).ready(function() {
             $(".login").hide();
             $(".login-text").hide();
             
-            $("#logout").show();
-            $("#logout-text").show();
+            $(".logout").show();
+            $(".logout-text").show();
             
             $("#account-text").text("Welcome, " + user.displayName + "!");
-            $("#account-image").attr("src", user.photoURL);
+            $(".account-image").show();
+            $(".account-image").attr("src", user.photoURL);
 
             userRef.on('value', function(snap) {
                 console.log(snap.val())
@@ -131,11 +143,13 @@ $(document).ready(function() {
             userRef.child('/name').set(user.displayName);
             userRef.child('/photo').set(user.photoURL);
         } else {
-            $("#login").show();
-            $("#login-text").show();
+            $(".login").show();
+            $(".login-text").show();
             
-            $("#logout").hide();
-            $("#logout-text").hide();
+            $(".logout").hide();
+            $(".logout-text").hide();
+            
+            $(".account-image").hide();
         }
     })
     
