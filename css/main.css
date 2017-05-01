@@ -1,15 +1,14 @@
 /* line 6, ../sass/_signup.scss */
 input[type=text], input[type=password] {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  height: 30px !important;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
   color: black;
 }
 
-/* line 16, ../sass/_signup.scss */
+/* line 17, ../sass/_signup.scss */
 button {
   background-color: #4CAF50;
   color: white;
@@ -20,34 +19,34 @@ button {
   width: 100%;
 }
 
-/* line 26, ../sass/_signup.scss */
+/* line 27, ../sass/_signup.scss */
 button:hover {
   background-color: #2d682f;
 }
 
-/* line 30, ../sass/_signup.scss */
+/* line 31, ../sass/_signup.scss */
 .cancelbtn:hover {
   background-color: black;
 }
 
-/* line 34, ../sass/_signup.scss */
+/* line 35, ../sass/_signup.scss */
 .cancelbtn {
   padding: 14px 20px;
   background-color: #333;
 }
 
-/* line 39, ../sass/_signup.scss */
+/* line 40, ../sass/_signup.scss */
 .cancelbtn, .signupbtn {
   float: left;
   width: 50%;
 }
 
-/* line 44, ../sass/_signup.scss */
+/* line 45, ../sass/_signup.scss */
 .container {
   padding: 16px;
 }
 
-/* line 48, ../sass/_signup.scss */
+/* line 49, ../sass/_signup.scss */
 .clearfix::after {
   content: "";
   clear: both;
@@ -55,7 +54,7 @@ button:hover {
 }
 
 @media screen and (max-width: 300px) {
-  /* line 55, ../sass/_signup.scss */
+  /* line 56, ../sass/_signup.scss */
   .cancelbtn, .signupbtn {
     width: 100%;
   }
