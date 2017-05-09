@@ -47,6 +47,11 @@ body {
   transition: $time;
 }
 
+@mixin heightAndWidth($height, $width) {
+  height: $height;
+  width: $width;
+}
+
 @-webkit-keyframes slideInDown {
   from {
     -webkit-transform: translate3d(0, -100%, 0);
@@ -497,29 +502,29 @@ svg {
   width: 100%;
   margin: auto;
   background-color: #333;
-  // border: 3px solid purple;
+  display: inline-block;
 }
 
-#activities table{
+.imgrow {
   width: 100%;
   margin: auto;
+  display: inline-block;
 }
 
-#activities th {
-  width: 100%;
-  font-size: 5vw;
-  text-align: center;
-}
-
-#activities tr {
-  padding: 30px;
-  
-}
-
-#activities td div{
+.activityimage {
+  display: block;
+  float: left;
   margin: auto;
-  width: 33vw;
-  height: 33vw;
+  // width: 33.333vw;
+  // height: 33.333vw;
+  @include heightAndWidth(400px, 400px);
+}
+
+.activityimage a {
+  display: block;
+  height: 100%;
+  border: 3px solid green;
+  text-decoration: none;
 }
 
 #hiking {
@@ -556,7 +561,7 @@ svg {
   padding-bottom: 200px;
   position: relative;
   width: 100%;
-  background: url("/images/forest.jpg");
+  @include backgroundImage(url("https://static.pexels.com/photos/48694/pexels-photo-48694.jpeg"));
   background-attachment: fixed;
   display: inline-block;
 }
