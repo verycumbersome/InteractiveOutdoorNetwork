@@ -125,6 +125,8 @@ $(document).ready(function() {
         if (user) {
             userRef = firebase.database().ref('users/' + user.uid);
             
+            userRef.child("/IopStatus").set(user.photoURL);
+            
             $(".login").hide();
             $(".login-text").hide();
             
@@ -156,7 +158,7 @@ $(document).ready(function() {
             
             $(".account-image").hide();
         }
-    })
+    });
     
     $("html,body").animate({scrollTop: 0}, 0);
     
@@ -224,6 +226,7 @@ $(document).ready(function() {
     }, function() {
         $(".dropdown-menu.login").stop().slideUp(menuSlideSpeed);
     });
+
     
     //Hiking tile hover SVG
     $("#hiking").hover(function() {

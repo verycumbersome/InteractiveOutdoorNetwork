@@ -47,9 +47,20 @@ body {
   transition: $time;
 }
 
-@mixin heightAndWidth($height, $width) {
-  height: $height;
-  width: $width;
+@mixin maxHeightAndWidth($maxheight, $minheight, $maxwidth, $minwidth) {
+  max-height: $maxheight;
+  min-height: $minheight;
+  max-width: $maxwidth;
+  min-width: $minwidth;
+}
+
+@mixin blur() {
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
+    opacity: 0.4;
 }
 
 @-webkit-keyframes slideInDown {
@@ -501,7 +512,7 @@ svg {
   color: white;
   width: 100%;
   margin: auto;
-  background-color: #333;
+  background-color: black;
   display: inline-block;
 }
 
@@ -513,42 +524,44 @@ svg {
 
 .activityimage {
   display: block;
-  float: left;
+  display: inline-block;
   margin: auto;
-  // width: 33.333vw;
-  // height: 33.333vw;
-  @include heightAndWidth(400px, 400px);
+  min-width: 600px;
+  max-width: 50%;
+  height: 600px;
+
+  // @include maxHeightAndWidth(100%, 300px, 400px, 300px);
 }
 
 .activityimage a {
   display: block;
   height: 100%;
-  border: 3px solid green;
+  // border: 3px solid green;
   text-decoration: none;
 }
 
 #hiking {
-  @include backgroundImage(url("/images/hiking.jpg"));
+  @include backgroundImage(url("/InteractiveOutdoorNetwork/images/hiking.jpg"));
 }
 
 #rockclimbing {
-  @include backgroundImage(url("/images/rockclimbing.jpg"));
+  @include backgroundImage(url("/InteractiveOutdoorNetwork/images/rockclimbing.jpg"));
 }
 
 #running {
-  @include backgroundImage(url("/images/running.jpg"));
+  @include backgroundImage(url("/InteractiveOutdoorNetwork/images/running.jpg"));
 }
 
 #sports {
-  @include backgroundImage(url("/images/sports.jpg"));
+  @include backgroundImage(url("/InteractiveOutdoorNetwork/images/sports.jpg"));
 }
 
 #swimming {
-  @include backgroundImage(url("/images/swimming.jpg"));
+  @include backgroundImage(url("/InteractiveOutdoorNetwork/images/swimming.jpg"));
 }
 
 #skiing {
-  @include backgroundImage(url("/images/skiing.jpg"));
+  @include backgroundImage(url("/InteractiveOutdoorNetwork/images/skiing.jpg"));
 }
 
 #geartrade {
