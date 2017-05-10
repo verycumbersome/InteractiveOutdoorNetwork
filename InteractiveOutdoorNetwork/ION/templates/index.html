@@ -1,238 +1,119 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+{% extends "base.html" %}
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="google-site-verification" content="q5pMYCKHXXdw-TOgAO4i9PMiwcodukNgV0aIPpm_S6Q" />
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <link href="../assets/css/main.css" rel="stylesheet" type="text/css" media="screen" />
-    <!-- <link id="size-stylesheet" rel="stylesheet" type="text/css" href="css/mobile.css" media="screen" /> -->
-
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="http://www.free-icons-download.net/images/abstract-tree-icon-69964.png">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
-    <!--<script type="text/javascript" src="javascript/jquery-3.2.0.min.js"></script>-->
-    <script id="javascript" type="text/javascript" src="../assets/javascript/main.js"></script>
-</head>
-
-<body>
-<nav class="navbar navbar-inverse navbar-fixed-top animated slideInDown">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-            <a class="navbar-brand glyphicon glyphicon-tree-conifer" href="#">InteractiveOutdoorNetwork</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/index.html">Home</a></li>
-                <li class="dropdown people">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Activities<span class="caret"></span></a>
-                    <ul class="dropdown-menu people">
-                        <li><a href="#">Hiking</a></li>
-                        <li><a href="#">Swimming</a></li>
-                        <li><a href="#">Climbing</a></li>
-                        <li><a href="#">Sports</a></li>
-                        <li><a class="dropdown-toggle activities" data-toggle="dropdown" href="#">Water Activities<span class="caret"></span></a>
-                            <ul class="dropdown-menu activities">
-                                <li><a href="#">Swimming</a></li>
-                                <li><a href="#">Rafting</a></li>
-                                <li><a href="#">Kayaking</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown practices">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gear Trade<span class="caret"></span></a>
-                    <ul class="dropdown-menu practices">
-                        <li><a href="#">Buy</a></li>
-                        <li><a href="#">Sell</a></li>
-                    </ul>
-                </li>
-                <li class="active"><a href="/index.html">IOP Timeline Archive</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <p class="navbar-text login-text">Already have an account?</p>
-                </li>
-                <li class="dropdown login">
-                    <a href="#" class="dropdown-toggle"><b>Login</b> <span class="caret"></span></a>
-                    <ul id="login-dp" class="dropdown-menu login">
-                        <li>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    Login via
-                                    <div class="social-buttons">
-                                        <a href="#" class="btn btn-go"><i class="fa fa-google"></i> Google</a>
-                                        <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-                                    </div>
-                                    or
-                                    <form class="form" role="form" method="post" onsubmit="return loginForm()" accept-charset="UTF-8" id="login-nav">
-                                        <div class="form-group">
-                                            <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                            <input name="email" type="email" class="form-control" id="email" placeholder="Email address" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                            <input name="password" type="password" class="form-control" id="password" placeholder="Password" required>
-                                            <div class="help-block text-right"><a href="">Forgot password ?</a></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label>
-											 <input type="checkbox"> keep me logged-in
-											 </label>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="bottom text-center">
-                                    New here? <a href="/pages/signup.html"><b>Join Us</b></a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <img class="dropdown account-image" href="#" src="">
-                <li class="dropdown logout">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Logout</b> <span class="caret"></span></a>
-                </li>
-            </ul>
+{% block content %}
+<div id="content">
+    <div class="title">
+        <svg>
+        <defs>
+            <mask id="titlemask" x="0" y="0" width="100%" height="100%">
+                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                <text id="title" x="50%" y="0" dy="1.58em">Interactive Outdoor Network</text>
+                <text id="subtitle" x="50%" y="0" dy="9.8em">Bringing People Together</text>
+            </mask>
+            </defs>
+            <rect id="titlebase" x="0" y="0" width="100%" height="100%"/>
+        </svg>
+    </div>
+    <div id="autoscroll" class="animated slideInUp noselect noselect-recursive">
+        <div id=scrollbox>
+            <a id="scrolldown" class="fa fa-square-o" href="#footer"></a>
+            <a id="scrolldownarrow" class="glyphicon glyphicon-chevron-down"></a>
         </div>
     </div>
-</nav>
-    <!-- End Header -->
-
-    <div id="content">
-        <div class="title">
-            <svg>
-            <defs>
-                <mask id="titlemask" x="0" y="0" width="100%" height="100%">
-                    <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                    <text id="title" x="50%" y="0" dy="1.58em">Interactive Outdoor Network</text>
-                    <text id="subtitle" x="50%" y="0" dy="9.8em">Bringing People Together</text>
-                </mask>
-                </defs>
-                <rect id="titlebase" x="0" y="0" width="100%" height="100%"/>
-            </svg>
-        </div>
-        <div id="autoscroll" class="animated slideInUp noselect noselect-recursive">
-            <div id=scrollbox>
-                <a id="scrolldown" class="fa fa-square-o" href="#footer"></a>
-                <a id="scrolldownarrow" class="glyphicon glyphicon-chevron-down"></a>
+</div>
+<div id="activities">
+            <div id="hiking" class="activityimage">
+                <a href=/pages/activities/hiking.html>
+                <svg>
+                    <defs>
+                        <mask id="hikingmask" x="0" y="0" width="100%" height="100%">
+                            <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                            <text id="title" x="50%" y="0" dy="1.58em">Hiking</text>
+                            <text id="subtitle" x="50%" y="0" dy="9.8em">find someone</text>
+                        </mask>
+                    </defs>
+                    <rect id="hikingbase" x="0" y="0" width="100%" height="100%"/>
+                </svg>
             </div>
-        </div>
+            <div id="rockclimbing" class="activityimage">
+                <!--<a href=/pages/activities/hiking.html>-->
+                <svg>
+                    <defs>
+                        <mask id="rockclimbingmask" x="0" y="0" width="100%" height="100%">
+                            <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                            <text id="title" x="50%" y="0" dy="1.58em">Climbing</text>
+                            <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
+                        </mask>
+                    </defs>
+                    <rect id="rockclimbingbase" x="0" y="0" width="100%" height="100%"/>
+                </svg>
+            </div>
+            <div id="swimming" class="activityimage">
+                <!--<a href=/pages/activities/hiking.html>-->
+                <svg>
+                    <defs>
+                        <mask id="swimmingmask" x="0" y="0" width="100%" height="100%">
+                            <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                            <text id="title" x="50%" y="0" dy="1.58em">Swimming</text>
+                            <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
+                        </mask>
+                    </defs>
+                    <rect id="swimmingbase" x="0" y="0" width="100%" height="100%"/>
+                </svg>
+            </div>
+            <div id="running" class="activityimage">
+                <svg>
+                    <defs>
+                        <mask id="runningmask" x="0" y="0" width="100%" height="100%">
+                            <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                            <text id="title" x="50%" y="0" dy="1.58em">Running</text>
+                            <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
+                        </mask>
+                    </defs>
+                    <rect id="runningbase" x="0" y="0" width="100%" height="100%"/>
+                </svg>
+            </div>
+            <div id="sports" class="activityimage">
+                <svg>
+                    <defs>
+                        <mask id="sportsmask" x="0" y="0" width="100%" height="100%">
+                            <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                            <text id="title" x="50%" y="0" dy="1.58em">Sports</text>
+                            <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
+                        </mask>
+                    </defs>
+                    <rect id="sportsbase" x="0" y="0" width="100%" height="100%"/>
+                </svg>
+            </div>
+            <div id="skiing" class="activityimage">
+                <svg>
+                    <defs>
+                        <mask id="skiingmask" x="0" y="0" width="100%" height="100%">
+                            <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                            <text id="title" x="50%" y="0" dy="1.58em">Skiing</text>
+                            <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
+                        </mask>
+                    </defs>
+                    <rect id="skiingbase" x="0" y="0" width="100%" height="100%"/>
+                </svg>
+            </div>
+</div>
+<div class="separator"></div>
+<div id="geartrade">
+    <h1>Gear Trade</h1>
+    <div id="sell">
+        <svg>
+            <defs>
+                <mask id="sellmask" x="0" y="0" width="100%" height="100%">
+                    <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                    <text id="title" x="50%" y="0" dy="1.58em">Sell</text>
+                </mask>
+            </defs>
+            <rect id="sellbase" x="0" y="0" width="100%" height="100%"/>
+        </svg>
     </div>
-    <div id="activities">
-                <div id="hiking" class="activityimage">
-                    <a href=/pages/activities/hiking.html>
-                    <svg>
-                        <defs>
-                            <mask id="hikingmask" x="0" y="0" width="100%" height="100%">
-                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                                <text id="title" x="50%" y="0" dy="1.58em">Hiking</text>
-                                <text id="subtitle" x="50%" y="0" dy="9.8em">find someone</text>
-                            </mask>
-                        </defs>
-                        <rect id="hikingbase" x="0" y="0" width="100%" height="100%"/>
-                    </svg>
-                </div>
-                <div id="rockclimbing" class="activityimage">
-                    <!--<a href=/pages/activities/hiking.html>-->
-                    <svg>
-                        <defs>
-                            <mask id="rockclimbingmask" x="0" y="0" width="100%" height="100%">
-                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                                <text id="title" x="50%" y="0" dy="1.58em">Climbing</text>
-                                <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
-                            </mask>
-                        </defs>
-                        <rect id="rockclimbingbase" x="0" y="0" width="100%" height="100%"/>
-                    </svg>
-                </div>
-                <div id="swimming" class="activityimage">
-                    <!--<a href=/pages/activities/hiking.html>-->
-                    <svg>
-                        <defs>
-                            <mask id="swimmingmask" x="0" y="0" width="100%" height="100%">
-                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                                <text id="title" x="50%" y="0" dy="1.58em">Swimming</text>
-                                <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
-                            </mask>
-                        </defs>
-                        <rect id="swimmingbase" x="0" y="0" width="100%" height="100%"/>
-                    </svg>
-                </div>
-                <div id="running" class="activityimage">
-                    <svg>
-                        <defs>
-                            <mask id="runningmask" x="0" y="0" width="100%" height="100%">
-                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                                <text id="title" x="50%" y="0" dy="1.58em">Running</text>
-                                <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
-                            </mask>
-                        </defs>
-                        <rect id="runningbase" x="0" y="0" width="100%" height="100%"/>
-                    </svg>
-                </div>
-                <div id="sports" class="activityimage">
-                    <svg>
-                        <defs>
-                            <mask id="sportsmask" x="0" y="0" width="100%" height="100%">
-                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                                <text id="title" x="50%" y="0" dy="1.58em">Sports</text>
-                                <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
-                            </mask>
-                        </defs>
-                        <rect id="sportsbase" x="0" y="0" width="100%" height="100%"/>
-                    </svg>
-                </div>
-                <div id="skiing" class="activityimage">
-                    <svg>
-                        <defs>
-                            <mask id="skiingmask" x="0" y="0" width="100%" height="100%">
-                                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                                <text id="title" x="50%" y="0" dy="1.58em">Skiing</text>
-                                <text id="subtitle" x="50%" y="0" dy="9.8em">Find Someone</text>
-                            </mask>
-                        </defs>
-                        <rect id="skiingbase" x="0" y="0" width="100%" height="100%"/>
-                    </svg>
-                </div>
-    </div>
-    <div class="separator"></div>
-    <div id="geartrade">
-        <h1>Gear Trade</h1>
-        <div id="sell">
-            <svg>
-                <defs>
-                    <mask id="sellmask" x="0" y="0" width="100%" height="100%">
-                        <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                        <text id="title" x="50%" y="0" dy="1.58em">Sell</text>
-                    </mask>
-                </defs>
-                <rect id="sellbase" x="0" y="0" width="100%" height="100%"/>
-            </svg>
-        </div>
-        <div id="buy">
+    <div id="buy">
 
-        </div>
     </div>
-    <footer>© 2016 South Valley | <a href="#sitemap">Sitemap</a> | <a href="#legal disclaimer">Legal Disclaimer</a></footer>
-    <!-- End Content -->
-</body>
-
-</html>
+</div>
+{% endblock content %}

@@ -2,7 +2,7 @@ from django.conf.urls import url
 from ION import views
 
 urlpatterns = [
-    url(r'^$', views.HomePageView.as_view()),
+    url(r'^$', views.Main.as_view()),
 ]
 # from django.conf.urls import include, url
 # from django.contrib import admin
