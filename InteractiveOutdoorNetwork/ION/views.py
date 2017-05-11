@@ -9,7 +9,7 @@ from django.template import loader
 from django.utils import timezone
 
 # from .forms import PostForm
-from .models import Post
+from .models import Post, GearPost
 
 class Main(TemplateView):
     def get(self, request, **kwargs):
@@ -21,7 +21,13 @@ def timeline(request):
 def blog(request):
     posts = Post.objects.order_by('created_date')
     return render(request, 'blog.html', {
-    'posts':posts
+        'posts':posts
+    })
+
+def geartrade(request):
+    gearposts = GearPost.objects.order_by('created_date')
+    return render(request, 'geartrade.html', {
+        'gearposts':gearposts
     })
 
 def login(request):

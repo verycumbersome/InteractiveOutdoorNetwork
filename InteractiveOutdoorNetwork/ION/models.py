@@ -8,7 +8,7 @@ from django.utils import timezone
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
-    text = models.TextField()
+    text = models.TextField(max_length=1000)
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
@@ -20,3 +20,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class GearPost(models.Model):
+    author = models.ForeignKey('auth.User')
+    title = models.CharField(max_length=200)
+    description = models.TextField(max_length=1000)
+    created_date = models.DateTimeField(default=timezone.now)
