@@ -62,7 +62,7 @@ button:hover {
 /* line 3, ../sass/_blog.scss */
 .blogpost {
   background-color: rgba(0, 0, 0, 0.6);
-  width: 70%;
+  width: 80%;
   margin: auto;
   color: white;
   border-radius: 4px;
@@ -70,9 +70,10 @@ button:hover {
   font-weight: 300;
   line-spacing: -2px;
   padding-bottom: 30px;
+  padding: 15px;
 }
 
-/* line 15, ../sass/_blog.scss */
+/* line 16, ../sass/_blog.scss */
 .blogpost h1 {
   font-weight: 600;
   font-size: 3em;
