@@ -372,14 +372,15 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   overflow: hidden;
   width: 100%;
   color: white;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-/* line 342, ../sass/main.scss */
+/* line 343, ../sass/main.scss */
 #content h2 {
   text-align: center;
   font-size: 40px;
@@ -390,79 +391,79 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   /*background-color: rgba(50, 50, 50, 0.7);*/
 }
 
-/* line 352, ../sass/main.scss */
+/* line 353, ../sass/main.scss */
 svg {
   width: 100%;
   height: inherit;
 }
-/* line 355, ../sass/main.scss */
+/* line 356, ../sass/main.scss */
 svg text {
   text-anchor: middle;
 }
-/* line 358, ../sass/main.scss */
+/* line 359, ../sass/main.scss */
 svg #alpha {
   fill: #999999;
 }
-/* line 362, ../sass/main.scss */
+/* line 363, ../sass/main.scss */
 svg #title {
   letter-spacing: -2px;
   font-size: 6em;
   font-weight: 800;
 }
-/* line 367, ../sass/main.scss */
+/* line 368, ../sass/main.scss */
 svg #subtitle {
   letter-spacing: 10px;
   font-size: 1.2em;
   font-weight: 300;
   text-transform: uppercase;
 }
-/* line 373, ../sass/main.scss */
+/* line 374, ../sass/main.scss */
 svg #titlebase {
   fill: black;
   mask: url(#titlemask);
 }
-/* line 377, ../sass/main.scss */
+/* line 378, ../sass/main.scss */
 svg #hikingbase {
   fill: black;
   mask: url(#hikingmask);
 }
-/* line 381, ../sass/main.scss */
+/* line 382, ../sass/main.scss */
 svg #swimmingbase {
   fill: black;
   mask: url(#swimmingmask);
 }
-/* line 385, ../sass/main.scss */
+/* line 386, ../sass/main.scss */
 svg #runningbase {
   fill: black;
   mask: url(#runningmask);
 }
-/* line 389, ../sass/main.scss */
+/* line 390, ../sass/main.scss */
 svg #sportsbase {
   fill: black;
   mask: url(#sportsmask);
 }
-/* line 393, ../sass/main.scss */
+/* line 394, ../sass/main.scss */
 svg #rockclimbingbase {
   fill: black;
   mask: url(#rockclimbingmask);
 }
-/* line 397, ../sass/main.scss */
+/* line 398, ../sass/main.scss */
 svg #skiingbase {
   fill: black;
   mask: url(#skiingmask);
 }
-/* line 401, ../sass/main.scss */
+/* line 402, ../sass/main.scss */
 svg #sellbase {
   fill: black;
   mask: url(#sellmask);
 }
-/* line 406, ../sass/main.scss */
+/* line 407, ../sass/main.scss */
 svg #buybase {
   fill: black;
   mask: url(#buymask);
 }
 
-/* line 413, ../sass/main.scss */
+/* line 414, ../sass/main.scss */
 .contentbody {
   margin-top: 0;
   background-color: rgba(200, 200, 200, 0.7);
@@ -471,7 +472,7 @@ svg #buybase {
   height: auto;
 }
 
-/* line 421, ../sass/main.scss */
+/* line 422, ../sass/main.scss */
 .contentbody p {
   line-height: 30px;
   font-size: 16px;
@@ -484,7 +485,7 @@ svg #buybase {
   background-color: rgba(0, 53, 95, 0.5);
 }
 
-/* line 433, ../sass/main.scss */
+/* line 434, ../sass/main.scss */
 .header {
   text-align: center;
   color: white;
@@ -493,7 +494,7 @@ svg #buybase {
   font-weight: 400;
 }
 
-/* line 441, ../sass/main.scss */
+/* line 442, ../sass/main.scss */
 #slidein {
   width: 100%;
   padding-bottom: 30px;
@@ -502,7 +503,7 @@ svg #buybase {
   /*border: 3px solid green;*/
 }
 
-/* line 449, ../sass/main.scss */
+/* line 450, ../sass/main.scss */
 #slidein h1 {
   color: white;
   font-size: 70px;
@@ -510,7 +511,7 @@ svg #buybase {
   font-weight: 400;
 }
 
-/* line 456, ../sass/main.scss */
+/* line 457, ../sass/main.scss */
 #autoscroll {
   /*padding-top: 400px;*/
   width: 100%;
@@ -520,7 +521,7 @@ svg #buybase {
   position: absolute;
 }
 
-/* line 465, ../sass/main.scss */
+/* line 466, ../sass/main.scss */
 #autoscroll a {
   /*font-size: 4em;*/
   bottom: 0;
@@ -528,17 +529,17 @@ svg #buybase {
   text-decoration: none;
 }
 
-/* line 472, ../sass/main.scss */
+/* line 473, ../sass/main.scss */
 #scrollbox {
   top: 0;
 }
 
-/* line 476, ../sass/main.scss */
+/* line 477, ../sass/main.scss */
 #scrollbox .glyphicon {
   font-size: 25px;
 }
 
-/* line 480, ../sass/main.scss */
+/* line 481, ../sass/main.scss */
 #scrolldown {
   /*position: absolute;*/
   font-size: 4em;
@@ -547,13 +548,13 @@ svg #buybase {
   margin-bottom: -14px;
 }
 
-/* line 488, ../sass/main.scss */
+/* line 489, ../sass/main.scss */
 #scrolldownarrow {
   z-index: -1;
   display: block;
 }
 
-/* line 493, ../sass/main.scss */
+/* line 494, ../sass/main.scss */
 .separator {
   margin-top: 0;
   background-color: #001400;
@@ -564,14 +565,14 @@ svg #buybase {
   padding: 10px 0 10px 0;
 }
 
-/* line 503, ../sass/main.scss */
+/* line 504, ../sass/main.scss */
 .separator p {
   font-size: 18px;
   width: 80%;
   margin: auto;
 }
 
-/* line 510, ../sass/main.scss */
+/* line 511, ../sass/main.scss */
 #activities {
   text-align: center;
   color: white;
@@ -581,14 +582,14 @@ svg #buybase {
   display: inline-block;
 }
 
-/* line 519, ../sass/main.scss */
+/* line 520, ../sass/main.scss */
 .imgrow {
   width: 100%;
   margin: auto;
   display: inline-block;
 }
 
-/* line 525, ../sass/main.scss */
+/* line 526, ../sass/main.scss */
 .activityimage {
   display: block;
   display: inline-block;
@@ -598,14 +599,14 @@ svg #buybase {
   height: 400px;
 }
 
-/* line 536, ../sass/main.scss */
+/* line 537, ../sass/main.scss */
 .activityimage a {
   display: block;
   height: 100%;
   text-decoration: none;
 }
 
-/* line 543, ../sass/main.scss */
+/* line 544, ../sass/main.scss */
 #hiking {
   background-image: url("../images/hiking.jpg");
   background-size: cover;
@@ -613,7 +614,7 @@ svg #buybase {
   background-position: center center;
 }
 
-/* line 547, ../sass/main.scss */
+/* line 548, ../sass/main.scss */
 #rockclimbing {
   background-image: url("../images/rockclimbing.jpg");
   background-size: cover;
@@ -621,7 +622,7 @@ svg #buybase {
   background-position: center center;
 }
 
-/* line 551, ../sass/main.scss */
+/* line 552, ../sass/main.scss */
 #running {
   background-image: url("../images/running.jpg");
   background-size: cover;
@@ -629,7 +630,7 @@ svg #buybase {
   background-position: center center;
 }
 
-/* line 555, ../sass/main.scss */
+/* line 556, ../sass/main.scss */
 #sports {
   background-image: url("../images/sports.jpg");
   background-size: cover;
@@ -637,7 +638,7 @@ svg #buybase {
   background-position: center center;
 }
 
-/* line 559, ../sass/main.scss */
+/* line 560, ../sass/main.scss */
 #swimming {
   background-image: url("../images/swimming.jpg");
   background-size: cover;
@@ -645,7 +646,7 @@ svg #buybase {
   background-position: center center;
 }
 
-/* line 563, ../sass/main.scss */
+/* line 564, ../sass/main.scss */
 #skiing {
   background-image: url("../images/skiing.jpg");
   background-size: cover;
@@ -653,7 +654,7 @@ svg #buybase {
   background-position: center center;
 }
 
-/* line 567, ../sass/main.scss */
+/* line 568, ../sass/main.scss */
 #geartrade {
   color: #fff;
   margin: auto;
@@ -670,35 +671,35 @@ svg #buybase {
   display: inline-block;
 }
 
-/* line 582, ../sass/main.scss */
+/* line 583, ../sass/main.scss */
 #geartrade h1 {
   letter-spacing: -2px;
   font-size: 6em;
   font-weight: 600;
 }
 
-/* line 588, ../sass/main.scss */
+/* line 589, ../sass/main.scss */
 #sell {
   float: left;
   height: 100px;
   width: 50%;
 }
 
-/* line 594, ../sass/main.scss */
+/* line 595, ../sass/main.scss */
 #buy {
   float: left;
   height: 100px;
   width: 50%;
 }
 
-/* line 600, ../sass/main.scss */
+/* line 601, ../sass/main.scss */
 #missionstatement {
   width: 80%;
   background-color: rgba(13, 59, 2, 0.5);
   margin: auto;
 }
 
-/* line 606, ../sass/main.scss */
+/* line 607, ../sass/main.scss */
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -708,7 +709,7 @@ svg #buybase {
   user-select: none;
 }
 
-/* line 615, ../sass/main.scss */
+/* line 616, ../sass/main.scss */
 .noselect-recursive *,
 .noselect-recursive * *,
 .noselect-recursive {
@@ -720,7 +721,7 @@ svg #buybase {
   user-select: none;
 }
 
-/* line 626, ../sass/main.scss */
+/* line 627, ../sass/main.scss */
 footer {
   color: #fff;
   text-align: center;
@@ -732,7 +733,7 @@ footer {
   background-color: #001400;
 }
 
-/* line 637, ../sass/main.scss */
+/* line 638, ../sass/main.scss */
 footer a {
   display: inline;
   color: white;
@@ -744,7 +745,7 @@ footer a {
   transition: 0.25s;
 }
 
-/* line 644, ../sass/main.scss */
+/* line 645, ../sass/main.scss */
 footer a:hover {
   color: #228B22;
 }
