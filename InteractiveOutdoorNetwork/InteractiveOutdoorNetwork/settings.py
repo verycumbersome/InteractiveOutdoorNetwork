@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
+    # 'django.contrib.sites',
     'ION',
 ]
 
@@ -73,6 +73,15 @@ WSGI_APPLICATION = 'InteractiveOutdoorNetwork.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+
+CONFIG = {
+    'apiKey': 'AIzaSyDzYuYf0cuMhvhsNx2pssoTi97c9R1vrXk',
+    'authDomain': 'interactive-outdoors.firebaseapp.com',
+    'databaseURL': 'https://interactive-outdoors.firebaseio.com',
+    'projectId': 'interactive-outdoors',
+    'storageBucket': 'interactive-outdoors.appspot.com',
+    'messagingSenderId': '434825884803'
+}
 
 DATABASES = {
     'default': {
