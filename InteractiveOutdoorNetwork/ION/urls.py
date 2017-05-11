@@ -3,6 +3,7 @@ from ION import views
 
 urlpatterns = [
     url(r'^$', views.Main.as_view()),
+    url(r'^timeline/', views.timeline)
 ]
 # from django.conf.urls import include, url
 # from django.contrib import admin

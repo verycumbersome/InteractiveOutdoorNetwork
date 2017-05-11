@@ -10,6 +10,9 @@ class Main(TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'index.html', context=None)
 
-    def index(request):
-        template = loader.get_template('base.html')
-        return HttpResponse(template.render())
+    # def index(request):
+    #     template = loader.get_template('base.html')
+    #     return HttpResponse(template.render())
+
+def timeline(request):
+    return render(request, 'timeline.html', {})

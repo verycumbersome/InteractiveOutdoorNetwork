@@ -317,7 +317,6 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
 .title {
   position: fixed;
   top: 100px;
-  // left: 0;
   margin: auto;
   width: 100%;
   height: $height-mask;
@@ -526,9 +525,9 @@ svg {
   display: block;
   display: inline-block;
   margin: auto;
-  min-width: 600px;
-  max-width: 50%;
-  height: 600px;
+  width: 33%;
+  min-width: 400px;
+  height: 400px;
 
   // @include maxHeightAndWidth(100%, 300px, 400px, 300px);
 }
