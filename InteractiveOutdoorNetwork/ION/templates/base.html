@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+{% load static %}
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,19 +10,16 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <link href="/css/main.css" rel="stylesheet" type="text/css" media="screen" />
-    <!-- <link id="size-stylesheet" rel="stylesheet" type="text/css" href="css/mobile.css" media="screen" /> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://www.free-icons-download.net/images/abstract-tree-icon-69964.png">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
-    <!--<script type="text/javascript" src="javascript/jquery-3.2.0.min.js"></script>-->
-    <script id="javascript" type="text/javascript" src="/main.js"></script>
+    <script type="text/javascript" src="{% static 'javascript/main.js' %}" /></script>
 </head>
 
 <body>
@@ -31,37 +29,45 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
-            <a class="navbar-brand glyphicon glyphicon-tree-conifer" href="#">InteractiveOutdoorNetwork</a>
+            <a class="navbar-brand glyphicon glyphicon-tree-conifer" href="{% url 'ION:home' %}">InteractiveOutdoorNetwork</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/index.html">Home</a></li>
+                <li class="active"><a href="{% url 'ION:home' %}">Home</a></li>
                 <li class="dropdown people">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Stuff<span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Activities<span class="caret"></span></a>
                     <ul class="dropdown-menu people">
                         <li><a href="#">Hiking</a></li>
                         <li><a href="#">Swimming</a></li>
                         <li><a href="#">Climbing</a></li>
-                        <li><a href="#">FUCK</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a class="dropdown-toggle activities" data-toggle="dropdown" href="#">Water Activities<span class="caret"></span></a>
+                            <ul class="dropdown-menu activities">
+                                <li><a href="#">Swimming</a></li>
+                                <li><a href="#">Rafting</a></li>
+                                <li><a href="#">Kayaking</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li class="dropdown practices">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gear Trade<span class="caret"></span></a>
                     <ul class="dropdown-menu practices">
-                        <li><a href="#">Shirts</a></li>
-                        <li><a href="#">Shoes</a></li>
-                        <li><a href="#">Literal Shit</a></li>
+                        <li><a href="#">Buy</a></li>
+                        <li><a href="#">Sell</a></li>
                     </ul>
                 </li>
+                <li class="active"><a href="{% url 'ION:timeline' %}">IOP Timeline Archive</a></li>
+                <li class="active"><a href="{% url 'ION:blog' %}">Blog</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <p class="navbar-text">Already have an account?</p>
+                    <p class="navbar-text login-text">Already have an account?</p>
                 </li>
                 <li class="dropdown login">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle"><b>Login</b> <span class="caret"></span></a>
                     <ul id="login-dp" class="dropdown-menu login">
                         <li>
                             <div class="row">
@@ -72,15 +78,15 @@
                                         <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
                                     </div>
                                     or
-                                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                    <form class="form" role="form" method="post" action="return loginForm()" accept-charset="UTF-8" id="login-nav">
                                         <div class="form-group">
                                             <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                            <input name="email" type="email" class="form-control" id="email" placeholder="Email address" required>
                                         </div>
                                         <div class="form-group">
                                             <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                            <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                            <input name="password" type="password" class="form-control" id="password" placeholder="Password" required>
+                                            <div class="help-block text-right"><a href="">Forgot password ?</a></div>
                                         </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary btn-block">Sign in</button>
@@ -93,40 +99,23 @@
                                     </form>
                                 </div>
                                 <div class="bottom text-center">
-                                    New here? <a href="#"><b>Join Us</b></a>
+                                    New here? <a href="/pages/signup.html"><b>Join Us</b></a>
                                 </div>
                             </div>
                         </li>
                     </ul>
+                </li>
+                <img class="dropdown account-image" href="#" src="">
+                <li class="dropdown logout">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Logout</b> <span class="caret"></span></a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
     <!-- End Header -->
-
-    <div id="content">
-        <form name="signup" onsubmit="return createAccountForm()">
-            <div class="container">
-                <label><b>Email</b></label>
-                <input id="email" type="text" placeholder="Enter Email" name="email" required>
-        
-                <label><b>Password</b></label>
-                <input id="password" type="password" placeholder="Enter Password" name="psw" required>
-        
-                <label><b>Repeat Password</b></label>
-                <input id="password-rpt" type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                <input type="checkbox" checked="checked"> Remember me
-                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-        
-                <div class="clearfix">
-                    <button type="button" href="/index.html" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="signupbtn">Sign Up</button>
-                </div>
-            </div>
-        </form>
-    </div>
-    <footer>© 2016 by West Coast Design | <a href="#sitemap">Sitemap</a> | <a href="#legal disclaimer">Legal Disclaimer</a></footer>
+    {% block content %}{% endblock content %}
+    <footer>© 2016 South Valley | <a href="#sitemap">Sitemap</a> | <a href="#legal disclaimer">Legal Disclaimer</a></footer>
     <!-- End Content -->
 </body>
 

@@ -47,6 +47,22 @@ body {
   transition: $time;
 }
 
+@mixin maxHeightAndWidth($maxheight, $minheight, $maxwidth, $minwidth) {
+  max-height: $maxheight;
+  min-height: $minheight;
+  max-width: $maxwidth;
+  min-width: $minwidth;
+}
+
+@mixin blur() {
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
+    opacity: 0.4;
+}
+
 @-webkit-keyframes slideInDown {
   from {
     -webkit-transform: translate3d(0, -100%, 0);
@@ -301,7 +317,6 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
 .title {
   position: fixed;
   top: 100px;
-  // left: 0;
   margin: auto;
   width: 100%;
   height: $height-mask;
@@ -386,12 +401,12 @@ svg {
     fill: $color-base;
     mask: url(#sellmask);
   }
-  
+
   #buybase {
     fill: $color-base;
     mask: url(#buymask);
   }
-  
+
 }
 
 .contentbody {
@@ -496,54 +511,56 @@ svg {
   color: white;
   width: 100%;
   margin: auto;
-  background-color: #333;
-  // border: 3px solid purple;
+  background-color: black;
+  display: inline-block;
 }
 
-#activities table{
+.imgrow {
   width: 100%;
   margin: auto;
+  display: inline-block;
 }
 
-#activities th {
-  width: 100%;
-  font-size: 5vw;
-  text-align: center;
-}
-
-#activities tr {
-  padding: 30px;
-  
-}
-
-#activities td div{
+.activityimage {
+  display: block;
+  display: inline-block;
   margin: auto;
-  width: 33vw;
-  height: 33vw;
+  width: 33%;
+  min-width: 400px;
+  height: 400px;
+
+  // @include maxHeightAndWidth(100%, 300px, 400px, 300px);
+}
+
+.activityimage a {
+  display: block;
+  height: 100%;
+  // border: 3px solid green;
+  text-decoration: none;
 }
 
 #hiking {
-  @include backgroundImage(url("/images/hiking.jpg"));
+  @include backgroundImage(url("../images/hiking.jpg"));
 }
 
 #rockclimbing {
-  @include backgroundImage(url("/images/rockclimbing.jpg"));
+  @include backgroundImage(url("../images/rockclimbing.jpg"));
 }
 
 #running {
-  @include backgroundImage(url("/images/running.jpg"));
+  @include backgroundImage(url("../images/running.jpg"));
 }
 
 #sports {
-  @include backgroundImage(url("/images/sports.jpg"));
+  @include backgroundImage(url("../images/sports.jpg"));
 }
 
 #swimming {
-  @include backgroundImage(url("/images/swimming.jpg"));
+  @include backgroundImage(url("../images/swimming.jpg"));
 }
 
 #skiing {
-  @include backgroundImage(url("/images/skiing.jpg"));
+  @include backgroundImage(url("../images/skiing.jpg"));
 }
 
 #geartrade {
@@ -556,7 +573,7 @@ svg {
   padding-bottom: 200px;
   position: relative;
   width: 100%;
-  background: url("/images/forest.jpg");
+  @include backgroundImage(url("https://static.pexels.com/photos/48694/pexels-photo-48694.jpeg"));
   background-attachment: fixed;
   display: inline-block;
 }
