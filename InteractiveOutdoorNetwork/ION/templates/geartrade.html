@@ -2,11 +2,11 @@
 
 {% block content %}
     <div id='content'>
-        <section id='content'>
+        <section class='blogpost'>
             {% for post in gearposts %}
                 <h1>{{ post.title }}</h1>
                 <h2>Created: {{ post.author }}</h2>
-                {{ post.text }}
+                {{ post.description }}
             {% endfor %}
         </section>
     </div>
