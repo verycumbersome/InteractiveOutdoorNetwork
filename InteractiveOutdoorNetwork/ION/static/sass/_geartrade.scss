@@ -1,0 +1,25 @@
+@import "compass/css3";
+
+.gearpost {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 33%;
+    min-width: 400px;
+    display: inline-block;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-spacing: -2px;
+    text-align: center;
+}
+
+.gearpost h1 {
+    font-weight: 600;
+    font-size: 3em;
+    text-align: center;
+}
+
+.gearpost h2 {
+    font-weight: 400;
+    font-size: 1.2em !important;
+    text-align: center;
+}

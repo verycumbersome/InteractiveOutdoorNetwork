@@ -1,9 +1,9 @@
 from django import forms
 
-from .models import Post
+from .models import GearPost
 
-class PostForm(forms.ModelForm):
+class SellGearForm(forms.ModelForm):
 
     class Meta:
-        model = Post
-        fields = ('title', 'text')
+        model = GearPost
+        fields = ('title', 'description',)

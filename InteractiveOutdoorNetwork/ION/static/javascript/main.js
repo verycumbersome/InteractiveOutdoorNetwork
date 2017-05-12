@@ -182,6 +182,7 @@ $(document).ready(function() {
     $("#practicesdropdown").slideUp(0);
     $("#blogdropdown").slideUp(0);
     $("#contactdropdown").slideUp(0);
+    $(".dropdown-menu.login").fadeOut(menuSlideSpeed);
 
     $(".navbar a").on("click", function(){
         $(".navbar").find(".active").removeClass("active");

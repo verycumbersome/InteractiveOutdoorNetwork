@@ -6,5 +6,6 @@ urlpatterns = [
     url(r'^timeline/', views.timeline, name='timeline'),
     url(r'^login/', views.login, name='login'),
     url(r'^blog/', views.blog, name='blog'),
-    url(r'^geartrade/', views.geartrade, name='geartrade'),
+    url(r'^geartrade/buy', views.geartrade, name='gearbuy'),
+    url(r'^geartrade/sell$', views.gearsell, name='gearsell'),
 ]
