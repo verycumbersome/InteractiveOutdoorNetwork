@@ -1,0 +1,21 @@
+@import "compass/css3";
+
+.blogpost {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 80%;
+    margin: auto;
+    color: white;
+    border-radius: 4px;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-spacing: -2px;
+    padding-bottom: 30px;
+    padding: 15px;
+    text-align: center;
+}
+
+.blogpost h1 {
+    font-weight: 600;
+    font-size: 3em;
+    text-align: center;
+}

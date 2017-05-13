@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+from django_markdown.models import MarkdownField
 from django.db import models
-
 from django.utils import timezone
 
 class BlogPost(models.Model):

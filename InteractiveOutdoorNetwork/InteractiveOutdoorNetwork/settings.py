@@ -25,7 +25,7 @@ SECRET_KEY = '=a1*yv%k2h)^sjyv7vg)+#$iuqf+dupl(3af=lq4y=7-w4qf#j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'verycumbersome.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 'django.contrib.sites',
+    'markdown_deux',
+    # 'django_markdown',
     'ION',
 ]
 
@@ -136,3 +138,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+MARKDOWN_EDITOR_SKIN = 'simple'
