@@ -5,6 +5,7 @@
         {% for post in gearposts %}
             <section class='gearpost'>
                 <h1>{{ post.title }}</h1>
+                <h2>By: {{ post.author }}</h2>
                 <h2>Created: {{ post.created_date }}</h2>
                 <!-- <a src="{{ post.photo }}"></a> -->
                 {{ post.photo }}

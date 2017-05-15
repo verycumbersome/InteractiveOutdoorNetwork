@@ -1,4 +1,36 @@
 /* line 6, ../sass/_signup.scss */
+.signupform {
+  width: 80%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+}
+
+/* line 13, ../sass/_signup.scss */
+#id_email {
+  color: black;
+  resize: none;
+  width: 100%;
+  height: auto;
+}
+
+/* line 20, ../sass/_signup.scss */
+#id_username {
+  color: black;
+  resize: none;
+  width: 100%;
+  height: auto;
+}
+
+/* line 27, ../sass/_signup.scss */
+#id_password {
+  color: black;
+  resize: none;
+  width: 100%;
+  height: auto;
+}
+
+/* line 34, ../sass/_signup.scss */
 input[type=text], input[type=password] {
   width: 100%;
   height: 30px !important;
@@ -8,7 +40,7 @@ input[type=text], input[type=password] {
   color: black;
 }
 
-/* line 17, ../sass/_signup.scss */
+/* line 45, ../sass/_signup.scss */
 button {
   background-color: #4CAF50;
   color: white;
@@ -19,34 +51,34 @@ button {
   width: 100%;
 }
 
-/* line 27, ../sass/_signup.scss */
+/* line 55, ../sass/_signup.scss */
 button:hover {
   background-color: #2d682f;
 }
 
-/* line 31, ../sass/_signup.scss */
+/* line 59, ../sass/_signup.scss */
 .cancelbtn:hover {
   background-color: black;
 }
 
-/* line 35, ../sass/_signup.scss */
+/* line 63, ../sass/_signup.scss */
 .cancelbtn {
   padding: 14px 20px;
   background-color: #333;
 }
 
-/* line 40, ../sass/_signup.scss */
+/* line 68, ../sass/_signup.scss */
 .cancelbtn, .signupbtn {
   float: left;
   width: 50%;
 }
 
-/* line 45, ../sass/_signup.scss */
+/* line 73, ../sass/_signup.scss */
 .container {
   padding: 16px;
 }
 
-/* line 49, ../sass/_signup.scss */
+/* line 77, ../sass/_signup.scss */
 .clearfix::after {
   content: "";
   clear: both;
@@ -54,7 +86,7 @@ button:hover {
 }
 
 @media screen and (max-width: 300px) {
-  /* line 56, ../sass/_signup.scss */
+  /* line 84, ../sass/_signup.scss */
   .cancelbtn, .signupbtn {
     width: 100%;
   }

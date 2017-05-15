@@ -6,6 +6,7 @@ from django.views.generic import TemplateView
 from django.http import HttpResponse
 from django.template import loader
 from django.contrib.auth import login
+from django.contrib.auth.models import User
 from django.utils import timezone
 
 from .forms import SellGearForm, UserCreate
@@ -42,19 +43,19 @@ def gearsell(request):
         form = SellGearForm()
     return render(request, 'geartrade/gearsell.html', {'form': form})
 
-def login(request):
-    form = PostForm()
-    return render(request, 'timeline.html', {'form': form})
+# def login(request):
+#     form = PostForm()
+#     return render(request, 'timeline.html', {'form': form})
 
 def signup(request):
     if request.method == "POST":
         userForm = UserCreate(request.POST)
-        if form.is_valid():
+        if userForm.is_valid():
             newUser = User.objects.create_user(**userForm.cleaned_data)
-            login(newUser)
+            login(request, newUser)
 
-            return HttpResponseRedirect('index.html')
+            return redirect('/')
     else:
         userForm = UserCreate()
 
-    return render(request, 'signup.html', {'form': form})
+    return render(request, 'signup.html', {'form': userForm})
