@@ -71,13 +71,19 @@ button:hover {
   line-spacing: -2px;
   padding-bottom: 30px;
   padding: 15px;
-  text-align: center;
 }
 
 /* line 17, ../sass/_blog.scss */
 .blogpost h1 {
   font-weight: 600;
   font-size: 3em;
+  text-align: center;
+}
+
+/* line 23, ../sass/_blog.scss */
+.blogpost h2 {
+  font-weight: 400;
+  font-size: 1.2em !important;
   text-align: center;
 }
 
@@ -97,14 +103,14 @@ button:hover {
   height: auto;
 }
 
-/* line 19, ../sass/_geartrade.scss */
+/* line 17, ../sass/_geartrade.scss */
 .gearform h1 {
   font-weight: 600;
   font-size: 3em;
   text-align: center;
 }
 
-/* line 25, ../sass/_geartrade.scss */
+/* line 23, ../sass/_geartrade.scss */
 .gearpost {
   background-color: rgba(0, 0, 0, 0.6);
   width: 33%;
@@ -117,14 +123,14 @@ button:hover {
   text-align: center;
 }
 
-/* line 37, ../sass/_geartrade.scss */
+/* line 35, ../sass/_geartrade.scss */
 .gearpost h1 {
   font-weight: 600;
   font-size: 3em;
   text-align: center;
 }
 
-/* line 43, ../sass/_geartrade.scss */
+/* line 41, ../sass/_geartrade.scss */
 .gearpost h2 {
   font-weight: 400;
   font-size: 1.2em !important;

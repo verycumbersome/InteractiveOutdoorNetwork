@@ -5,10 +5,10 @@ from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from django.http import HttpResponse
 from django.template import loader
-
+from django.contrib.auth import login
 from django.utils import timezone
 
-from .forms import SellGearForm
+from .forms import SellGearForm, UserCreate
 from .models import BlogPost, GearPost
 
 class Main(TemplateView):
@@ -45,3 +45,16 @@ def gearsell(request):
 def login(request):
     form = PostForm()
     return render(request, 'timeline.html', {'form': form})
+
+def signup(request):
+    if request.method == "POST":
+        userForm = UserCreate(request.POST)
+        if form.is_valid():
+            newUser = User.objects.create_user(**userForm.cleaned_data)
+            login(newUser)
+
+            return HttpResponseRedirect('index.html')
+    else:
+        userForm = UserCreate()
+
+    return render(request, 'signup.html', {'form': form})

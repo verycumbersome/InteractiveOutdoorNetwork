@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django_markdown.models import MarkdownField
 from django.db import models
 from django.utils import timezone
+import dbmanager
 
 class BlogPost(models.Model):
     author = models.ForeignKey('auth.User')
@@ -25,7 +26,11 @@ class GearPost(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     description = models.TextField(max_length=1000)
+    photo = models.ImageField(upload_to='gearimages', default='/static/images/media/imgnotfound.png')
     created_date = models.DateTimeField(default=timezone.now)
+
+    # print photo.name
+    dbmanager.Store(photo)
 
     def __str__(self):
         return self.title

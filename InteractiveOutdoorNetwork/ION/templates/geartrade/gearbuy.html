@@ -6,6 +6,8 @@
             <section class='gearpost'>
                 <h1>{{ post.title }}</h1>
                 <h2>Created: {{ post.created_date }}</h2>
+                <!-- <a src="{{ post.photo }}"></a> -->
+                {{ post.photo }}
                 {{ post.description }}
             </section>
         {% endfor %}
