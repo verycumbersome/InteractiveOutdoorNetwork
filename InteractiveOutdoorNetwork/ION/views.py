@@ -20,7 +20,7 @@ def timeline(request):
     return render(request, 'timeline.html', {})
 
 def blog(request):
-    posts = BlogPost.objects.order_by('created_date')
+    posts = BlogPost.objects.order_by('created_date').reverse()
     return render(request, 'blog.html', {
         'posts':posts
     })
