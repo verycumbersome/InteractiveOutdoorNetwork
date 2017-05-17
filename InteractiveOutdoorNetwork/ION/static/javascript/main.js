@@ -178,6 +178,12 @@ $(document).ready(function() {
         $(".blogpost").fadeIn(1000);
     });
 
+    setTimeout(
+        function()
+        {
+            $(".dropdown-menu.login").slideUp(500);
+        }, 1000);
+
     $("#aboutusdropdown").slideUp(0);
     $("#practicesdropdown").slideUp(0);
     $("#blogdropdown").slideUp(0);

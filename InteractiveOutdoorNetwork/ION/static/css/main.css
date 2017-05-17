@@ -1,36 +1,4 @@
 /* line 6, ../sass/_signup.scss */
-.signupform {
-  width: 80%;
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-}
-
-/* line 13, ../sass/_signup.scss */
-#id_email {
-  color: black;
-  resize: none;
-  width: 100%;
-  height: auto;
-}
-
-/* line 20, ../sass/_signup.scss */
-#id_username {
-  color: black;
-  resize: none;
-  width: 100%;
-  height: auto;
-}
-
-/* line 27, ../sass/_signup.scss */
-#id_password {
-  color: black;
-  resize: none;
-  width: 100%;
-  height: auto;
-}
-
-/* line 34, ../sass/_signup.scss */
 input[type=text], input[type=password] {
   width: 100%;
   height: 30px !important;
@@ -40,7 +8,7 @@ input[type=text], input[type=password] {
   color: black;
 }
 
-/* line 45, ../sass/_signup.scss */
+/* line 17, ../sass/_signup.scss */
 button {
   background-color: #4CAF50;
   color: white;
@@ -51,34 +19,34 @@ button {
   width: 100%;
 }
 
-/* line 55, ../sass/_signup.scss */
+/* line 27, ../sass/_signup.scss */
 button:hover {
   background-color: #2d682f;
 }
 
-/* line 59, ../sass/_signup.scss */
+/* line 31, ../sass/_signup.scss */
 .cancelbtn:hover {
   background-color: black;
 }
 
-/* line 63, ../sass/_signup.scss */
+/* line 35, ../sass/_signup.scss */
 .cancelbtn {
   padding: 14px 20px;
   background-color: #333;
 }
 
-/* line 68, ../sass/_signup.scss */
+/* line 40, ../sass/_signup.scss */
 .cancelbtn, .signupbtn {
   float: left;
   width: 50%;
 }
 
-/* line 73, ../sass/_signup.scss */
+/* line 45, ../sass/_signup.scss */
 .container {
   padding: 16px;
 }
 
-/* line 77, ../sass/_signup.scss */
+/* line 49, ../sass/_signup.scss */
 .clearfix::after {
   content: "";
   clear: both;
@@ -86,7 +54,7 @@ button:hover {
 }
 
 @media screen and (max-width: 300px) {
-  /* line 84, ../sass/_signup.scss */
+  /* line 56, ../sass/_signup.scss */
   .cancelbtn, .signupbtn {
     width: 100%;
   }
@@ -103,6 +71,7 @@ button:hover {
   line-spacing: -2px;
   padding-bottom: 30px;
   padding: 15px;
+  text-align: center;
 }
 
 /* line 17, ../sass/_blog.scss */
@@ -112,10 +81,56 @@ button:hover {
   text-align: center;
 }
 
-/* line 23, ../sass/_blog.scss */
-.blogpost h2 {
-  font-weight: 400;
-  font-size: 1.2em !important;
+/* line 3, ../sass/_index.scss */
+.aboutus {
+  font-size: 1.1em;
+  background-color: #001400;
+  color: white;
+  height: 400px;
+}
+
+/* line 3, ../sass/_registration.scss */
+.blogpost {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 80%;
+  margin: auto;
+  color: white;
+  border-radius: 4px;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-spacing: -2px;
+  padding-bottom: 30px;
+  padding: 15px;
+  text-align: center;
+}
+
+/* line 17, ../sass/_registration.scss */
+.blogpost h1 {
+  font-weight: 600;
+  font-size: 3em;
+  text-align: center;
+}
+
+/* line 23, ../sass/_registration.scss */
+.registrationform {
+  width: 80%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+}
+
+/* line 30, ../sass/_registration.scss */
+#id_description {
+  color: black;
+  resize: none;
+  width: 100%;
+  height: auto;
+}
+
+/* line 39, ../sass/_registration.scss */
+.registrationform h1 {
+  font-weight: 600;
+  font-size: 3em;
   text-align: center;
 }
 
@@ -135,20 +150,18 @@ button:hover {
   height: auto;
 }
 
-/* line 17, ../sass/_geartrade.scss */
+/* line 19, ../sass/_geartrade.scss */
 .gearform h1 {
   font-weight: 600;
   font-size: 3em;
   text-align: center;
 }
 
-/* line 23, ../sass/_geartrade.scss */
+/* line 25, ../sass/_geartrade.scss */
 .gearpost {
   background-color: rgba(0, 0, 0, 0.6);
   width: 33%;
   min-width: 400px;
-  height: 400px;
-  overflow: scroll;
   display: inline-block;
   color: white;
   font-size: 1.2em;
@@ -171,7 +184,7 @@ button:hover {
   text-align: center;
 }
 
-/* line 24, ../sass/main.scss */
+/* line 26, ../sass/main.scss */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -180,7 +193,7 @@ html {
   text-rendering: optimizelegibility;
 }
 
-/* line 32, ../sass/main.scss */
+/* line 34, ../sass/main.scss */
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -278,31 +291,31 @@ body {
     transform: none;
   }
 }
-/* line 168, ../sass/main.scss */
+/* line 170, ../sass/main.scss */
 .slideInDown {
   -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
 }
 
-/* line 173, ../sass/main.scss */
+/* line 175, ../sass/main.scss */
 .slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
 }
 
-/* line 178, ../sass/main.scss */
+/* line 180, ../sass/main.scss */
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
 
-/* line 183, ../sass/main.scss */
+/* line 185, ../sass/main.scss */
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
 
-/* line 188, ../sass/main.scss */
+/* line 190, ../sass/main.scss */
 .animated {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
@@ -310,19 +323,19 @@ body {
   animation-fill-mode: both;
 }
 
-/* line 195, ../sass/main.scss */
+/* line 197, ../sass/main.scss */
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-/* line 200, ../sass/main.scss */
+/* line 202, ../sass/main.scss */
 .animated.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 
-/* line 205, ../sass/main.scss */
+/* line 207, ../sass/main.scss */
 .navbar {
   border: 0px;
   transition: 0.5s;
@@ -330,29 +343,29 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 215, ../sass/main.scss */
+  /* line 217, ../sass/main.scss */
   .navbar {
     /*min-height: 65px;*/
     border: 0px;
   }
 }
-/* line 231, ../sass/main.scss */
+/* line 233, ../sass/main.scss */
 .navbar.scrolldown {
   background-color: #001400;
 }
 
-/* line 235, ../sass/main.scss */
+/* line 237, ../sass/main.scss */
 .navbar-brand {
   word-spacing: 0.5em;
   line-height: 0.76;
 }
 
-/* line 240, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 input[type=text], input[type=password], input[type=email], input[type=tel] {
   height: 28px !important;
 }
 
-/* line 244, ../sass/main.scss */
+/* line 246, ../sass/main.scss */
 #login-dp {
   min-width: 250px;
   padding: 14px 14px 0;
@@ -362,12 +375,12 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* line 253, ../sass/main.scss */
+/* line 255, ../sass/main.scss */
 #login-dp .help-block {
   font-size: 12px;
 }
 
-/* line 257, ../sass/main.scss */
+/* line 259, ../sass/main.scss */
 #login-dp .bottom {
   background-color: rgba(255, 255, 255, 0.8);
   border-top: 1px solid #ddd;
@@ -376,72 +389,72 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   padding: 14px;
 }
 
-/* line 265, ../sass/main.scss */
+/* line 267, ../sass/main.scss */
 #login-dp .social-buttons {
   margin: 12px 0;
 }
 
-/* line 269, ../sass/main.scss */
+/* line 271, ../sass/main.scss */
 #login-dp .social-buttons a {
   width: 49%;
 }
 
-/* line 273, ../sass/main.scss */
+/* line 275, ../sass/main.scss */
 #login-dp .form-group {
   margin-bottom: 10px;
 }
 
-/* line 277, ../sass/main.scss */
+/* line 279, ../sass/main.scss */
 .btn-fb:hover {
   color: #fff;
   background-color: #496ebc;
 }
 
-/* line 282, ../sass/main.scss */
+/* line 284, ../sass/main.scss */
 .btn-go {
   color: #fff;
   background-color: #3b5998;
 }
 
-/* line 287, ../sass/main.scss */
+/* line 289, ../sass/main.scss */
 .btn-go:hover {
   color: #fff;
   background-color: #496ebc;
 }
 
-/* line 292, ../sass/main.scss */
+/* line 294, ../sass/main.scss */
 .btn-tw {
   color: #fff;
   background-color: #55acee;
 }
 
-/* line 297, ../sass/main.scss */
+/* line 299, ../sass/main.scss */
 .btn-tw:hover {
   color: #fff;
   background-color: #59b5fa;
 }
 
 @media (max-width: 768px) {
-  /* line 303, ../sass/main.scss */
+  /* line 305, ../sass/main.scss */
   #login-dp {
     background-color: inherit;
     color: #fff;
   }
 
-  /* line 307, ../sass/main.scss */
+  /* line 309, ../sass/main.scss */
   #login-dp .bottom {
     background-color: inherit;
     border-top: 0 none;
   }
 }
-/* line 313, ../sass/main.scss */
+/* line 315, ../sass/main.scss */
 .account-image {
   top: 7px;
   height: 35px;
   border-radius: 20px;
 }
 
-/* line 319, ../sass/main.scss */
+/* line 321, ../sass/main.scss */
 .title {
   position: fixed;
   top: 100px;
@@ -451,13 +464,13 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   z-index: 10;
 }
 
-/* line 328, ../sass/main.scss */
+/* line 330, ../sass/main.scss */
 .title.scrolldown {
   position: absolute;
   top: 250px;
 }
 
-/* line 333, ../sass/main.scss */
+/* line 335, ../sass/main.scss */
 #content {
   padding-top: 80px;
   margin: auto;
@@ -472,7 +485,7 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   background-position: center center;
 }
 
-/* line 344, ../sass/main.scss */
+/* line 346, ../sass/main.scss */
 #content h2 {
   text-align: center;
   font-size: 40px;
@@ -483,79 +496,79 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   /*background-color: rgba(50, 50, 50, 0.7);*/
 }
 
-/* line 354, ../sass/main.scss */
+/* line 356, ../sass/main.scss */
 svg {
   width: 100%;
   height: inherit;
 }
-/* line 357, ../sass/main.scss */
+/* line 359, ../sass/main.scss */
 svg text {
   text-anchor: middle;
 }
-/* line 360, ../sass/main.scss */
+/* line 362, ../sass/main.scss */
 svg #alpha {
   fill: #999999;
 }
-/* line 364, ../sass/main.scss */
+/* line 366, ../sass/main.scss */
 svg #title {
   letter-spacing: -2px;
-  font-size: 6em;
+  font-size: 12vmin;
   font-weight: 800;
 }
-/* line 369, ../sass/main.scss */
+/* line 372, ../sass/main.scss */
 svg #subtitle {
   letter-spacing: 10px;
   font-size: 1.2em;
   font-weight: 300;
   text-transform: uppercase;
 }
-/* line 375, ../sass/main.scss */
+/* line 378, ../sass/main.scss */
 svg #titlebase {
   fill: black;
   mask: url(#titlemask);
 }
-/* line 379, ../sass/main.scss */
+/* line 382, ../sass/main.scss */
 svg #hikingbase {
   fill: black;
   mask: url(#hikingmask);
 }
-/* line 383, ../sass/main.scss */
+/* line 386, ../sass/main.scss */
 svg #swimmingbase {
   fill: black;
   mask: url(#swimmingmask);
 }
-/* line 387, ../sass/main.scss */
+/* line 390, ../sass/main.scss */
 svg #runningbase {
   fill: black;
   mask: url(#runningmask);
 }
-/* line 391, ../sass/main.scss */
+/* line 394, ../sass/main.scss */
 svg #sportsbase {
   fill: black;
   mask: url(#sportsmask);
 }
-/* line 395, ../sass/main.scss */
+/* line 398, ../sass/main.scss */
 svg #rockclimbingbase {
   fill: black;
   mask: url(#rockclimbingmask);
 }
-/* line 399, ../sass/main.scss */
+/* line 402, ../sass/main.scss */
 svg #skiingbase {
   fill: black;
   mask: url(#skiingmask);
 }
-/* line 403, ../sass/main.scss */
+/* line 406, ../sass/main.scss */
 svg #sellbase {
   fill: black;
   mask: url(#sellmask);
 }
-/* line 408, ../sass/main.scss */
+/* line 411, ../sass/main.scss */
 svg #buybase {
   fill: black;
   mask: url(#buymask);
 }
 
-/* line 415, ../sass/main.scss */
+/* line 418, ../sass/main.scss */
 .contentbody {
   margin-top: 0;
   background-color: rgba(200, 200, 200, 0.7);
@@ -564,7 +577,7 @@ svg #buybase {
   height: auto;
 }
 
-/* line 423, ../sass/main.scss */
+/* line 426, ../sass/main.scss */
 .contentbody p {
   line-height: 30px;
   font-size: 16px;
@@ -577,7 +590,7 @@ svg #buybase {
   background-color: rgba(0, 53, 95, 0.5);
 }
 
-/* line 435, ../sass/main.scss */
+/* line 438, ../sass/main.scss */
 .header {
   text-align: center;
   color: white;
@@ -586,7 +599,7 @@ svg #buybase {
   font-weight: 400;
 }
 
-/* line 443, ../sass/main.scss */
+/* line 446, ../sass/main.scss */
 #slidein {
   width: 100%;
   padding-bottom: 30px;
@@ -595,7 +608,7 @@ svg #buybase {
   /*border: 3px solid green;*/
 }
 
-/* line 451, ../sass/main.scss */
+/* line 454, ../sass/main.scss */
 #slidein h1 {
   color: white;
   font-size: 70px;
@@ -603,7 +616,7 @@ svg #buybase {
   font-weight: 400;
 }
 
-/* line 458, ../sass/main.scss */
+/* line 461, ../sass/main.scss */
 #autoscroll {
   /*padding-top: 400px;*/
   width: 100%;
@@ -613,7 +626,7 @@ svg #buybase {
   position: absolute;
 }
 
-/* line 467, ../sass/main.scss */
+/* line 470, ../sass/main.scss */
 #autoscroll a {
   /*font-size: 4em;*/
   bottom: 0;
@@ -621,17 +634,17 @@ svg #buybase {
   text-decoration: none;
 }
 
-/* line 474, ../sass/main.scss */
+/* line 477, ../sass/main.scss */
 #scrollbox {
   top: 0;
 }
 
-/* line 478, ../sass/main.scss */
+/* line 481, ../sass/main.scss */
 #scrollbox .glyphicon {
   font-size: 25px;
 }
 
-/* line 482, ../sass/main.scss */
+/* line 485, ../sass/main.scss */
 #scrolldown {
   /*position: absolute;*/
   font-size: 4em;
@@ -640,13 +653,13 @@ svg #buybase {
   margin-bottom: -14px;
 }
 
-/* line 490, ../sass/main.scss */
+/* line 493, ../sass/main.scss */
 #scrolldownarrow {
   z-index: -1;
   display: block;
 }
 
-/* line 495, ../sass/main.scss */
+/* line 498, ../sass/main.scss */
 .separator {
   margin-top: 0;
   background-color: #001400;
@@ -657,14 +670,14 @@ svg #buybase {
   padding: 10px 0 10px 0;
 }
 
-/* line 505, ../sass/main.scss */
+/* line 508, ../sass/main.scss */
 .separator p {
   font-size: 18px;
   width: 80%;
   margin: auto;
 }
 
-/* line 512, ../sass/main.scss */
+/* line 515, ../sass/main.scss */
 #activities {
   text-align: center;
   color: white;
@@ -674,14 +687,14 @@ svg #buybase {
   display: inline-block;
 }
 
-/* line 521, ../sass/main.scss */
+/* line 524, ../sass/main.scss */
 .imgrow {
   width: 100%;
   margin: auto;
   display: inline-block;
 }
 
-/* line 527, ../sass/main.scss */
+/* line 530, ../sass/main.scss */
 .activityimage {
   display: block;
   display: inline-block;
@@ -691,14 +704,14 @@ svg #buybase {
   height: 400px;
 }
 
-/* line 538, ../sass/main.scss */
+/* line 541, ../sass/main.scss */
 .activityimage a {
   display: block;
   height: 100%;
   text-decoration: none;
 }
 
-/* line 545, ../sass/main.scss */
+/* line 548, ../sass/main.scss */
 #hiking {
   background-image: url("../images/hiking.jpg");
   background-size: cover;
@@ -706,7 +719,7 @@ svg #buybase {
   background-position: center center;
 }
 
-/* line 549, ../sass/main.scss */
+/* line 552, ../sass/main.scss */
 #rockclimbing {
   background-image: url("../images/rockclimbing.jpg");
   background-size: cover;
@@ -714,7 +727,7 @@ svg #buybase {
   background-position: center center;
 }
 
-/* line 553, ../sass/main.scss */
+/* line 556, ../sass/main.scss */
 #running {
   background-image: url("../images/running.jpg");
   background-size: cover;
@@ -722,7 +735,7 @@ svg #buybase {
   background-position: center center;
 }
 
-/* line 557, ../sass/main.scss */
+/* line 560, ../sass/main.scss */
 #sports {
   background-image: url("../images/sports.jpg");
   background-size: cover;
@@ -730,7 +743,7 @@ svg #buybase {
   background-position: center center;
 }
 
-/* line 561, ../sass/main.scss */
+/* line 564, ../sass/main.scss */
 #swimming {
   background-image: url("../images/swimming.jpg");
   background-size: cover;
@@ -738,7 +751,7 @@ svg #buybase {
   background-position: center center;
 }
 
-/* line 565, ../sass/main.scss */
+/* line 568, ../sass/main.scss */
 #skiing {
   background-image: url("../images/skiing.jpg");
   background-size: cover;
@@ -746,7 +759,7 @@ svg #buybase {
   background-position: center center;
 }
 
-/* line 569, ../sass/main.scss */
+/* line 572, ../sass/main.scss */
 #geartrade {
   color: #fff;
   margin: auto;
@@ -763,35 +776,54 @@ svg #buybase {
   display: inline-block;
 }
 
-/* line 584, ../sass/main.scss */
+/* line 587, ../sass/main.scss */
+#geartrade:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  width: 1200px;
+  height: 800px;
+  background-attachment: fixed;
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -o-filter: blur(20px);
+  -ms-filter: blur(20px);
+  filter: blur(20px);
+  opacity: 0.4;
+}
+
+/* line 601, ../sass/main.scss */
 #geartrade h1 {
   letter-spacing: -2px;
   font-size: 6em;
   font-weight: 600;
 }
 
-/* line 590, ../sass/main.scss */
+/* line 607, ../sass/main.scss */
 #sell {
   float: left;
   height: 100px;
   width: 50%;
 }
 
-/* line 596, ../sass/main.scss */
+/* line 613, ../sass/main.scss */
 #buy {
   float: left;
   height: 100px;
   width: 50%;
 }
 
-/* line 602, ../sass/main.scss */
+/* line 619, ../sass/main.scss */
 #missionstatement {
   width: 80%;
   background-color: rgba(13, 59, 2, 0.5);
   margin: auto;
 }
 
-/* line 608, ../sass/main.scss */
+/* line 625, ../sass/main.scss */
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -801,7 +833,7 @@ svg #buybase {
   user-select: none;
 }
 
-/* line 617, ../sass/main.scss */
+/* line 634, ../sass/main.scss */
 .noselect-recursive *,
 .noselect-recursive * *,
 .noselect-recursive {
@@ -813,7 +845,7 @@ svg #buybase {
   user-select: none;
 }
 
-/* line 628, ../sass/main.scss */
+/* line 645, ../sass/main.scss */
 footer {
   color: #fff;
   text-align: center;
@@ -825,7 +857,7 @@ footer {
   background-color: #001400;
 }
 
-/* line 639, ../sass/main.scss */
+/* line 656, ../sass/main.scss */
 footer a {
   display: inline;
   color: white;
@@ -837,7 +869,7 @@ footer a {
   transition: 0.25s;
 }
 
-/* line 646, ../sass/main.scss */
+/* line 663, ../sass/main.scss */
 footer a:hover {
   color: #228B22;
 }

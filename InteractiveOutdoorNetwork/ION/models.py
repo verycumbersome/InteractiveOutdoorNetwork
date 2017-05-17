@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from django_markdown.models import MarkdownField
 from django.db import models
 from django.utils import timezone
-import dbmanager
+import firebasemanager
 
 class BlogPost(models.Model):
     author = models.ForeignKey('auth.User')
@@ -30,7 +30,7 @@ class GearPost(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
 
     # print photo.name
-    dbmanager.Store(photo)
+    firebasemanager.Store(photo)
 
     def __str__(self):
         return self.title
