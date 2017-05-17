@@ -147,6 +147,8 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.6);
   width: 33%;
   min-width: 400px;
+  height: 400px;
+  overflow: scroll;
   display: inline-block;
   color: white;
   font-size: 1.2em;
@@ -155,14 +157,14 @@ button:hover {
   text-align: center;
 }
 
-/* line 35, ../sass/_geartrade.scss */
+/* line 37, ../sass/_geartrade.scss */
 .gearpost h1 {
   font-weight: 600;
   font-size: 3em;
   text-align: center;
 }
 
-/* line 41, ../sass/_geartrade.scss */
+/* line 43, ../sass/_geartrade.scss */
 .gearpost h2 {
   font-weight: 400;
   font-size: 1.2em !important;
