@@ -78,7 +78,8 @@
                                         <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
                                     </div>
                                     or
-                                    <form class="form" role="form" method="post" action="return loginForm()" accept-charset="UTF-8" id="login-nav">
+                                    <a href="{% url 'login' %}">Login through ION<a>
+                                    <!-- <form class="form" role="form" method="post" action="return loginForm()" accept-charset="UTF-8" id="login-nav">
                                         <div class="form-group">
                                             <label class="sr-only" for="exampleInputEmail2">Email address</label>
                                             <input name="email" type="email" class="form-control" id="email" placeholder="Email address" required>
@@ -96,7 +97,7 @@
 											 <input type="checkbox"> keep me logged-in
 											 </label>
                                         </div>
-                                    </form>
+                                    </form> -->
                                 </div>
                                 <div class="bottom text-center">
                                     New here? <a href="{% url 'ION:signup' %}"><b>Join Us</b></a>

@@ -6,7 +6,6 @@ from ION import views
 urlpatterns = [
     url(r'^$', views.Main.as_view(), name='home'),
     url(r'^timeline/', views.timeline, name='timeline'),
-    # url(r'^accounts/login/$', auth_views.login, name='login'),
     url(r'^signup', views.signup, name='signup'),
     url(r'^blog/', views.blog, name='blog'),
     url(r'^geartrade/buy', views.geartrade, name='gearbuy'),
