@@ -7,7 +7,7 @@
     background-color: #202020;
     color: white !important;
     padding: 0;
-    height: 50vh;
+    height: auto;
     text-align: center;
 }
 
@@ -16,6 +16,7 @@
     min-width: 400px;
     margin: auto;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .glyphicon.glyphicon-info-sign {

@@ -206,7 +206,7 @@ $(document).ready(function() {
            page.stop();
         });
 
-        page.stop().animate({scrollTop: $("#activities").position().top - 50}, 1500, "easeInOutCubic", function(){
+        page.stop().animate({scrollTop: $(".aboutus").position().top - 50}, 1500, "easeInOutCubic", function(){
            page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
         });
 
