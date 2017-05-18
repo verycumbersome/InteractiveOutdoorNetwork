@@ -1,6 +1,8 @@
 @import "compass/css3";
 @import "signup";
 @import "blog";
+@import "index";
+@import "registration";
 @import "geartrade";
 
 $height-mask: 250px;
@@ -363,8 +365,9 @@ svg {
   }
   #title {
     letter-spacing: -2px;
-    font-size: 6em;
+    font-size: 12vmin;
     font-weight: 800;
+    // word-break: break-all;
   }
   #subtitle {
     letter-spacing: 10px;
@@ -579,6 +582,20 @@ svg {
   @include backgroundImage(url("https://static.pexels.com/photos/48694/pexels-photo-48694.jpeg"));
   background-attachment: fixed;
   display: inline-block;
+}
+
+#geartrade:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  // @include backgroundImage(url("https://static.pexels.com/photos/48694/pexels-photo-48694.jpeg"));
+  width: 1200px;
+  height: 800px;
+  background-attachment: fixed;
+  @include blur();
 }
 
 #geartrade h1{

@@ -5,6 +5,9 @@ config = settings.CONFIG
 
 firebase = pyrebase.initialize_app(config)
 
+auth = firebase.auth()
+db = firebase.database()
+storage = firebase.storage()
+
 def Store(img):
-    storageRef = firebase.storage()
-    storageRef.child("images/image.jpg").put(img.name)
+    storage.child("images/image.jpg").put(img.name)

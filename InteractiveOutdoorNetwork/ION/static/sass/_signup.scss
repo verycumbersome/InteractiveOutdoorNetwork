@@ -3,34 +3,6 @@
 $submitbtncolor: #4CAF50;
 $cancelbtncolor: #333;
 
-.signupform {
-    width: 80%;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-}
-
-#id_email {
-    color: black;
-    resize: none;
-    width: 100%;
-    height: auto;
-}
-
-#id_username {
-    color: black;
-    resize: none;
-    width: 100%;
-    height: auto;
-}
-
-#id_password {
-    color: black;
-    resize: none;
-    width: 100%;
-    height: auto;
-}
-
 input[type=text], input[type=password] {
     width: 100%;
     height: 30px !important;
