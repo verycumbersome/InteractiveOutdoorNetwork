@@ -83,10 +83,30 @@ button:hover {
 
 /* line 3, ../sass/_index.scss */
 .aboutus {
-  font-size: 1.1em;
-  background-color: #001400;
-  color: white;
-  height: 400px;
+  font-size: 1.2em;
+  line-height: 120%;
+  font-weight: 400;
+  background-color: #202020;
+  color: white !important;
+  padding: 0;
+  height: 50vh;
+  text-align: center;
+}
+
+/* line 14, ../sass/_index.scss */
+.aboutuscontainer {
+  width: 70%;
+  min-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+/* line 21, ../sass/_index.scss */
+.glyphicon.glyphicon-info-sign {
+  margin-top: 50px;
+  font-size: 75px;
+  color: white !important;
+  text-decoration: none;
 }
 
 /* line 3, ../sass/_registration.scss */
@@ -512,7 +532,7 @@ svg #alpha {
 /* line 366, ../sass/main.scss */
 svg #title {
   letter-spacing: -2px;
-  font-size: 12vmin;
+  font-size: 9vmin;
   font-weight: 800;
 }
 /* line 372, ../sass/main.scss */

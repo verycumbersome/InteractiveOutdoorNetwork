@@ -9,7 +9,7 @@ import firebasemanager
 class BlogPost(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
-    text = models.TextField(max_length=1000)
+    text = models.TextField(max_length=2500)
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(

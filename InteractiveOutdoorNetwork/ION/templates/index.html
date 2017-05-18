@@ -7,7 +7,7 @@
         <defs>
             <mask id="titlemask" x="0" y="0" width="100%" height="100%">
                 <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                <text id="title" x="50%" y="0" dy="1.58em">Interactive Outdoor Network</text>
+                <text id="title" x="50%" y="0" dy="1.58em">Interactive Outdoor Program</text>
                 <text id="subtitle" x="50%" y="0" dy="9.8em">Bringing People Together</text>
             </mask>
             </defs>
@@ -22,8 +22,9 @@
     </div>
 </div>
 <div class="aboutus">
-    <div>
-        <h1></h1>
+    <div class="aboutuscontainer">
+        <a class="glyphicon glyphicon-info-sign"></a>
+        <h1>About Us</h1>
         <p>
             Based in Eugene, Oregon, IOP(Integrated Outdoor Program) is a nature-themed high school
             class, which integrates Physical Education into an English class. This class is unique to
@@ -39,6 +40,8 @@
             gallery to show the fun opportunities that students in this class can have. We hope that the
             InteractiveOutdoorNetwork can let students stay updated as to what goes on in IOP.
         </p>
+        <a href="{% url 'ION:signup' %}" class="btn btn-info" role="button">Get Started Now</a>
+        <a href="{% url 'login' %}" class="btn btn-primary" role="button">Login</a>
     </div>
 </div>
 <div id="activities">
