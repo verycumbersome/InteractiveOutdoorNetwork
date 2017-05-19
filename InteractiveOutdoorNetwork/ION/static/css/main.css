@@ -81,6 +81,110 @@ button:hover {
   text-align: center;
 }
 
+/* line 3, ../sass/_index.scss */
+.aboutus {
+  font-size: 1.2em;
+  line-height: 120%;
+  font-weight: 400;
+  background-color: #001400;
+  color: white !important;
+  padding: 0;
+  height: auto;
+  text-align: center;
+}
+
+/* line 14, ../sass/_index.scss */
+.aboutuscontainer {
+  width: 70%;
+  min-width: 400px;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* line 22, ../sass/_index.scss */
+.geartrade {
+  color: #fff;
+  background-color: #228B22;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 200px;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+/* line 34, ../sass/_index.scss */
+.geartradecontainer {
+  width: 70%;
+  min-width: 400px;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* line 42, ../sass/_index.scss */
+.blog {
+  color: black;
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 200px;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+/* line 54, ../sass/_index.scss */
+.blogcontainer {
+  width: 70%;
+  min-width: 400px;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* line 62, ../sass/_index.scss */
+.endcontent {
+  color: #fff;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 400px;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  background-image: url("https://static.pexels.com/photos/48694/pexels-photo-48694.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+/* line 78, ../sass/_index.scss */
+.glyphicon.glyphicon-info-sign {
+  margin-top: 50px;
+  font-size: 75px;
+  color: white !important;
+  text-decoration: none;
+}
+
+/* line 85, ../sass/_index.scss */
+.glyphicon.glyphicon-transfer {
+  font-size: 75px;
+  color: white !important;
+  text-decoration: none;
+}
+
+/* line 91, ../sass/_index.scss */
+.glyphicon.glyphicon-pencil {
+  font-size: 75px;
+  color: black !important;
+  text-decoration: none;
+}
+
 /* line 3, ../sass/_registration.scss */
 .blogpost {
   background-color: rgba(0, 0, 0, 0.6);
@@ -742,70 +846,13 @@ svg #skiingbase {
 }
 
 /* line 562, ../sass/main.scss */
-#geartrade {
-  color: #fff;
-  margin: auto;
-  text-align: center;
-  padding: 20px;
-  padding-bottom: 200px;
-  position: relative;
-  width: 100%;
-  background-image: url("https://static.pexels.com/photos/48694/pexels-photo-48694.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  display: inline-block;
-}
-
-/* line 577, ../sass/main.scss */
-#geartrade:before {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  display: block;
-  width: 1200px;
-  height: 800px;
-  background-attachment: fixed;
-  -webkit-filter: blur(20px);
-  -moz-filter: blur(20px);
-  -o-filter: blur(20px);
-  -ms-filter: blur(20px);
-  filter: blur(20px);
-  opacity: 0.4;
-}
-
-/* line 591, ../sass/main.scss */
-#geartrade h1 {
-  letter-spacing: -2px;
-  font-size: 6em;
-  font-weight: 600;
-}
-
-/* line 597, ../sass/main.scss */
-#sell {
-  float: left;
-  height: 100px;
-  width: 50%;
-}
-
-/* line 603, ../sass/main.scss */
-#buy {
-  float: left;
-  height: 100px;
-  width: 50%;
-}
-
-/* line 609, ../sass/main.scss */
 #missionstatement {
   width: 80%;
   background-color: rgba(13, 59, 2, 0.5);
   margin: auto;
 }
 
-/* line 615, ../sass/main.scss */
+/* line 568, ../sass/main.scss */
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -815,7 +862,7 @@ svg #skiingbase {
   user-select: none;
 }
 
-/* line 624, ../sass/main.scss */
+/* line 577, ../sass/main.scss */
 .noselect-recursive *,
 .noselect-recursive * *,
 .noselect-recursive {
@@ -827,7 +874,7 @@ svg #skiingbase {
   user-select: none;
 }
 
-/* line 635, ../sass/main.scss */
+/* line 588, ../sass/main.scss */
 footer {
   color: #fff;
   text-align: center;
@@ -839,7 +886,7 @@ footer {
   background-color: #001400;
 }
 
-/* line 646, ../sass/main.scss */
+/* line 599, ../sass/main.scss */
 footer a {
   display: inline;
   color: white;
@@ -851,7 +898,7 @@ footer a {
   transition: 0.25s;
 }
 
-/* line 653, ../sass/main.scss */
+/* line 606, ../sass/main.scss */
 footer a:hover {
   color: #228B22;
 }

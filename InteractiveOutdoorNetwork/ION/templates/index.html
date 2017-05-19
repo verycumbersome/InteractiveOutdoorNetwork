@@ -44,11 +44,26 @@
         <a href="{% url 'login' %}" class="btn btn-primary glyphicon glyphicon-log-in" role="button">Login</a>
     </div>
 </div>
-<div id="geartrade">
-    <h1>Gear Trade</h1>
-    <div class="btn-group btn-group-justified">
-        <a class="btn btn-lg btn-default" href="{% url 'ION:gearbuy' %}">Buy</a>
-        <a class="btn btn-lg btn-default" href="{% url 'ION:gearsell' %}">Sell</a>
+<div class="geartrade">
+    <div class="geartradecontainer">
+        <a class="glyphicon glyphicon-transfer"></a>
+        <h1>Gear Trade</h1>
+        <div class="btn-group">
+            <a class="btn btn-lg btn-default" href="{% url 'ION:gearbuy' %}">Buy</a>
+            <a class="btn btn-lg btn-default" href="{% url 'ION:gearsell' %}">Sell</a>
+        </div>
     </div>
+</div>
+<div class="blog">
+    <div class="blogcontainer">
+        <a class="glyphicon glyphicon-pencil"></a>
+        <h1>Blog</h1>
+        <div class="btn-group">
+            <a class="btn btn-lg btn-default" href="{% url 'ION:blog' %}">Read More</a>
+        </div>
+    </div>
+</div>
+<div class="endcontent">
+
 </div>
 {% endblock content %}

@@ -559,53 +559,6 @@ svg {
   @include backgroundImage(url("../images/skiing.jpg"));
 }
 
-#geartrade {
-  // line-height: 30px;
-  // font-style: italic;
-  color: #fff;
-  margin: auto;
-  text-align: center;
-  padding: 20px;
-  padding-bottom: 200px;
-  position: relative;
-  width: 100%;
-  @include backgroundImage(url("https://static.pexels.com/photos/48694/pexels-photo-48694.jpeg"));
-  background-attachment: fixed;
-  display: inline-block;
-}
-
-#geartrade:before {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  display: block;
-  // @include backgroundImage(url("https://static.pexels.com/photos/48694/pexels-photo-48694.jpeg"));
-  width: 1200px;
-  height: 800px;
-  background-attachment: fixed;
-  @include blur();
-}
-
-#geartrade h1{
-  letter-spacing: -2px;
-  font-size: 6em;
-  font-weight: 600;
-}
-
-#sell {
-  float: left;
-  height: $geartrademenuheight;
-  width: 50%;
-}
-
-#buy {
-  float: left;
-  height: $geartrademenuheight;
-  width: 50%;
-}
-
 #missionstatement {
   width: 80%;
   background-color: $darkforestgreenalpha;

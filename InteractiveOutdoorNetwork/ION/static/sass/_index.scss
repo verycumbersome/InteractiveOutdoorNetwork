@@ -1,0 +1,95 @@
+@import "compass/css3";
+
+.aboutus {
+    font-size: 1.2em;
+    line-height: 120%;
+    font-weight: 400;
+    background-color: #001400;
+    color: white !important;
+    padding: 0;
+    height: auto;
+    text-align: center;
+}
+
+.aboutuscontainer {
+    width: 70%;
+    min-width: 400px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.geartrade {
+  color: #fff;
+  background-color: #228B22;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 200px;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.geartradecontainer {
+    width: 70%;
+    min-width: 400px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.blog {
+  color: black;
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 200px;
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.blogcontainer {
+    width: 70%;
+    min-width: 400px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.endcontent {
+    color: #fff;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 400px;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    background-image: url("https://static.pexels.com/photos/48694/pexels-photo-48694.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.glyphicon.glyphicon-info-sign {
+    margin-top: 50px;
+    font-size: 75px;
+    color: white !important;
+    text-decoration: none;
+}
+
+.glyphicon.glyphicon-transfer {
+    font-size: 75px;
+    color: white !important;
+    text-decoration: none;
+}
+
+.glyphicon.glyphicon-pencil {
+    font-size: 75px;
+    color: black !important;
+    text-decoration: none;
+}
