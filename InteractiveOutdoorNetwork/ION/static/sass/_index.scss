@@ -84,6 +84,26 @@
     text-decoration: none;
 }
 
+.social {
+    margin-top: 30px;
+    font-size: 3em;
+    letter-spacing: 12px;
+    background-color: #333;
+    width: 40vw;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.social .fa {
+    text-decoration: none !important;
+    color: white !important;
+    @include transitions(0.15s);
+}
+
+.social .fa:hover {
+    color: #228B22 !important;
+}
+
 .endcontent .glyphicon.glyphicon-leaf:hover {
     color: white !important;
 }
