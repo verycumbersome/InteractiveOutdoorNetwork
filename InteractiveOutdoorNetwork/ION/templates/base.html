@@ -36,22 +36,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="{% url 'ION:home' %}">Home</a></li>
-                <li class="dropdown people">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Activities<span class="caret"></span></a>
-                    <ul class="dropdown-menu people">
-                        <li><a href="#">Hiking</a></li>
-                        <li><a href="#">Swimming</a></li>
-                        <li><a href="#">Climbing</a></li>
-                        <li><a href="#">Sports</a></li>
-                        <li><a class="dropdown-toggle activities" data-toggle="dropdown" href="#">Water Activities<span class="caret"></span></a>
-                            <ul class="dropdown-menu activities">
-                                <li><a href="#">Swimming</a></li>
-                                <li><a href="#">Rafting</a></li>
-                                <li><a href="#">Kayaking</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+                <li class="active"><a href="{% url 'ION:activities' %}">Activities</a></li>
                 <li class="dropdown practices">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gear Trade<span class="caret"></span></a>
                     <ul class="dropdown-menu practices">

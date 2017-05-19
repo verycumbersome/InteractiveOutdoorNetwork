@@ -19,6 +19,9 @@ class Main(TemplateView):
 def timeline(request):
     return render(request, 'timeline.html', {})
 
+def activities(request):
+    return render(request, 'activities/activities.html')
+
 def blog(request):
     posts = BlogPost.objects.order_by('created_date').reverse()
     return render(request, 'blog.html', {
