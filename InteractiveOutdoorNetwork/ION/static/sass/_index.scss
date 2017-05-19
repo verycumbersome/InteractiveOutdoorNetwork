@@ -64,15 +64,28 @@
     margin: auto;
     text-align: center;
     padding: 20px;
-    padding-bottom: 400px;
+    height: 90vh;
     position: relative;
     width: 100%;
     display: inline-block;
-    background-image: url("https://static.pexels.com/photos/48694/pexels-photo-48694.jpeg");
+    background-image: url("https://c1.staticflickr.com/2/1629/26323803930_c68c65942b_k.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 100% 25%;
     background-attachment: fixed;
+}
+.endcontent h1 {
+    font-weight: 400;
+    font-size: 5em;
+}
+
+.endcontent .glyphicon.glyphicon-leaf {
+    font-size: 7em;
+    color: #228B22 !important;
+}
+
+.endcontent .glyphicon.glyphicon-leaf:hover {
+    color: white !important;
 }
 
 .glyphicon.glyphicon-info-sign {

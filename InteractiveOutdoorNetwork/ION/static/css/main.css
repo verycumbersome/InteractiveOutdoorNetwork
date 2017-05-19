@@ -152,18 +152,35 @@ button:hover {
   margin: auto;
   text-align: center;
   padding: 20px;
-  padding-bottom: 400px;
+  height: 90vh;
   position: relative;
   width: 100%;
   display: inline-block;
-  background-image: url("https://static.pexels.com/photos/48694/pexels-photo-48694.jpeg");
+  background-image: url("https://c1.staticflickr.com/2/1629/26323803930_c68c65942b_k.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 100% 25%;
   background-attachment: fixed;
 }
 
-/* line 78, ../sass/_index.scss */
+/* line 77, ../sass/_index.scss */
+.endcontent h1 {
+  font-weight: 400;
+  font-size: 5em;
+}
+
+/* line 82, ../sass/_index.scss */
+.endcontent .glyphicon.glyphicon-leaf {
+  font-size: 7em;
+  color: #228B22 !important;
+}
+
+/* line 87, ../sass/_index.scss */
+.endcontent .glyphicon.glyphicon-leaf:hover {
+  color: white !important;
+}
+
+/* line 91, ../sass/_index.scss */
 .glyphicon.glyphicon-info-sign {
   margin-top: 50px;
   font-size: 75px;
@@ -171,14 +188,14 @@ button:hover {
   text-decoration: none;
 }
 
-/* line 85, ../sass/_index.scss */
+/* line 98, ../sass/_index.scss */
 .glyphicon.glyphicon-transfer {
   font-size: 75px;
   color: white !important;
   text-decoration: none;
 }
 
-/* line 91, ../sass/_index.scss */
+/* line 104, ../sass/_index.scss */
 .glyphicon.glyphicon-pencil {
   font-size: 75px;
   color: black !important;
