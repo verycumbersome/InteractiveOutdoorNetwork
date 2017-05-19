@@ -5,9 +5,11 @@
     <div id="content">
         <section class="blogpost">
             {% for post in posts %}
-                <h1>{{ post.title }}</h1>
-                <h2>Created: {{ post.created_date }}</h2>
-                {{ post.text|markdown }}
+                <div class="blogpostwrapper">  
+                    <h1>{{ post.title }}</h1>
+                    <h2>Created: {{ post.created_date }}</h2>
+                    {{ post.text|markdown }}
+                </div>
             {% endfor %}
         </section>
     </div>

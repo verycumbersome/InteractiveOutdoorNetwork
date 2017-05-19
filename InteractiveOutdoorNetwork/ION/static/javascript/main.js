@@ -213,6 +213,18 @@ $(document).ready(function() {
        return false;
     });
 
+    $(".endcontent .glyphicon.glyphicon-leaf").click(function(e) {
+            page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
+            page.stop();
+        });
+     
+            page.stop().animate({scrollTop: $("#content").position().top - 50}, 1500, "easeInOutCubic", function(){
+            page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+        });                                                                                                                                                                                             
+
+            return false;
+    });
+
     $(".dropdown.people").hover(function() {
         $(".dropdown-menu.people").stop(false, false).slideDown(menuSlideSpeed);
     }, function() {

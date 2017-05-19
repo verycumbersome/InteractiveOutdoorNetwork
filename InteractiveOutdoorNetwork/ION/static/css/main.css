@@ -59,9 +59,9 @@ button:hover {
     width: 100%;
   }
 }
-/* line 3, ../sass/_blog.scss */
+/* line 4, ../sass/_blog.scss */
 .blogpost {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.01) !important;
   width: 80%;
   margin: auto;
   color: white;
@@ -74,10 +74,28 @@ button:hover {
   text-align: center;
 }
 
-/* line 17, ../sass/_blog.scss */
+/* line 18, ../sass/_blog.scss */
+.blogpostwrapper {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  background-color: black;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* line 27, ../sass/_blog.scss */
 .blogpost h1 {
   font-weight: 600;
   font-size: 3em;
+  text-align: center;
+}
+
+/* line 33, ../sass/_blog.scss */
+.blogpost h2 {
+  font-size: 1.5em;
+  font-weight: 400;
+  font-size: 1.2em !important;
   text-align: center;
 }
 
@@ -104,6 +122,7 @@ button:hover {
 
 /* line 23, ../sass/_index.scss */
 .geartrade {
+  font-size: 1.2em;
   color: #fff;
   background-color: #228B22;
   margin: auto;
@@ -115,7 +134,7 @@ button:hover {
   display: inline-block;
 }
 
-/* line 35, ../sass/_index.scss */
+/* line 36, ../sass/_index.scss */
 .geartradecontainer {
   width: 70%;
   min-width: 400px;
@@ -124,8 +143,9 @@ button:hover {
   padding-bottom: 20px;
 }
 
-/* line 43, ../sass/_index.scss */
+/* line 44, ../sass/_index.scss */
 .blog {
+  font-size: 1.2em;
   color: black;
   background-color: white;
   margin: auto;
@@ -137,7 +157,7 @@ button:hover {
   display: inline-block;
 }
 
-/* line 55, ../sass/_index.scss */
+/* line 57, ../sass/_index.scss */
 .blogcontainer {
   width: 70%;
   min-width: 400px;
@@ -146,7 +166,7 @@ button:hover {
   padding-bottom: 20px;
 }
 
-/* line 63, ../sass/_index.scss */
+/* line 65, ../sass/_index.scss */
 .endcontent {
   color: #fff;
   margin: auto;
@@ -163,13 +183,13 @@ button:hover {
   background-attachment: fixed;
 }
 
-/* line 75, ../sass/_index.scss */
+/* line 77, ../sass/_index.scss */
 .endcontent h1 {
   font-weight: 400;
   font-size: 5em;
 }
 
-/* line 80, ../sass/_index.scss */
+/* line 82, ../sass/_index.scss */
 .endcontent .glyphicon.glyphicon-leaf {
   font-size: 7em;
   color: #228B22 !important;
@@ -181,7 +201,7 @@ button:hover {
   text-decoration: none;
 }
 
-/* line 87, ../sass/_index.scss */
+/* line 89, ../sass/_index.scss */
 .social {
   margin-top: 30px;
   font-size: 3em;
@@ -192,7 +212,7 @@ button:hover {
   margin: auto;
 }
 
-/* line 97, ../sass/_index.scss */
+/* line 99, ../sass/_index.scss */
 .social .fa {
   text-decoration: none !important;
   color: white !important;
@@ -203,17 +223,17 @@ button:hover {
   transition: 0.15s;
 }
 
-/* line 103, ../sass/_index.scss */
+/* line 105, ../sass/_index.scss */
 .social .fa:hover {
   color: #228B22 !important;
 }
 
-/* line 107, ../sass/_index.scss */
+/* line 109, ../sass/_index.scss */
 .endcontent .glyphicon.glyphicon-leaf:hover {
   color: white !important;
 }
 
-/* line 111, ../sass/_index.scss */
+/* line 113, ../sass/_index.scss */
 .glyphicon.glyphicon-info-sign {
   margin-top: 50px;
   font-size: 75px;
@@ -221,14 +241,14 @@ button:hover {
   text-decoration: none;
 }
 
-/* line 118, ../sass/_index.scss */
+/* line 120, ../sass/_index.scss */
 .glyphicon.glyphicon-transfer {
   font-size: 75px;
   color: white !important;
   text-decoration: none;
 }
 
-/* line 124, ../sass/_index.scss */
+/* line 126, ../sass/_index.scss */
 .glyphicon.glyphicon-pencil {
   font-size: 75px;
   color: black !important;
