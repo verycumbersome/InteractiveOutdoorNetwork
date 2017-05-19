@@ -236,6 +236,16 @@ button:hover {
 }
 
 /* line 3, ../sass/_registration.scss */
+input[type=text], input[type=email], input[type=password] {
+  width: 100%;
+  height: 30px !important;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color: black;
+}
+
+/* line 14, ../sass/_registration.scss */
 .blogpost {
   background-color: rgba(0, 0, 0, 0.6);
   width: 80%;
@@ -250,22 +260,23 @@ button:hover {
   text-align: center;
 }
 
-/* line 17, ../sass/_registration.scss */
+/* line 28, ../sass/_registration.scss */
 .blogpost h1 {
   font-weight: 600;
   font-size: 3em;
   text-align: center;
 }
 
-/* line 23, ../sass/_registration.scss */
+/* line 34, ../sass/_registration.scss */
 .registrationform {
+  color: white;
   width: 80%;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 30px;
 }
 
-/* line 30, ../sass/_registration.scss */
+/* line 42, ../sass/_registration.scss */
 #id_description {
   color: black;
   resize: none;
@@ -273,7 +284,7 @@ button:hover {
   height: auto;
 }
 
-/* line 39, ../sass/_registration.scss */
+/* line 51, ../sass/_registration.scss */
 .registrationform h1 {
   font-weight: 600;
   font-size: 3em;
