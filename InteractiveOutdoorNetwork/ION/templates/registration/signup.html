@@ -4,15 +4,15 @@
 {% block content %}
     <div id="content">
         <!-- <form name="signup" onsubmit="return createAccountForm()"> -->
-        <form name="signup" method="post">
+        <form class="registrationform" name="signup" method="post">
             <div class="signupform">
                 {% csrf_token %}
                 {{ form }}
                 <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
-                <div class="clearfix">
-                    <button type="button" href="{% url 'ION:signup' %}" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="signupbtn">Sign Up</button>
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                    <a href="{% url 'ION:signup' %}" class="btn btn-lg btn-danger" role="button">Cancel</a>
+                    <a type="submit" href="{% url 'login' %}" class="btn btn-lg btn-success" role="button">Sign Up</a>
                 </div>
             </div>
         </form>

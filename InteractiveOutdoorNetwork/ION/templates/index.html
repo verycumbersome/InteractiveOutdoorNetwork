@@ -41,25 +41,14 @@
             InteractiveOutdoorNetwork can let students stay updated as to what goes on in IOP.
         </p>
         <a href="{% url 'ION:signup' %}" class="btn btn-info" role="button">Get Started Now</a>
-        <a href="{% url 'login' %}" class="btn btn-primary" role="button">Login</a>
+        <a href="{% url 'login' %}" class="btn btn-primary glyphicon glyphicon-log-in" role="button">Login</a>
     </div>
 </div>
 <div id="geartrade">
     <h1>Gear Trade</h1>
-    <div id="sell">
-        <p>
-            <button type = "button" class = "btn btn-primary btn-lg btn-block">
-                Buy
-            </button>
-        </p>
-    </div>
-
-    <div id="buy">
-        <p>
-            <button type = "button" class = "btn btn-primary btn-lg btn-block">
-                Sell
-            </button>
-        </p>
+    <div class="btn-group btn-group-justified">
+        <a class="btn btn-lg btn-default" href="{% url 'ION:gearbuy' %}">Buy</a>
+        <a class="btn btn-lg btn-default" href="{% url 'ION:gearsell' %}">Sell</a>
     </div>
 </div>
 {% endblock content %}

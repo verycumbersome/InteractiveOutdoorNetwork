@@ -403,16 +403,6 @@ svg {
     fill: $color-base;
     mask: url(#skiingmask);
   }
-  #sellbase {
-    fill: $color-base;
-    mask: url(#sellmask);
-  }
-
-  #buybase {
-    fill: $color-base;
-    mask: url(#buymask);
-  }
-
 }
 
 .contentbody {

@@ -7,7 +7,7 @@
 {% endif %}
 
 <div id="content">
-    <form method="post" action="{% url 'login' %}">
+    <form class="registrationform" method="post" action="{% url 'login' %}">
         {% csrf_token %}
         <table>
             <tr>
