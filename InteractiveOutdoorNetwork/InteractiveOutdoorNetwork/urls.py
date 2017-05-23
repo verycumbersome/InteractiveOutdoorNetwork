@@ -22,4 +22,4 @@ urlpatterns = [
     url(r'^accounts/login/$', auth_views.login, name='login'),
     url(r'^admin/', admin.site.urls),
     url(r'^', include('ION.urls', namespace='ION')),
-]
+] 

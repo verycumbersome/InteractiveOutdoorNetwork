@@ -8,7 +8,8 @@
                 <h2>By: {{ post.author }}</h2>
                 <h2>Created: {{ post.created_date }}</h2>
                 <!-- <a src="{{ post.photo }}"></a> -->
-                {{ post.photo }}
+                <img src="{% post.photo.url %}"/>
+                {{ post.photo.url }}
                 {{ post.description }}
             </section>
         {% endfor %}

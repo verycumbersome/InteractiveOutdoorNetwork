@@ -143,3 +143,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MARKDOWN_EDITOR_SKIN = 'simple'
 
 LOGIN_REDIRECT_URL = '/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

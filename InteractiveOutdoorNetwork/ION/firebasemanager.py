@@ -10,4 +10,4 @@ db = firebase.database()
 storage = firebase.storage()
 
 def Store(img):
-    storage.child("images/image.jpg").put(img.name)
+    storage.child("images/image.jpg").put("hiking2.jpg")

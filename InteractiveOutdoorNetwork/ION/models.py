@@ -26,7 +26,7 @@ class GearPost(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     description = models.TextField(max_length=1000)
-    photo = models.ImageField(upload_to='gearimages', default='/static/images/media/imgnotfound.png')
+    photo = models.ImageField(upload_to='gearimages/')
     created_date = models.DateTimeField(default=timezone.now)
 
     # print photo.name
