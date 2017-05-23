@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
     <div id='content'>
@@ -8,7 +9,7 @@
                 <h2>By: {{ post.author }}</h2>
                 <h2>Created: {{ post.created_date }}</h2>
                 <!-- <a src="{{ post.photo }}"></a> -->
-                <img src="{% post.photo.url %}"/>
+                <img src="{{ post.photo.url }}"/>
                 {{ post.photo.url }}
                 {{ post.description }}
             </section>

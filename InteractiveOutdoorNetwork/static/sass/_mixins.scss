@@ -1,0 +1,30 @@
+@mixin backgroundImage($imageUrl) {
+  background-image: $imageUrl;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin transitions($time) {
+  -o-transition: $time;
+  -ms-transition: $time;
+  -moz-transition: $time;
+  -webkit-transition: $time;
+  transition: $time;
+}
+
+@mixin maxHeightAndWidth($maxheight, $minheight, $maxwidth, $minwidth) {
+  max-height: $maxheight;
+  min-height: $minheight;
+  max-width: $maxwidth;
+  min-width: $minwidth;
+}
+
+@mixin blur() {
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
+    opacity: 0.4;
+}

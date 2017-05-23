@@ -30,7 +30,7 @@ class GearPost(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
 
     # print photo.name
-    firebasemanager.Store(photo)
+    # firebasemanager.Store(photo)
 
     def __str__(self):
         return self.title
