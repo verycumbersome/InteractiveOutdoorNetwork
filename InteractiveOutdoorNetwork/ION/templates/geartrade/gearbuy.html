@@ -5,11 +5,10 @@
     <div id='content'>
         {% for post in gearposts %}
             <section class='gearpost'>
-                <h1>{{ post.title }}</h1>
-                <h2>By: {{ post.author }}</h2>
-                <h2>Created: {{ post.created_date }}</h2>
-                <!-- <a src="{{ post.photo }}"></a> -->
-                <img src="{{ post.photo.url }}" style="width: 400px; height: 400px;"/>
+                <img src="{{ post.photo.url }}" style="height: 200px;"/>
+                <h2>{{ post.title }}</h2>
+                <span>By: {{ post.author }}</span>
+                <span>Created: {{ post.created_date }}</span>
                 {{ post.description }}
             </section>
         {% endfor %}
