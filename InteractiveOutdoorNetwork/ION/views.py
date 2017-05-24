@@ -46,9 +46,10 @@ def gearsell(request):
         form = SellGearForm()
     return render(request, 'geartrade/gearsell.html', {'form': form})
 
-# def login(request):
-#     form = PostForm()
-#     return render(request, 'timeline.html', {'form': form})
+def gearitem(request, gear_id):
+    print gear_id
+
+    return render(request, 'geartrade/gearitem.html', {})
 
 def signup(request):
     if request.method == "POST":
