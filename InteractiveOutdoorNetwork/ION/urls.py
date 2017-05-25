@@ -10,7 +10,7 @@ urlpatterns = [
     url(r'^activities/', views.activities, name='activities'),
     url(r'^geartrade/buy', views.geartrade, name='gearbuy'),
     url(r'^geartrade/sell$', views.gearsell, name='gearsell'),
-    url(r'^geartrade/item/(?P<gear_id>[a-z]+)$', views.gearitem, name='gearitem'),
-    url(r'^blog/', views.blog, name='blog'),\
+    url(r'^geartrade/item/(?P<item>[0-9]+)$', views.gearitem, name='gearitem'),
+    url(r'^blog/', views.blog, name='blog'),
 
 ]

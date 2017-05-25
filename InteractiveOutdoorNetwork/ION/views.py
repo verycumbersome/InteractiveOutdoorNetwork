@@ -46,10 +46,16 @@ def gearsell(request):
         form = SellGearForm()
     return render(request, 'geartrade/gearsell.html', {'form': form})
 
-def gearitem(request, gear_id):
-    print gear_id
+def gearitem(request, item):
+    # gear_description = request.GET['gear_description']
+    # gear_id = request.GET['gear_id']
+    # gear_author = request.GET['gear_author']
+    if GearPost.objects.filter(id=item):
+        gearitem = GearPost.objects.filter(id=item).get()
+    else:
+        print 'item not found'
 
-    return render(request, 'geartrade/gearitem.html', {})
+    return render(request, 'geartrade/gearitem.html', {'gearitem': gearitem})
 
 def signup(request):
     if request.method == "POST":

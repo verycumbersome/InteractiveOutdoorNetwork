@@ -1,1 +1,11 @@
 {% extends 'base.html' %}
+
+{% block content %}
+    <div id='content'>
+        <h1>{{ gearitem.title }}</h1>
+        <img src="{{ gearitem.photo.url }}" style="height: 200px;"/>
+        <h2>By: {{ gearitem.author }}</h2>
+        <h2>{{ gearitem.created_date }}</h2>
+
+    </div>
+{% endblock content %}

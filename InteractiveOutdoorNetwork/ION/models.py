@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django_markdown.models import MarkdownField
 from django.db import models
 from django.utils import timezone
+import uuid
 import firebasemanager
 
 class BlogPost(models.Model):
@@ -29,7 +30,6 @@ class GearPost(models.Model):
     photo = models.ImageField(upload_to='gearimages/')
     created_date = models.DateTimeField(default=timezone.now)
 
-    # print photo.name
     # firebasemanager.Store(photo)
 
     def __str__(self):

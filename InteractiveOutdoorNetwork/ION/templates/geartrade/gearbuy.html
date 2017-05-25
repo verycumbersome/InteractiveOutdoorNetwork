@@ -7,7 +7,8 @@
             <section class='gearpost'>
                 <img src="{{ post.photo.url }}" style="height: 200px;"/>
                 <h2>{{ post.title }}</h2>
-                <a href="{% url 'ION:gearitem' gear_id=post.title %}"
+                <a href="{% url 'ION:gearitem' item=post.id %}"
+                {{ post }}
                 <span>By: {{ post.author }}</span>
                 <span>Created: {{ post.created_date }}</span>
                 {{ post.description }}
