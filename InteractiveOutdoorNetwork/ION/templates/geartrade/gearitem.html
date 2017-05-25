@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div id='content'>
-        <h1>{{ gearitem.title }}</h1>
-        <img src="{{ gearitem.photo.url }}" style="height: 200px;"/>
-        <h2>By: {{ gearitem.author }}</h2>
-        <h2>{{ gearitem.created_date }}</h2>
-
+    <div id="content">
+        <div class="gearitem">
+            <h1>{{ gearitem.title }}</h1>
+            <img src="{{ gearitem.photo.url }}" style="width: 20%"/>
+            <h2>By: {{ gearitem.author }}</h2>
+            <h2>{{ gearitem.created_date }}</h2>
+        </div>
     </div>
 {% endblock content %}

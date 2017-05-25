@@ -5,7 +5,24 @@
         <form method="POST" class="gearform" enctype="multipart/form-data">
             {% csrf_token %}
             <h1>Sell Gear</h1>
-            {{ form.as_p }}
+
+            {{ form.title.label_tag }}
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">@</span>
+                {{ form.title }}
+            </div>
+
+            {{ form.description.label_tag }}
+            <div class="input-group">
+                {{ form.description }}
+                <span class="input-group-addon glyphicon glyphicon-comment" id="basic-addon1"></span>
+            </div>
+
+            {{ form.photo.label_tag }}
+            <div class="btn-group">
+                {{ form.photo }}
+            </div>
+
             <button type="submit" class="save btn btn-default">Save</button>
         </form>
     </div>

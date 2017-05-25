@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+
 
 {% block content %}
 
@@ -6,19 +6,25 @@
     {{ form.errors }}
 {% endif %}
 
-<div id="content">
+<!-- <div id="content"> -->
     <form class="registrationform" method="post" action="{% url 'login' %}">
         {% csrf_token %}
 
         {{ form.username.label_tag }}
-        {{ form.username }}
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">@</span>
+            {{ form.username }}
+        </div>
 
         {{ form.password.label_tag }}
-        {{ form.password }}
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">@</span>
+            {{ form.password }}
+        </div>
 
         <input type="submit" value="submit" class="btn btn-lg btn-success"/></input>
         <input type="hidden" name="next" value="{{ next }}" />
     </form>
-</div>
+<!-- </div> -->
 
 {% endblock %}

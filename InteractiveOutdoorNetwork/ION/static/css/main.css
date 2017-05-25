@@ -361,6 +361,11 @@ input[type=text], input[type=email], input[type=password] {
   text-align: center;
 }
 
+/* line 49, ../sass/_geartrade.scss */
+.gearitem {
+  background-color: black;
+}
+
 /* line 27, ../sass/main.scss */
 html {
   -ms-text-size-adjust: 100%;

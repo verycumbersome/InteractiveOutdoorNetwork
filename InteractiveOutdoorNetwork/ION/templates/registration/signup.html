@@ -7,20 +7,31 @@
         <form class="registrationform" name="signup" method="post">
             <div class="signupform">
                 {% csrf_token %}
+
                 {{ form.username.label_tag }}
-                {{ form.username }}
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">username</span>
+                    {{ form.username }}
+                </div>
 
                 {{ form.email.label_tag }}
-                {{ form.email }}
+                <div class="input-group">
+                    {{ form.email }}
+                    <span class="input-group-addon" id="basic-addon1">@example.com</span>
+                </div>
 
                 {{ form.password.label_tag }}
-                {{ form.password }}
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">password</span>
+                    {{ form.password }}
+                </div>
+
                 <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
                 <div class="btn-group" role="group" aria-label="...">
 
-                    <input type="submit" value="submit" class="btn btn-lg btn-success"/></input>
-                    <a href="{% url 'ION:home' %}" class="btn btn-lg btn-danger" role="button">Cancel</a>
+                    <input type="submit" value="Submit" class="btn btn-success"/></input>
+                    <a href="{% url 'ION:home' %}" class="btn btn-danger" role="button">Cancel</a>
                     <!-- <input type="submit" value="submit" class="btn btn-lg btn-success"/></input>
                     <a href="{% url 'ION:home' %}" class="btn btn-lg btn-danger" role="button">Cancel</a>
                     <a type="submit" href="{% url 'login' %}" class="btn btn-lg btn-success" role="button">Sign Up</a> -->
