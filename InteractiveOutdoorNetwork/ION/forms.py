@@ -8,7 +8,7 @@ class SellGearForm(forms.ModelForm):
 
     class Meta:
         model = GearPost
-        fields = ('title', 'description', 'photo')
+        fields = ('title', 'description', 'photo', 'price')
 
 class UserCreate(forms.ModelForm):
     class Meta:

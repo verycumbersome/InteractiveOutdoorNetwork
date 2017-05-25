@@ -28,6 +28,7 @@ class GearPost(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(max_length=1000)
     photo = models.ImageField(upload_to='gearimages/')
+    price = models.IntegerField(default=0)
     created_date = models.DateTimeField(default=timezone.now)
 
     # firebasemanager.Store(photo)
