@@ -4,4 +4,4 @@ env
 __pycache__
 /node_modules
 .sass-cache
-InteractiveOutdoorNetwork/media/gearimages/*.jpg
+InteractiveOutdoorNetwork/media/gearimages

@@ -47,5 +47,14 @@
 }
 
 .gearitem {
+    text-align: center;
+    // background-color: black;
+
+}
+
+.gearitem h1, h2 {
+    margin: auto;
     background-color: black;
+    border-radius: 5px;
+    width: 80%;
 }

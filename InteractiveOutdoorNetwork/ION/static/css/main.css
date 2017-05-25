@@ -363,7 +363,15 @@ input[type=text], input[type=email], input[type=password] {
 
 /* line 49, ../sass/_geartrade.scss */
 .gearitem {
+  text-align: center;
+}
+
+/* line 55, ../sass/_geartrade.scss */
+.gearitem h1, h2 {
+  margin: auto;
   background-color: black;
+  border-radius: 5px;
+  width: 80%;
 }
 
 /* line 27, ../sass/main.scss */
