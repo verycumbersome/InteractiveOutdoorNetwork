@@ -18,6 +18,12 @@
                 <span class="input-group-addon glyphicon glyphicon-comment" id="basic-addon1"></span>
             </div>
 
+            {{ form.price.label_tag }}
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">$</span>
+                {{ form.price }}
+            </div>
+
             {{ form.photo.label_tag }}
             <div class="btn-group">
                 {{ form.photo }}

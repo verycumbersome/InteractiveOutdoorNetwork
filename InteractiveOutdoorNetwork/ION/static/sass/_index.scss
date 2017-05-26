@@ -1,6 +1,10 @@
 @import "compass/css3";
 @import "mixins";
 
+.indexcontainer {
+    // @include backgroundImage(url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg"));
+}
+
 .aboutus {
     font-size: 1.2em;
     line-height: 120%;

@@ -150,8 +150,8 @@ $(document).ready(function() {
             userRef.child('/name').set(user.displayName);
             userRef.child('/photo').set(user.photoURL);
         } else {
-            $(".login").show();
-            $(".login-text").show();
+            // $(".login").show();
+            // $(".login-text").show();
 
             $(".logout").hide();
             $(".logout-text").hide();
@@ -164,35 +164,18 @@ $(document).ready(function() {
 
     const menuSlideSpeed = 300;
 
-    $(".header").fadeOut(0);
-
-    $(".blogpost").fadeOut(0);
-
-    $(".row").fadeIn(2000);
 
     $(".navbar").find(".active").removeClass("active");
 
-    $(".navbar").fadeIn(1500, function() {
-        $(".header").fadeIn(1500);
-        $(".contentbody p").fadeIn(1000);
-        $(".blogpost").fadeIn(1000);
-    });
+    // $(".navbar").fadeIn(1500, function() {
+    //     $(".header").fadeIn(1500);
+    //     $(".contentbody p").fadeIn(1000);
+    //     $(".blogpost").fadeIn(1000);
+    // });
 
-    setTimeout(
-        function()
-        {
-            $(".dropdown-menu.login").slideUp(300);
-        }, 0);
-    
-    $("#aboutusdropdown").slideUp(0);
-    $("#practicesdropdown").slideUp(0);
-    $("#blogdropdown").slideUp(0);
-    $("#contactdropdown").slideUp(0);
-    $(".dropdown-menu.login").fadeOut(menuSlideSpeed);
-
-    $(".navbar a").on("click", function(){
-        $(".navbar").find(".active").removeClass("active");
-    });
+    // $(".navbar a").on("click", function(){
+    //     $(".navbar").find(".active").removeClass("active");
+    // });
 
 
     setInterval(function(){
@@ -217,27 +200,29 @@ $(document).ready(function() {
             page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
             page.stop();
         });
-     
+
             page.stop().animate({scrollTop: $("#content").position().top - 50}, 1500, "easeInOutCubic", function(){
             page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
-        });                                                                                                                                                                                             
+        });
 
             return false;
     });
 
-    $(".dropdown.people").hover(function() {
-        $(".dropdown-menu.people").stop(false, false).slideDown(menuSlideSpeed);
-    }, function() {
-        $(".dropdown-menu").stop().slideUp(menuSlideSpeed);
-    });
-
-    $(".practices").hover(function() {
-        $(".practices").stop().slideDown(menuSlideSpeed);
-    }, function() {
-        $(".dropdown-menu").stop().slideUp(menuSlideSpeed);
-    });
-
+    // $(".dropdown.people").hover(function() {
+    //     $(".dropdown-menu.people").stop(false, false).slideDown(menuSlideSpeed);
+    // }, function() {
+    //     $(".dropdown-menu").stop().slideUp(menuSlideSpeed);
+    // });
+    //
+    // $(".practices").hover(function() {
+    //     $(".practices").stop().slideDown(menuSlideSpeed);
+    // }, function() {
+    //     $(".dropdown-menu").stop().slideUp(menuSlideSpeed);
+    // });
+    //
     $(".dropdown.login").hover(function() {
+        $(".login").show();
+        $(".login-text").show();
         $(".dropdown-menu.login").stop(false, false).slideDown(menuSlideSpeed);
     }, function() {
         $(".dropdown-menu.login").stop().slideUp(menuSlideSpeed);

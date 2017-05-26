@@ -2,22 +2,24 @@
 
 {% block content %}
 <div id="content">
-    <div class="title">
-        <svg>
-        <defs>
-            <mask id="titlemask" x="0" y="0" width="100%" height="100%">
-                <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                <text id="title" x="50%" y="0" dy="1.58em">Integrated Outdoor Program</text>
-                <text id="subtitle" x="50%" y="0" dy="9.8em">Bringing People Together</text>
-            </mask>
-            </defs>
-            <rect id="titlebase" x="0" y="0" width="100%" height="100%"/>
-        </svg>
-    </div>
-    <div id="autoscroll" class="animated slideInUp noselect noselect-recursive">
-        <div id=scrollbox>
-            <a id="scrolldown" class="fa fa-square-o" href="#footer"></a>
-            <a id="scrolldownarrow" class="glyphicon glyphicon-chevron-down"></a>
+    <div class="indexcontainer">
+        <div class="title">
+            <svg>
+            <defs>
+                <mask id="titlemask" x="0" y="0" width="100%" height="100%">
+                    <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                    <text id="title" x="50%" y="0" dy="1.58em">Integrated Outdoor Program</text>
+                    <text id="subtitle" x="50%" y="0" dy="9.8em">Bringing People Together</text>
+                </mask>
+                </defs>
+                <rect id="titlebase" x="0" y="0" width="100%" height="100%"/>
+            </svg>
+        </div>
+        <div id="autoscroll" class="animated slideInUp noselect noselect-recursive">
+            <div id=scrollbox>
+                <a id="scrolldown" class="fa fa-square-o" href="#footer"></a>
+                <a id="scrolldownarrow" class="glyphicon glyphicon-chevron-down"></a>
+            </div>
         </div>
     </div>
 </div>
@@ -51,7 +53,12 @@
         <h1>Gear Trade</h1>
         <hr>
         <p>
-        The InteractiveOutdoorProgram hosts an effective way of buying, selling, or trading gear. By clicking the sell option, users are able to title their post, write a description, and even post a picture to effectively advertise their gear. By clicking the buy option, users can browse posts made by others to find the gear they are looking for. Make sure you post your contact information in the description to let others know how to contact you when someone would want to buy/trade your equipment.
+            The InteractiveOutdoorProgram hosts an effective way of buying, selling, or trading gear. By
+            clicking the sell option, users are able to title their post, write a description, and even
+            post a picture to effectively advertise their gear. By clicking the buy option, users can
+            browse posts made by others to find the gear they are looking for. Make sure you post your
+            contact information in the description to let others know how to contact you when someone
+            would want to buy/trade your equipment.
         </p>
         <!-- <div class="btn-group"> -->
             <a class="btn btn-default" href="{% url 'ION:gearbuy' %}"><span class="glyphicon glyphicon-usd"></span>Buy</a>
@@ -65,8 +72,12 @@
         <h1>Blog</h1>
         <hr>
         <p>
-        Our website has an updated blog feed with messages from the IOP Facebook page to bring students without a Facebook account up-to-date information on future dates, activities, and general information. The SL’s, as well as Jeff and Pete are the only one’s able to make blog posts, so users are aware of the authenticity of each post. Email us if you have any questions with the functionality of the blog or the other utilities present on the InteractiveOutdoorProgram.
-        </p>
+        Our website has an updated blog feed with messages from the IOP Facebook page to bring
+        students without a Facebook account up-to-date information on future dates, activities, and
+        general information. The SL’s, as well as Jeff and Pete are the only one’s able to make blog
+        posts, so users are aware of the authenticity of each post. Email us if you have any
+        questions with the functionality of the blog or the other utilities present on the
+        InteractiveOutdoorProgram.         </p>
         <div class="btn-group">
             <a class="btn btn-lg btn-info" href="{% url 'ION:blog' %}">Read More</a>
         </div>
