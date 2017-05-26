@@ -1,13 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div id="content">
+    <div class="gearbuycontent">
+        <h1>{{ gearitem.title }}</h1>
         <div class="gearitem">
-            <h1>{{ gearitem.title }}</h1>
-            <img src="{{ gearitem.photo.url }}" style="max-height: 50%;"/>
-            <p>{{ gearitem.description }}</p>
-            <h2>By: {{ gearitem.author }}</h2>
-            <h2>{{ gearitem.created_date }}</h2>
+                <img class="geariteminline" src="{{ gearitem.photo.url }}" style="max-height: 50%; max-width: 100%;"/>
+            <div>
+                <span><a class="btn btn-success glyphicon glyphicon-usd">{{ gearitem.price }}</a></span>
+                <span><p class="geariteminline">{{ gearitem.title }}</p></span>
+                <br>
+                <h2>Poster: {{ gearitem.author }}</h2>
+                <h2>Posted: {{ gearitem.created_date }}</h2>
+            </div>
         </div>
     </div>
 {% endblock content %}

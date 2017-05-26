@@ -421,15 +421,44 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
 
 /* line 94, ../sass/_geartrade.scss */
 .gearitem {
+  color: black;
   text-align: center;
+  background-color: white;
+  margin: auto;
+  border-radius: 5px;
 }
 
-/* line 100, ../sass/_geartrade.scss */
-.gearitem h1, h2 {
+/* line 103, ../sass/_geartrade.scss */
+.gearitem img {
+  margin: 10px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+/* line 108, ../sass/_geartrade.scss */
+.gearitem img:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+/* line 116, ../sass/_geartrade.scss */
+.gearitem p {
+  display: inline-block;
+  font-size: 1.4em;
+}
+
+/* line 122, ../sass/_geartrade.scss */
+.gearitem h2 {
   margin: auto;
-  background-color: black;
-  border-radius: 5px;
+  color: black !important;
   width: 80%;
+  font-size: 1.5em;
+  padding-bottom: 10px;
 }
 
 /* line 27, ../sass/main.scss */
