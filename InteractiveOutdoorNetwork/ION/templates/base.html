@@ -26,17 +26,17 @@
 <nav class="navbar navbar-inverse navbar-fixed-top animated slideInDown">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
             <a class="navbar-brand glyphicon glyphicon-leaf" href="{% url 'ION:home' %}">IOP</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="collapse navbar-collapse myNavbar" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="{% url 'ION:home' %}">Home</a></li>
-                <li class="active"><a href="{% url 'ION:activities' %}">Activities</a></li>
+                <li class="active"><a href="{% url 'ION:iopimages' %}">IOP Images</a></li>
                 <li class="dropdown practices">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gear Trade<span class="caret"></span></a>
                     <ul class="dropdown-menu practices">

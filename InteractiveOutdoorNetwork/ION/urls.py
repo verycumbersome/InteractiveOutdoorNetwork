@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^timeline/', views.timeline, name='timeline'),
     url(r'^signup', views.signup, name='signup'),
     url(r'^activities/', views.activities, name='activities'),
+    url(r'^iopimages/', views.iopimages, name='iopimages'),
     url(r'^geartrade/buy', views.geartrade, name='gearbuy'),
     url(r'^geartrade/sell$', views.gearsell, name='gearsell'),
     url(r'^geartrade/item/(?P<item>[0-9]+)$', views.gearitem, name='gearitem'),

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% for photo in photo_list %}
+            <section class='gearpost'>
+                <img src="{{ photo.photo.url }}" style="height: 400px; max-width: 100%"/>
+                <br>
+                    {{ photo.title }}
+                <div>
+                    <span>Photographer: {{ photo.author }}</span>
+                    <br>
+                    <span>Uploaded: {{ photo.created_date }}</span>
+                </div>
+            </section>
+        {% endfor %}
+    </div>
+{% endblock content %}

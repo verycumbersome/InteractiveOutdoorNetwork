@@ -150,8 +150,8 @@ $(document).ready(function() {
             userRef.child('/name').set(user.displayName);
             userRef.child('/photo').set(user.photoURL);
         } else {
-            $(".login").show();
-            $(".login-text").show();
+            // $(".login").show();
+            // $(".login-text").show();
 
             $(".logout").hide();
             $(".logout-text").hide();
@@ -220,11 +220,13 @@ $(document).ready(function() {
     //     $(".dropdown-menu").stop().slideUp(menuSlideSpeed);
     // });
     //
-    // $(".dropdown.login").hover(function() {
-    //     $(".dropdown-menu.login").stop(false, false).slideDown(menuSlideSpeed);
-    // }, function() {
-    //     $(".dropdown-menu.login").stop().slideUp(menuSlideSpeed);
-    // });
+    $(".dropdown.login").hover(function() {
+        $(".login").show();
+        $(".login-text").show();
+        $(".dropdown-menu.login").stop(false, false).slideDown(menuSlideSpeed);
+    }, function() {
+        $(".dropdown-menu.login").stop().slideUp(menuSlideSpeed);
+    });
 
 
     //Hiking tile hover SVG

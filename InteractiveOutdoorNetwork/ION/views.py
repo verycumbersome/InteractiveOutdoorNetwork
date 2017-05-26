@@ -11,7 +11,7 @@ from django.utils import timezone
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .forms import SellGearForm, UserCreate
-from .models import BlogPost, GearPost
+from .models import BlogPost, GearPost, PhotoPost
 
 class Main(TemplateView):
     def get(self, request, **kwargs):
@@ -22,6 +22,22 @@ def timeline(request):
 
 def activities(request):
     return render(request, 'activities/activities.html')
+
+def iopimages(request):
+    photos = PhotoPost.objects.order_by('created_date').reverse()
+    page = request.GET.get('page', 1)
+
+    paginator = Paginator(photos, 6)
+    try:
+        photo_list = paginator.page(page)
+    except PageNotAnInteger:
+        photo_list = paginator.page(1)
+    except EmptyPage:
+        photo_list = paginator.page(paginator.num_pages)
+
+    # return render(request, 'core/user_list.html', { 'users': users })
+    # gearposts = GearPost.objects.order_by('created_date')
+    return render(request, 'iopimages.html', {'photo_list':photo_list})
 
 def blog(request):
     posts = BlogPost.objects.order_by('created_date').reverse()

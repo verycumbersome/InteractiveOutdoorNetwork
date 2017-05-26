@@ -35,3 +35,11 @@ class GearPost(models.Model):
 
     def __str__(self):
         return self.title
+
+class PhotoPost(models.Model):
+    title = models.CharField(max_length=50)
+    photo = models.ImageField(upload_to='IOPimages/')
+    created_date = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.title
