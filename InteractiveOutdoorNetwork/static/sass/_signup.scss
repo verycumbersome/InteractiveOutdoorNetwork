@@ -1,0 +1,59 @@
+@import "compass/css3";
+
+$submitbtncolor: #4CAF50;
+$cancelbtncolor: #333;
+
+input[type=text], input[type=password] {
+    width: 100%;
+    height: 30px !important;
+    // padding: 12px 20px;
+    // margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    color: black;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: darken($submitbtncolor, 20%);
+}
+
+.cancelbtn:hover {
+    background-color: darken($cancelbtncolor, 20%);
+}
+
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: $cancelbtncolor;
+}
+
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+        width: 100%;
+    }
+}

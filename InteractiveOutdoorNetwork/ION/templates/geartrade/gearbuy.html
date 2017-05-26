@@ -2,10 +2,20 @@
 {% load static %}
 
 {% block content %}
-    <div id='content'>
+    <div class='gearbuycontent'>
         <div class='gearbuycontainer'>
-            <h1>Buy Gear</h1>
-            <br>
+            <div class="othertitle scrolldown">
+                <svg>
+                <defs>
+                    <mask id="titlemask" x="0" y="0" width="100%" height="100%">
+                        <rect id="alpha" x="0" y="0" width="100%" height="100%" />
+                        <text id="title" x="50%" y="0" dy="1.58em">Buy Gear</text>
+                        <text id="subtitle" x="50%" y="0" dy="9.8em">Bringing People Together</text>
+                    </mask>
+                    </defs>
+                    <rect id="titlebase" x="0" y="20" width="100%" height="80%"/>
+                </svg>
+            </div>
             {% for post in gearposts %}
                 <section class='gearpost'>
                     <a href="{% url 'ION:gearitem' item=post.id %}">

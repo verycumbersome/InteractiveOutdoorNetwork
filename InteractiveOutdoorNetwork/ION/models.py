@@ -27,7 +27,7 @@ class GearPost(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=50)
     description = models.TextField(max_length=1000)
-    photo = models.ImageField(upload_to='gearimages/')
+    photo = models.ImageField(upload_to='gearimages/', default='/ION/static/images/imgnotfound.png')
     price = models.IntegerField(default=0)
     created_date = models.DateTimeField(default=timezone.now)
 
