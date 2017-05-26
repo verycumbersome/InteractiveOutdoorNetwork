@@ -1,5 +1,20 @@
 @import "compass/css3";
 
+.gearbuycontainer {
+    text-align: center;
+}
+
+.gearbuycontainer h1 {
+    text-align: center;
+    background-color: white;
+    font-weight: 600;
+    width: 40%;
+    border-radius: 5px;
+    font-size: 3em;
+    margin: auto;
+    color: black;
+}
+
 .gearform {
     width: 80%;
     margin: auto;
@@ -12,8 +27,6 @@
     resize: none;
     width: 100%;
     height: auto;
-
-
 }
 
 .gearform h1 {
@@ -23,15 +36,35 @@
 }
 
 .gearpost {
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 33%;
+    background-color: white;
+    margin: 0.5vh 0.25vw 0.5vh 0.25vw;
+    width: 30%;
     min-width: 400px;
     display: inline-block;
-    color: white;
+    color: black;
+    border-radius: 5px;
     font-size: 1.2em;
     font-weight: 300;
     line-spacing: -2px;
     text-align: center;
+}
+
+.gearpost img {
+    padding: 10px;
+    @include transitions(0.5s);
+    @include box_shadow(1);
+
+    &:hover {
+        @include box_shadow(3);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+}
+
+.pagination {
+    bottom: 0;
+    position: relative;
 }
 
 .gearpost h1 {

@@ -25,7 +25,7 @@ class BlogPost(models.Model):
 
 class GearPost(models.Model):
     author = models.ForeignKey('auth.User')
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=50)
     description = models.TextField(max_length=1000)
     photo = models.ImageField(upload_to='gearimages/')
     price = models.IntegerField(default=0)

@@ -3,17 +3,47 @@
 
 {% block content %}
     <div id='content'>
+        <div class='gearbuycontainer'>
+            <h1>Buy Gear</h1>
+            <br>
+            {% for post in gearposts %}
+                <section class='gearpost'>
+                    <a href="{% url 'ION:gearitem' item=post.id %}">
+                        <img src="{{ post.photo.url }}" style="height: 200px; max-width: 100%"/>
+                    </a>
+                    <br>
+                    <a href="{% url 'ION:gearitem' item=post.id %}" class="btn btn-success"><i class="fa fa-shopping-bag" aria-hidden="true"></i> {{ post.title }}</a>
+                    <div>
+                        <span>Seller: {{ post.author }}</span>
+                        <br>
+                        <span>Created: {{ post.created_date }}</span>
+                    </div>
+                </section>
+            {% endfor %}
 
-        <h1>Sell Gear</h1>
-        {% for post in gearposts %}
-            <section class='gearpost'>
-                <a href="{% url 'ION:gearitem' item=post.id %}">
-                    <img src="{{ post.photo.url }}" style="height: 200px; max-width: 100%"/>
-                    <h2>{{ post.title }}</h2>
-                </a>
-                <span>By: {{ post.author }}</span>
-                <span>Created: {{ post.created_date }}</span>
-            </section>
-        {% endfor %}
+            {% if gearposts.has_other_pages %}
+            <div>
+              <ul class="pagination">
+                {% if post.has_previous %}
+                  <li><a href="?page={{ gearposts.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                  <li class="disabled"><span>&laquo;</span></li>
+                {% endif %}
+                {% for i in gearposts.paginator.page_range %}
+                  {% if gearposts.number == i %}
+                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                  {% else %}
+                    <li><a href="?page={{ i }}">{{ i }}</a></li>
+                  {% endif %}
+                {% endfor %}
+                {% if gearposts.has_next %}
+                  <li><a href="?page={{ gearposts.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                  <li class="disabled"><span>&raquo;</span></li>
+                {% endif %}
+              </ul>
+            </div>
+            {% endif %}
+        </div>
     </div>
 {% endblock content %}
