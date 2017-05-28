@@ -6,10 +6,11 @@
         <div class="gearitem">
                 <img class="geariteminline" src="{{ gearitem.photo.url }}" style="max-height: 50%; max-width: 100%;"/>
             <div>
-                <span><a class="btn btn-success glyphicon glyphicon-usd">{{ gearitem.price }}</a></span>
+                <span><a class="btn btn-success glyphicon glyphicon-usd" href="mailto:{{ gearitem.user.email }}">{{ gearitem.price }}</a></span>
                 <span><p class="geariteminline">{{ gearitem.title }}</p></span>
+                {{ geartrade.user.email }}
                 <br>
-                <h2>Poster: {{ gearitem.author }}</h2>
+                <h2>Poster: {{ gearitem.user.username }}</h2>
                 <h2>Posted: {{ gearitem.created_date }}</h2>
             </div>
         </div>

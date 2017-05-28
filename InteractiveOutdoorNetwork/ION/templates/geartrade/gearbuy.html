@@ -24,7 +24,7 @@
                     <br>
                     <a href="{% url 'ION:gearitem' item=post.id %}" class="btn btn-success"><i class="fa fa-shopping-bag" aria-hidden="true"></i> {{ post.title }}</a>
                     <div>
-                        <span>Seller: {{ post.author }}</span>
+                        <span>Seller: {{ post.user.username }}</span>
                         <br>
                         <span>Created: {{ post.created_date }}</span>
                     </div>
