@@ -2,7 +2,7 @@
 @import "mixins";
 
 .blogpost {
-    background-color: rgba(0, 0, 0, 0.01) !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
     width: 80%;
     margin: auto;
     color: white;
@@ -15,14 +15,14 @@
     text-align: center;
 }
 
-.blogpostwrapper {
-    text-align: center;
-    width: 70%;
-    margin: auto;
-    background-color: black;
-    border-radius: 4px;
-    padding: 10px;
-}
+// .blogpostwrapper {
+//     text-align: center;
+//     width: 70%;
+//     margin: auto;
+//     background-color: black;
+//     border-radius: 4px;
+//     padding: 10px;
+// }
 
 .blogpost h1 {
     font-weight: 600;
@@ -34,5 +34,5 @@
     font-size: 1.5em;
     font-weight: 400;
     font-size: 1.2em !important;
-    text-align: center;                                                                                                                                                                                 
+    text-align: center;
 }

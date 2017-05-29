@@ -61,7 +61,7 @@ button:hover {
 }
 /* line 4, ../sass/_blog.scss */
 .blogpost {
-  background-color: rgba(0, 0, 0, 0.01) !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
   width: 80%;
   margin: auto;
   color: white;
@@ -72,16 +72,6 @@ button:hover {
   padding-bottom: 30px;
   padding: 15px;
   text-align: center;
-}
-
-/* line 18, ../sass/_blog.scss */
-.blogpostwrapper {
-  text-align: center;
-  width: 70%;
-  margin: auto;
-  background-color: black;
-  border-radius: 4px;
-  padding: 10px;
 }
 
 /* line 27, ../sass/_blog.scss */
@@ -97,6 +87,63 @@ button:hover {
   font-weight: 400;
   font-size: 1.2em !important;
   text-align: center;
+}
+
+/* line 1, ../sass/_pages.scss */
+.content {
+  padding-top: 80px;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  color: white;
+  height: auto;
+  min-height: 100vh;
+  background-image: url("https://c1.staticflickr.com/8/7351/16448657165_5f16814b0b_k.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* line 13, ../sass/_pages.scss */
+.content h2 {
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
+  margin: auto;
+  color: white;
+  bottom: 0;
+  /*background-color: rgba(50, 50, 50, 0.7);*/
+}
+
+/* line 23, ../sass/_pages.scss */
+.secondarycontent {
+  padding-top: 80px;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  color: white;
+  height: auto;
+  min-height: 100vh;
+  background-image: url("https://c1.staticflickr.com/8/7351/16448657165_5f16814b0b_k.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* line 34, ../sass/_pages.scss */
+.secondarycontent h1 {
+  letter-spacing: -2px;
+  font-size: 4.5em;
+  font-weight: 800;
+}
+
+/* line 40, ../sass/_pages.scss */
+.secondarycontent h2 {
+  color: white;
+  letter-spacing: 10px;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 /* line 8, ../sass/_index.scss */
@@ -312,38 +359,18 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
 }
 
 /* line 4, ../sass/_geartrade.scss */
-.gearbuycontent {
-  padding-top: 80px;
-  margin: auto;
-  overflow: hidden;
-  width: 100%;
-  color: white;
-  height: auto;
-  min-height: 100vh;
-  background-image: url("https://c1.staticflickr.com/8/7351/16448657165_5f16814b0b_k.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-/* line 15, ../sass/_geartrade.scss */
 .gearbuycontainer {
   text-align: center;
 }
 
-/* line 19, ../sass/_geartrade.scss */
+/* line 8, ../sass/_geartrade.scss */
 .gearbuycontainer h1 {
   text-align: center;
-  background-color: white;
-  font-weight: 600;
   width: 40%;
-  border-radius: 5px;
-  font-size: 3em;
   margin: auto;
-  color: black;
 }
 
-/* line 30, ../sass/_geartrade.scss */
+/* line 15, ../sass/_geartrade.scss */
 .gearform {
   width: 80%;
   margin: auto;
@@ -351,7 +378,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   padding: 30px;
 }
 
-/* line 37, ../sass/_geartrade.scss */
+/* line 22, ../sass/_geartrade.scss */
 #id_description {
   color: black;
   resize: none;
@@ -359,14 +386,14 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   height: auto;
 }
 
-/* line 44, ../sass/_geartrade.scss */
+/* line 29, ../sass/_geartrade.scss */
 .gearform h1 {
   font-weight: 600;
   font-size: 3em;
   text-align: center;
 }
 
-/* line 50, ../sass/_geartrade.scss */
+/* line 35, ../sass/_geartrade.scss */
 .gearpost {
   background-color: white;
   margin: 0.5vh 0.25vw 0.5vh 0.25vw;
@@ -381,7 +408,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   text-align: center;
 }
 
-/* line 64, ../sass/_geartrade.scss */
+/* line 49, ../sass/_geartrade.scss */
 .gearpost img {
   padding: 10px;
   -o-transition: 0.5s;
@@ -391,7 +418,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   transition: 0.5s;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-/* line 69, ../sass/_geartrade.scss */
+/* line 54, ../sass/_geartrade.scss */
 .gearpost img:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-transform: translateY(-5px);
@@ -399,27 +426,27 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   transform: translateY(-5px);
 }
 
-/* line 77, ../sass/_geartrade.scss */
+/* line 62, ../sass/_geartrade.scss */
 .pagination {
   bottom: 0;
   position: relative;
 }
 
-/* line 82, ../sass/_geartrade.scss */
+/* line 67, ../sass/_geartrade.scss */
 .gearpost h1 {
   font-weight: 600;
   font-size: 3em;
   text-align: center;
 }
 
-/* line 88, ../sass/_geartrade.scss */
+/* line 73, ../sass/_geartrade.scss */
 .gearpost h2 {
   font-weight: 400;
   font-size: 1.2em !important;
   text-align: center;
 }
 
-/* line 94, ../sass/_geartrade.scss */
+/* line 79, ../sass/_geartrade.scss */
 .gearitem {
   color: black;
   text-align: center;
@@ -428,7 +455,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   border-radius: 5px;
 }
 
-/* line 103, ../sass/_geartrade.scss */
+/* line 88, ../sass/_geartrade.scss */
 .gearitem img {
   margin: 10px;
   -o-transition: 0.5s;
@@ -438,7 +465,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   transition: 0.5s;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-/* line 108, ../sass/_geartrade.scss */
+/* line 93, ../sass/_geartrade.scss */
 .gearitem img:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-transform: translateY(-5px);
@@ -446,13 +473,13 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   transform: translateY(-5px);
 }
 
-/* line 116, ../sass/_geartrade.scss */
+/* line 101, ../sass/_geartrade.scss */
 .gearitem p {
   display: inline-block;
   font-size: 1.4em;
 }
 
-/* line 122, ../sass/_geartrade.scss */
+/* line 107, ../sass/_geartrade.scss */
 .gearitem h2 {
   margin: auto;
   color: black !important;
@@ -461,7 +488,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   padding-bottom: 10px;
 }
 
-/* line 27, ../sass/main.scss */
+/* line 28, ../sass/main.scss */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -470,9 +497,9 @@ html {
   text-rendering: optimizelegibility;
 }
 
-/* line 35, ../sass/main.scss */
+/* line 36, ../sass/main.scss */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   margin: 0;
 }
 
@@ -568,31 +595,31 @@ body {
     transform: none;
   }
 }
-/* line 140, ../sass/main.scss */
+/* line 143, ../sass/main.scss */
 .slideInDown {
   -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
 }
 
-/* line 145, ../sass/main.scss */
+/* line 148, ../sass/main.scss */
 .slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
 }
 
-/* line 150, ../sass/main.scss */
+/* line 153, ../sass/main.scss */
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
 
-/* line 155, ../sass/main.scss */
+/* line 158, ../sass/main.scss */
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
 
-/* line 160, ../sass/main.scss */
+/* line 163, ../sass/main.scss */
 .animated {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
@@ -600,24 +627,24 @@ body {
   animation-fill-mode: both;
 }
 
-/* line 167, ../sass/main.scss */
+/* line 170, ../sass/main.scss */
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-/* line 172, ../sass/main.scss */
+/* line 175, ../sass/main.scss */
 .animated.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 
-/* line 177, ../sass/main.scss */
+/* line 180, ../sass/main.scss */
 input[type=text], input[type=password], input[type=email], input[type=tel] {
   height: 28px !important;
 }
 
-/* line 181, ../sass/main.scss */
+/* line 184, ../sass/main.scss */
 #login-dp {
   min-width: 250px;
   padding: 14px 14px 0;
@@ -627,12 +654,12 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* line 190, ../sass/main.scss */
+/* line 193, ../sass/main.scss */
 #login-dp .help-block {
   font-size: 12px;
 }
 
-/* line 194, ../sass/main.scss */
+/* line 197, ../sass/main.scss */
 #login-dp .bottom {
   background-color: rgba(255, 255, 255, 0.8);
   border-top: 1px solid #ddd;
@@ -641,72 +668,72 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   padding: 14px;
 }
 
-/* line 202, ../sass/main.scss */
+/* line 205, ../sass/main.scss */
 #login-dp .social-buttons {
   margin: 12px 0;
 }
 
-/* line 206, ../sass/main.scss */
+/* line 209, ../sass/main.scss */
 #login-dp .social-buttons a {
   width: 49%;
 }
 
-/* line 210, ../sass/main.scss */
+/* line 213, ../sass/main.scss */
 #login-dp .form-group {
   margin-bottom: 10px;
 }
 
-/* line 214, ../sass/main.scss */
+/* line 217, ../sass/main.scss */
 .btn-fb:hover {
   color: #fff;
   background-color: #496ebc;
 }
 
-/* line 219, ../sass/main.scss */
+/* line 222, ../sass/main.scss */
 .btn-go {
   color: #fff;
   background-color: #3b5998;
 }
 
-/* line 224, ../sass/main.scss */
+/* line 227, ../sass/main.scss */
 .btn-go:hover {
   color: #fff;
   background-color: #496ebc;
 }
 
-/* line 229, ../sass/main.scss */
+/* line 232, ../sass/main.scss */
 .btn-tw {
   color: #fff;
   background-color: #55acee;
 }
 
-/* line 234, ../sass/main.scss */
+/* line 237, ../sass/main.scss */
 .btn-tw:hover {
   color: #fff;
   background-color: #59b5fa;
 }
 
 @media (max-width: 768px) {
-  /* line 240, ../sass/main.scss */
+  /* line 243, ../sass/main.scss */
   #login-dp {
     background-color: inherit;
     color: #fff;
   }
 
-  /* line 244, ../sass/main.scss */
+  /* line 247, ../sass/main.scss */
   #login-dp .bottom {
     background-color: inherit;
     border-top: 0 none;
   }
 }
-/* line 250, ../sass/main.scss */
+/* line 253, ../sass/main.scss */
 .account-image {
   top: 7px;
   height: 35px;
   border-radius: 20px;
 }
 
-/* line 256, ../sass/main.scss */
+/* line 259, ../sass/main.scss */
 .title {
   position: fixed;
   top: 100px;
@@ -716,101 +743,75 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   z-index: 10;
 }
 
-/* line 265, ../sass/main.scss */
+/* line 268, ../sass/main.scss */
 .title.scrolldown {
   position: absolute;
   top: 250px;
 }
 
-/* line 270, ../sass/main.scss */
-#content {
-  padding-top: 80px;
-  margin: auto;
-  overflow: hidden;
-  width: 100%;
-  color: white;
-  height: auto;
-  min-height: 100vh;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-/* line 281, ../sass/main.scss */
-#content h2 {
-  text-align: center;
-  font-size: 40px;
-  padding: 10px;
-  margin: auto;
-  color: white;
-  bottom: 0;
-  /*background-color: rgba(50, 50, 50, 0.7);*/
-}
-
-/* line 291, ../sass/main.scss */
+/* line 273, ../sass/main.scss */
 svg {
   width: 100%;
   height: inherit;
 }
-/* line 294, ../sass/main.scss */
+/* line 276, ../sass/main.scss */
 svg text {
   text-anchor: middle;
 }
-/* line 297, ../sass/main.scss */
+/* line 279, ../sass/main.scss */
 svg #alpha {
   fill: #999999;
 }
-/* line 301, ../sass/main.scss */
+/* line 283, ../sass/main.scss */
 svg #title {
   letter-spacing: -2px;
-  font-size: 9vmin;
-  font-weight: 800;
+  font-size: 4.5em;
+  font-weight: 1000;
 }
-/* line 307, ../sass/main.scss */
+/* line 289, ../sass/main.scss */
 svg #subtitle {
   letter-spacing: 10px;
   font-size: 1.2em;
   font-weight: 300;
   text-transform: uppercase;
 }
-/* line 314, ../sass/main.scss */
+/* line 296, ../sass/main.scss */
 svg #titlebase {
   fill: black;
   mask: url(#titlemask);
 }
-/* line 318, ../sass/main.scss */
+/* line 300, ../sass/main.scss */
 svg #hikingbase {
   fill: black;
   mask: url(#hikingmask);
 }
-/* line 322, ../sass/main.scss */
+/* line 304, ../sass/main.scss */
 svg #swimmingbase {
   fill: black;
   mask: url(#swimmingmask);
 }
-/* line 326, ../sass/main.scss */
+/* line 308, ../sass/main.scss */
 svg #runningbase {
   fill: black;
   mask: url(#runningmask);
 }
-/* line 330, ../sass/main.scss */
+/* line 312, ../sass/main.scss */
 svg #sportsbase {
   fill: black;
   mask: url(#sportsmask);
 }
-/* line 334, ../sass/main.scss */
+/* line 316, ../sass/main.scss */
 svg #rockclimbingbase {
   fill: black;
   mask: url(#rockclimbingmask);
 }
-/* line 338, ../sass/main.scss */
+/* line 320, ../sass/main.scss */
 svg #skiingbase {
   fill: black;
   mask: url(#skiingmask);
 }
 
-/* line 344, ../sass/main.scss */
+/* line 326, ../sass/main.scss */
 .contentbody {
   margin-top: 0;
   background-color: rgba(200, 200, 200, 0.7);
@@ -819,7 +820,7 @@ svg #skiingbase {
   height: auto;
 }
 
-/* line 352, ../sass/main.scss */
+/* line 334, ../sass/main.scss */
 .contentbody p {
   line-height: 30px;
   font-size: 16px;
@@ -832,7 +833,7 @@ svg #skiingbase {
   background-color: rgba(0, 53, 95, 0.5);
 }
 
-/* line 364, ../sass/main.scss */
+/* line 346, ../sass/main.scss */
 .header {
   text-align: center;
   color: white;
@@ -841,7 +842,7 @@ svg #skiingbase {
   font-weight: 400;
 }
 
-/* line 372, ../sass/main.scss */
+/* line 354, ../sass/main.scss */
 #slidein {
   width: 100%;
   padding-bottom: 30px;
@@ -850,7 +851,7 @@ svg #skiingbase {
   /*border: 3px solid green;*/
 }
 
-/* line 380, ../sass/main.scss */
+/* line 362, ../sass/main.scss */
 #slidein h1 {
   color: white;
   font-size: 70px;
@@ -858,7 +859,7 @@ svg #skiingbase {
   font-weight: 400;
 }
 
-/* line 387, ../sass/main.scss */
+/* line 369, ../sass/main.scss */
 #autoscroll {
   /*padding-top: 400px;*/
   width: 100%;
@@ -868,7 +869,7 @@ svg #skiingbase {
   position: absolute;
 }
 
-/* line 396, ../sass/main.scss */
+/* line 378, ../sass/main.scss */
 #autoscroll a {
   /*font-size: 4em;*/
   bottom: 0;
@@ -876,17 +877,17 @@ svg #skiingbase {
   text-decoration: none;
 }
 
-/* line 403, ../sass/main.scss */
+/* line 385, ../sass/main.scss */
 #scrollbox {
   top: 0;
 }
 
-/* line 407, ../sass/main.scss */
+/* line 389, ../sass/main.scss */
 #scrollbox .glyphicon {
   font-size: 25px;
 }
 
-/* line 411, ../sass/main.scss */
+/* line 393, ../sass/main.scss */
 #scrolldown {
   /*position: absolute;*/
   font-size: 4em;
@@ -895,13 +896,13 @@ svg #skiingbase {
   margin-bottom: -14px;
 }
 
-/* line 419, ../sass/main.scss */
+/* line 401, ../sass/main.scss */
 #scrolldownarrow {
   z-index: -1;
   display: block;
 }
 
-/* line 424, ../sass/main.scss */
+/* line 406, ../sass/main.scss */
 .separator {
   margin-top: 0;
   background-color: #001400;
@@ -912,14 +913,14 @@ svg #skiingbase {
   padding: 10px 0 10px 0;
 }
 
-/* line 434, ../sass/main.scss */
+/* line 416, ../sass/main.scss */
 .separator p {
   font-size: 18px;
   width: 80%;
   margin: auto;
 }
 
-/* line 441, ../sass/main.scss */
+/* line 423, ../sass/main.scss */
 #activities {
   text-align: center;
   color: white;
@@ -929,14 +930,14 @@ svg #skiingbase {
   display: inline-block;
 }
 
-/* line 450, ../sass/main.scss */
+/* line 432, ../sass/main.scss */
 .imgrow {
   width: 100%;
   margin: auto;
   display: inline-block;
 }
 
-/* line 456, ../sass/main.scss */
+/* line 438, ../sass/main.scss */
 .activityimage {
   display: block;
   display: inline-block;
@@ -946,14 +947,14 @@ svg #skiingbase {
   height: 400px;
 }
 
-/* line 467, ../sass/main.scss */
+/* line 449, ../sass/main.scss */
 .activityimage a {
   display: block;
   height: 100%;
   text-decoration: none;
 }
 
-/* line 474, ../sass/main.scss */
+/* line 456, ../sass/main.scss */
 #hiking {
   background-image: url("../images/hiking.jpg");
   background-size: cover;
@@ -961,7 +962,7 @@ svg #skiingbase {
   background-position: center center;
 }
 
-/* line 478, ../sass/main.scss */
+/* line 460, ../sass/main.scss */
 #rockclimbing {
   background-image: url("../images/rockclimbing.jpg");
   background-size: cover;
@@ -969,7 +970,7 @@ svg #skiingbase {
   background-position: center center;
 }
 
-/* line 482, ../sass/main.scss */
+/* line 464, ../sass/main.scss */
 #running {
   background-image: url("../images/running.jpg");
   background-size: cover;
@@ -977,7 +978,7 @@ svg #skiingbase {
   background-position: center center;
 }
 
-/* line 486, ../sass/main.scss */
+/* line 468, ../sass/main.scss */
 #sports {
   background-image: url("../images/sports.jpg");
   background-size: cover;
@@ -985,7 +986,7 @@ svg #skiingbase {
   background-position: center center;
 }
 
-/* line 490, ../sass/main.scss */
+/* line 472, ../sass/main.scss */
 #swimming {
   background-image: url("../images/swimming.jpg");
   background-size: cover;
@@ -993,7 +994,7 @@ svg #skiingbase {
   background-position: center center;
 }
 
-/* line 494, ../sass/main.scss */
+/* line 476, ../sass/main.scss */
 #skiing {
   background-image: url("../images/skiing.jpg");
   background-size: cover;
@@ -1001,14 +1002,14 @@ svg #skiingbase {
   background-position: center center;
 }
 
-/* line 498, ../sass/main.scss */
+/* line 480, ../sass/main.scss */
 #missionstatement {
   width: 80%;
   background-color: rgba(13, 59, 2, 0.5);
   margin: auto;
 }
 
-/* line 504, ../sass/main.scss */
+/* line 486, ../sass/main.scss */
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -1018,7 +1019,7 @@ svg #skiingbase {
   user-select: none;
 }
 
-/* line 513, ../sass/main.scss */
+/* line 495, ../sass/main.scss */
 .noselect-recursive *,
 .noselect-recursive * *,
 .noselect-recursive {
@@ -1030,7 +1031,7 @@ svg #skiingbase {
   user-select: none;
 }
 
-/* line 524, ../sass/main.scss */
+/* line 506, ../sass/main.scss */
 footer {
   color: #fff;
   text-align: center;
@@ -1042,7 +1043,7 @@ footer {
   background-color: #001400;
 }
 
-/* line 535, ../sass/main.scss */
+/* line 517, ../sass/main.scss */
 footer a {
   display: inline;
   color: white;
@@ -1054,7 +1055,7 @@ footer a {
   transition: 0.25s;
 }
 
-/* line 542, ../sass/main.scss */
+/* line 524, ../sass/main.scss */
 footer a:hover {
   color: #228B22;
 }

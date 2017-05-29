@@ -2,6 +2,7 @@
 @import "mixins";
 @import "signup";
 @import "blog";
+@import "pages";
 @import "index";
 @import "registration";
 @import "geartrade";
@@ -33,7 +34,9 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+
+  font-family: 'Ubuntu', sans-serif;
   margin: 0;
 }
 
@@ -267,27 +270,6 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   top: 250px;
 }
 
-#content {
-  padding-top: 80px;
-  margin: auto;
-  overflow: hidden;
-  width: 100%;
-  color: white;
-  height: auto;
-  min-height: 100vh;
-  @include backgroundImage(url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg"));
-}
-
-#content h2 {
-  text-align: center;
-  font-size: 40px;
-  padding: 10px;
-  margin: auto;
-  color: white;
-  bottom: 0;
-  /*background-color: rgba(50, 50, 50, 0.7);*/
-}
-
 svg {
   width: 100%;
   height: inherit;
@@ -300,8 +282,8 @@ svg {
   }
   #title {
     letter-spacing: -2px;
-    font-size: 9vmin;
-    font-weight: 800;
+    font-size: 4.5em;
+    font-weight: 1000;
     // word-break: break-all;
   }
   #subtitle {

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="gearbuycontent">
+    <div class="secondarycontent">
         <h1>{{ gearitem.title }}</h1>
         <div class="gearitem">
                 <img class="geariteminline" src="{{ gearitem.photo.url }}" style="max-height: 50%; max-width: 100%;"/>
@@ -10,8 +10,8 @@
                 <span><p class="geariteminline">{{ gearitem.title }}</p></span>
                 {{ geartrade.user.email }}
                 <br>
-                <h2>Poster: {{ gearitem.user.username }}</h2>
-                <h2>Posted: {{ gearitem.created_date }}</h2>
+                <span>Poster: {{ gearitem.user.username }}</span>
+                <span>Posted: {{ gearitem.created_date }}</span>
             </div>
         </div>
     </div>

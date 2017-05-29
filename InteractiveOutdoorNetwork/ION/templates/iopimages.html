@@ -1,20 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="gearbuycontent">
+    <div class="secondarycontent">
         <div class="gearbuycontainer">
-            <div class="othertitle scrolldown">
-                <svg>
-                <defs>
-                    <mask id="titlemask" x="0" y="0" width="100%" height="100%">
-                        <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                        <text id="title" x="50%" y="0" dy="1.58em">IOP Images</text>
-                        <text id="subtitle" x="50%" y="0" dy="9.8em">Bringing People Together</text>
-                    </mask>
-                    </defs>
-                    <rect id="titlebase" x="0" y="20" width="100%" height="80%"/>
-                </svg>
-            </div>
+            <h1>IOP Images</h1>
+            <h2>A Photo Gallery for IOP</h2>
             {% for photo in photo_list %}
                 <section class='gearpost'>
                     <img src="{{ photo.photo.url }}" style="height: 400px; max-width: 100%"/>

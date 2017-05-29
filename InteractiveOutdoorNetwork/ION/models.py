@@ -13,27 +13,18 @@ class BlogPost(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     text = models.TextField(max_length=2500)
-    created_date = models.DateTimeField(
-            default=timezone.now)
-    published_date = models.DateTimeField(
-            blank=True, null=True)
-
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
+    created_date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.title
 
 class GearPost(models.Model):
-    user = models.ForeignKey(User)
+    user = models.OneToOneField(User)
     title = models.CharField(max_length=50)
     description = models.TextField(max_length=1000)
     photo = models.ImageField(upload_to='gearimages/', default='/ION/static/images/imgnotfound.png')
     price = models.IntegerField(default=0)
     created_date = models.DateTimeField(default=timezone.now)
-
-    # firebasemanager.Store(photo)
 
     def __str__(self):
         return self.title
