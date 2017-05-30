@@ -132,18 +132,37 @@ button:hover {
 
 /* line 34, ../sass/_pages.scss */
 .secondarycontent h1 {
+  text-align: center;
   letter-spacing: -2px;
   font-size: 4.5em;
   font-weight: 800;
 }
 
-/* line 40, ../sass/_pages.scss */
+/* line 41, ../sass/_pages.scss */
 .secondarycontent h2 {
+  text-align: center;
   color: white;
   letter-spacing: 10px;
   font-size: 1.2em;
   font-weight: 300;
   text-transform: uppercase;
+}
+
+/* line 50, ../sass/_pages.scss */
+.secondaryform {
+  width: 80%;
+  margin: auto;
+  color: black;
+  border-radius: 5px;
+  background-color: white;
+  padding: 30px;
+}
+
+/* line 59, ../sass/_pages.scss */
+.secondaryform h1 {
+  font-weight: 600;
+  font-size: 3em;
+  text-align: center;
 }
 
 /* line 8, ../sass/_index.scss */
@@ -312,7 +331,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   color: black;
 }
 
-/* line 14, ../sass/_registration.scss */
+/* line 12, ../sass/_registration.scss */
 .blogpost {
   background-color: rgba(0, 0, 0, 0.6);
   width: 80%;
@@ -327,32 +346,8 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   text-align: center;
 }
 
-/* line 28, ../sass/_registration.scss */
+/* line 26, ../sass/_registration.scss */
 .blogpost h1 {
-  font-weight: 600;
-  font-size: 3em;
-  text-align: center;
-}
-
-/* line 34, ../sass/_registration.scss */
-.registrationform {
-  color: white;
-  width: 80%;
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-}
-
-/* line 42, ../sass/_registration.scss */
-#id_description {
-  color: black;
-  resize: none;
-  width: 100%;
-  height: auto;
-}
-
-/* line 51, ../sass/_registration.scss */
-.registrationform h1 {
   font-weight: 600;
   font-size: 3em;
   text-align: center;
@@ -371,14 +366,6 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
 }
 
 /* line 15, ../sass/_geartrade.scss */
-.gearform {
-  width: 80%;
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-}
-
-/* line 22, ../sass/_geartrade.scss */
 #id_description {
   color: black;
   resize: none;
@@ -386,15 +373,9 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   height: auto;
 }
 
-/* line 29, ../sass/_geartrade.scss */
-.gearform h1 {
-  font-weight: 600;
-  font-size: 3em;
-  text-align: center;
-}
-
-/* line 35, ../sass/_geartrade.scss */
+/* line 22, ../sass/_geartrade.scss */
 .gearpost {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   background-color: white;
   margin: 0.5vh 0.25vw 0.5vh 0.25vw;
   width: 30%;
@@ -408,7 +389,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   text-align: center;
 }
 
-/* line 49, ../sass/_geartrade.scss */
+/* line 37, ../sass/_geartrade.scss */
 .gearpost img {
   padding: 10px;
   -o-transition: 0.5s;
@@ -418,7 +399,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   transition: 0.5s;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-/* line 54, ../sass/_geartrade.scss */
+/* line 42, ../sass/_geartrade.scss */
 .gearpost img:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-transform: translateY(-5px);
@@ -426,27 +407,27 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   transform: translateY(-5px);
 }
 
-/* line 62, ../sass/_geartrade.scss */
+/* line 50, ../sass/_geartrade.scss */
 .pagination {
   bottom: 0;
   position: relative;
 }
 
-/* line 67, ../sass/_geartrade.scss */
+/* line 55, ../sass/_geartrade.scss */
 .gearpost h1 {
   font-weight: 600;
   font-size: 3em;
   text-align: center;
 }
 
-/* line 73, ../sass/_geartrade.scss */
+/* line 61, ../sass/_geartrade.scss */
 .gearpost h2 {
   font-weight: 400;
   font-size: 1.2em !important;
   text-align: center;
 }
 
-/* line 79, ../sass/_geartrade.scss */
+/* line 67, ../sass/_geartrade.scss */
 .gearitem {
   color: black;
   text-align: center;
@@ -455,7 +436,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   border-radius: 5px;
 }
 
-/* line 88, ../sass/_geartrade.scss */
+/* line 76, ../sass/_geartrade.scss */
 .gearitem img {
   margin: 10px;
   -o-transition: 0.5s;
@@ -465,7 +446,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   transition: 0.5s;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-/* line 93, ../sass/_geartrade.scss */
+/* line 81, ../sass/_geartrade.scss */
 .gearitem img:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-transform: translateY(-5px);
@@ -473,13 +454,13 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   transform: translateY(-5px);
 }
 
-/* line 101, ../sass/_geartrade.scss */
+/* line 89, ../sass/_geartrade.scss */
 .gearitem p {
   display: inline-block;
   font-size: 1.4em;
 }
 
-/* line 107, ../sass/_geartrade.scss */
+/* line 95, ../sass/_geartrade.scss */
 .gearitem h2 {
   margin: auto;
   color: black !important;

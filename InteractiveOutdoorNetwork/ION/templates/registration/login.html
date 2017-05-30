@@ -6,8 +6,9 @@
     {{ form.errors }}
 {% endif %}
 
-<div class="content">
-    <form class="registrationform" method="post" action="{% url 'login' %}">
+<div class="secondarycontent">
+    <h1>Login</h1>
+    <form class="secondaryform" method="post" action="{% url 'login' %}">
         {% csrf_token %}
 
         {{ form.username.label_tag }}

@@ -12,13 +12,6 @@
     // color: black;
 }
 
-.gearform {
-    width: 80%;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-}
-
 #id_description {
     color: black;
     resize: none;
@@ -26,13 +19,8 @@
     height: auto;
 }
 
-.gearform h1 {
-    font-weight: 600;
-    font-size: 3em;
-    text-align: center;
-}
-
 .gearpost {
+    @include box_shadow(1);
     background-color: white;
     margin: 0.5vh 0.25vw 0.5vh 0.25vw;
     width: 30%;

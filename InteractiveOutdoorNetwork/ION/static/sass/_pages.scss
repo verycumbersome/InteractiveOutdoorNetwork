@@ -32,15 +32,32 @@
 }
 
 .secondarycontent h1 {
+    text-align: center;
     letter-spacing: -2px;
     font-size: 4.5em;
     font-weight: 800;
 }
 
 .secondarycontent h2 {
+    text-align: center;
     color: white;
     letter-spacing: 10px;
     font-size: 1.2em;
     font-weight: 300;
     text-transform: uppercase;
+}
+
+.secondaryform {
+    width: 80%;
+    margin: auto;
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+    padding: 30px;
+}
+
+.secondaryform h1 {
+    font-weight: 600;
+    font-size: 3em;
+    text-align: center;
 }

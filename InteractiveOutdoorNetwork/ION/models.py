@@ -29,6 +29,10 @@ class GearPost(models.Model):
     def __str__(self):
         return self.title
 
+    def delete(self, *args, **kwargs):
+        os.rmdir(os.path.join(settings.MEDIA_ROOT, self.docfile.name))
+        super(Document,self).delete(*args,**kwargs)
+
 class PhotoPost(models.Model):
     title = models.CharField(max_length=50)
     photo = models.ImageField(upload_to='IOPimages/')

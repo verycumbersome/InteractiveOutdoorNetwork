@@ -70,7 +70,7 @@ def geartrade(request):
 
 def gearsell(request):
     if request.method == "POST":
-        form = SellGearForm(request.POST, request.FILES)
+        form = SellGearForm(request.POST, request.FILES, instance=request.user)
         if form.is_valid():
             post = form.save(commit=False)
             post.user = request.user
