@@ -7,7 +7,8 @@
             <h1>Buy Gear</h1>
             <h2>Here you can buy and sell items</h2>
             <a href="{% url 'ION:gearsell' %}" class="btn btn-success"><i class="fa fa-usd" aria-hidden="true"></i>Sell Gear</a>
-            {% for post in blog_list %}
+            <br>
+            {% for post in gearposts %}
                 <section class='gearpost'>
                     <a href="{% url 'ION:gearitem' item=post.id %}">
                         <img src="{{ post.photo.url }}" style="height: 400px; max-width: 100%"/>
