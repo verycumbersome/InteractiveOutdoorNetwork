@@ -39,8 +39,19 @@ def iopimages(request):
 
 def blog(request):
     posts = BlogPost.objects.order_by('created_date').reverse()
+
+    page = request.GET.get('page', 1)
+
+    paginator = Paginator(posts, 3)
+    try:
+        blog_list = paginator.page(page)
+    except PageNotAnInteger:
+        blog_list = paginator.page(1)
+    except EmptyPage:
+        blog_list = paginator.page(paginator.num_pages)
+
     return render(request, 'blog.html', {
-        'posts':posts
+        'blog_list':blog_list
     })
 
 def geartrade(request):
@@ -70,9 +81,6 @@ def gearsell(request):
     return render(request, 'geartrade/gearsell.html', {'form': form})
 
 def gearitem(request, item):
-    # gear_description = request.GET['gear_description']
-    # gear_id = request.GET['gear_id']
-    # gear_author = request.GET['gear_author']
     if GearPost.objects.filter(id=item):
         gearitem = GearPost.objects.filter(id=item).get()
     else:

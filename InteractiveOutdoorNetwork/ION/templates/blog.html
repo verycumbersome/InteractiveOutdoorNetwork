@@ -6,7 +6,7 @@
         <h1>Blog</h1>
         <h2>Stay up to date with the latest IOP news</h2>
         <section class="blogpost">
-            {% for post in posts %}
+            {% for post in blog_list %}
                 <!-- <div class="blogpostwrapper"> -->
                     <h1>{{ post.title }}</h1>
                     <h2>Created: {{ post.created_date }}</h2>
@@ -14,5 +14,29 @@
                 <!-- </div> -->
             {% endfor %}
         </section>
+
+        {% if blog_list.has_other_pages %}
+        <div>
+          <ul class="pagination">
+            {% if post.has_previous %}
+              <li><a href="?page={{ blog_list.previous_page_number }}">&laquo;</a></li>
+            {% else %}
+              <li class="disabled"><span>&laquo;</span></li>
+            {% endif %}
+            {% for i in blog_list.paginator.page_range %}
+              {% if blog_list.number == i %}
+                <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+              {% else %}
+                <li><a href="?page={{ i }}">{{ i }}</a></li>
+              {% endif %}
+            {% endfor %}
+            {% if blog_list.has_next %}
+              <li><a href="?page={{ blog_list.next_page_number }}">&raquo;</a></li>
+            {% else %}
+              <li class="disabled"><span>&raquo;</span></li>
+            {% endif %}
+          </ul>
+        </div>
+        {% endif %}
     </div>
 {% endblock content %}

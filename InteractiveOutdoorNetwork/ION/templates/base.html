@@ -52,6 +52,11 @@
                     <li>
                         <p class="navbar-text login-text">Hello {{ request.user }}!</p>
                     </li>
+                    {% if request.user.is_superuser %}
+                        <li>
+                            <input type="button" class="btn btn-warning navbar-btn" value="Moderate" onclick="location.href = '/admin';">
+                        </li>
+                    {% endif %}
                     <li>
                         <input type="button" class="btn btn-danger navbar-btn" value="Logout" onclick="location.href = '/accounts/logout';">
                     </li>

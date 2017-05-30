@@ -6,7 +6,7 @@
         <div class='gearbuycontainer'>
             <h1>Buy Gear</h1>
             <h2>Here you can buy and sell items</h2>
-            {% for post in gearposts %}
+            {% for post in blog_list %}
                 <section class='gearpost'>
                     <a href="{% url 'ION:gearitem' item=post.id %}">
                         <img src="{{ post.photo.url }}" style="height: 400px; max-width: 100%"/>
