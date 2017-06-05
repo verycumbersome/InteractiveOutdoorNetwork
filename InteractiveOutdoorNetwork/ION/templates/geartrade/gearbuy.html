@@ -11,11 +11,13 @@
             {% for post in gearposts %}
                 <section class='gearpost'>
                     <a href="{% url 'ION:gearitem' item=post.id %}">
-                        <img src="{{ post.photo.url }}" style="height: 400px; max-width: 100%"/>
+                        <img src="{{ post.photo.url }}" style="height: 300px; max-width: 100%"/>
                     </a>
                     <br>
-                    <a href="{% url 'ION:gearitem' item=post.id %}" class="btn btn-success"><i class="fa fa-shopping-bag" aria-hidden="true"></i> {{ post.title }}</a>
+                    <a href="{% url 'ION:gearitem' item=post.id %}" class="btn btn-success"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Purchase</a>
                     <div>
+                        {{ post.title }}
+                        <br>
                         <span>Seller: {{ post.user.username }}</span>
                         <br>
                         <span>Created: {{ post.created_date }}</span>

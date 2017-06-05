@@ -20,22 +20,6 @@
 }
 
 .gearpost {
-    @include box_shadow(1);
-    background-color: white;
-    margin: 0.5vh 0.25vw 0.5vh 0.25vw;
-    width: 30%;
-    min-width: 400px;
-    display: inline-block;
-    color: black;
-    border-radius: 5px;
-    font-size: 1.2em;
-    font-weight: 300;
-    line-spacing: -2px;
-    text-align: center;
-}
-
-.gearpost img {
-    padding: 10px;
     @include transitions(0.5s);
     @include box_shadow(1);
 
@@ -45,6 +29,22 @@
         -moz-transform: translateY(-5px);
         transform: translateY(-5px);
     }
+
+    background-color: #222;
+    margin: 0.5vh 0.25vw 0.5vh 0.25vw;
+    width: 30%;
+    min-width: 400px;
+    display: inline-block;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-spacing: -2px;
+    text-align: center;
+}
+
+.gearpost img {
+    padding: 10px;
 }
 
 .pagination {

@@ -375,36 +375,35 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
 
 /* line 22, ../sass/_geartrade.scss */
 .gearpost {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  background-color: white;
-  margin: 0.5vh 0.25vw 0.5vh 0.25vw;
-  width: 30%;
-  min-width: 400px;
-  display: inline-block;
-  color: black;
-  border-radius: 5px;
-  font-size: 1.2em;
-  font-weight: 300;
-  line-spacing: -2px;
-  text-align: center;
-}
-
-/* line 37, ../sass/_geartrade.scss */
-.gearpost img {
-  padding: 10px;
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: #222;
+  margin: 0.5vh 0.25vw 0.5vh 0.25vw;
+  width: 30%;
+  min-width: 400px;
+  display: inline-block;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-spacing: -2px;
+  text-align: center;
 }
-/* line 42, ../sass/_geartrade.scss */
-.gearpost img:hover {
+/* line 26, ../sass/_geartrade.scss */
+.gearpost:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-transform: translateY(-5px);
   -moz-transform: translateY(-5px);
   transform: translateY(-5px);
+}
+
+/* line 46, ../sass/_geartrade.scss */
+.gearpost img {
+  padding: 10px;
 }
 
 /* line 50, ../sass/_geartrade.scss */
