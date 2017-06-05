@@ -19,7 +19,7 @@ class BlogPost(models.Model):
         return self.title
 
 class GearPost(models.Model):
-    user = models.OneToOneField(User)
+    user = models.ForeignKey('auth.User')
     title = models.CharField(max_length=50)
     description = models.TextField(max_length=1000)
     photo = models.ImageField(upload_to='gearimages/', default='/ION/static/images/imgnotfound.png')

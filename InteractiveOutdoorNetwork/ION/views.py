@@ -70,14 +70,17 @@ def geartrade(request):
 
 def gearsell(request):
     if request.method == "POST":
-        form = SellGearForm(request.POST, request.FILES, instance=request.user)
+        form = SellGearForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
             post.user = request.user
             post.save()
+
             return redirect('/geartrade/buy', pk=post.pk)
     else:
         form = SellGearForm()
+        
+
     return render(request, 'geartrade/gearsell.html', {'form': form})
 
 def gearitem(request, item):
