@@ -35,7 +35,23 @@ def iopimages(request):
     except EmptyPage:
         photo_list = paginator.page(paginator.num_pages)
 
-    return render(request, 'iopimages.html', {'photo_list':photo_list})
+    return render(request, 'IOPimages/iopimages.html', {'photo_list':photo_list})
+
+def iopimagespost(request):
+    if request.method == "POST":
+        form = IOPimagesForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.user = request.user
+            post.save()
+
+            return redirect('/iopimages/', pk=post.pk)
+    else:
+        form = IOPimagesForm()
+
+
+    return render(request, 'IOPimages/iopimages_post.html', {'form': form})
+
 
 def blog(request):
     posts = BlogPost.objects.order_by('created_date').reverse()
@@ -56,6 +72,11 @@ def blog(request):
 
 def geartrade(request):
     gear_posts = GearPost.objects.order_by('created_date').reverse()
+
+    cur_user = None
+    if request.user.is_authenticated():
+        cur_user = str(request.user.username)
+
     page = request.GET.get('page', 1)
 
     paginator = Paginator(gear_posts, 6)
@@ -66,7 +87,7 @@ def geartrade(request):
     except EmptyPage:
         gearposts = paginator.page(paginator.num_pages)
 
-    return render(request, 'geartrade/gearbuy.html', {'gearposts':gearposts})
+    return render(request, 'geartrade/gearbuy.html', {'gearposts':gearposts, 'currentuser':cur_user})
 
 def gearsell(request):
     if request.method == "POST":
@@ -79,7 +100,7 @@ def gearsell(request):
             return redirect('/geartrade/buy', pk=post.pk)
     else:
         form = SellGearForm()
-        
+
 
     return render(request, 'geartrade/gearsell.html', {'form': form})
 

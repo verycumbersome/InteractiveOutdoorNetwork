@@ -9,6 +9,9 @@
             <a href="{% url 'ION:gearsell' %}" class="btn btn-success"><i class="fa fa-usd" aria-hidden="true"></i>Sell Gear</a>
             <br>
             {% for post in gearposts %}
+            {% if currentuser == post.user.username %}
+                <a href="{% url 'ION:gearitem' item=post.id %}" class="btn btn-danger" style="position: absolute; margin: -10px 0 0 -3px; z-index: 100;"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></a>
+            {% endif %}
                 <section class='gearpost'>
                     <a href="{% url 'ION:gearitem' item=post.id %}">
                         <img src="{{ post.photo.url }}" style="height: 300px; max-width: 100%"/>

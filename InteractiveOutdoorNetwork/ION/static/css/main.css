@@ -148,17 +148,17 @@ button:hover {
   text-transform: uppercase;
 }
 
-/* line 50, ../sass/_pages.scss */
+/* line 59, ../sass/_pages.scss */
 .secondaryform {
-  width: 80%;
+  background-color: #222;
   margin: auto;
-  color: black;
+  width: 80%;
+  color: white;
   border-radius: 5px;
-  background-color: white;
   padding: 30px;
 }
 
-/* line 59, ../sass/_pages.scss */
+/* line 72, ../sass/_pages.scss */
 .secondaryform h1 {
   font-weight: 600;
   font-size: 3em;
