@@ -49,22 +49,45 @@
 </div>
 <div class="geartrade">
     <div class="geartradecontainer">
-        <a class="glyphicon glyphicon-transfer"></a>
-        <h1>Gear Trade</h1>
-        <hr>
-        <p>
-            The InteractiveOutdoorProgram hosts an effective way of buying, selling, or trading gear. By
-            clicking the sell option, users are able to title their post, write a description, and even
-            post a picture to effectively advertise their gear. By clicking the buy option, users can
-            browse posts made by others to find the gear they are looking for. Make sure you post your
-            contact information in the description to let others know how to contact you when someone
-            would want to buy/trade your equipment.
-        </p>
-        <!-- <div class="btn-group"> -->
-            <a class="btn btn-default" href="{% url 'ION:gearbuy' %}"><span class="glyphicon glyphicon-usd"></span>Buy</a>
-            <a class="btn btn-default" href="{% url 'ION:gearsell' %}"><span class="glyphicon glyphicon-tag"></span>Sell</a>
-        <!-- </div> -->
+        <div style="display: inline-block;">
+            <a class="glyphicon glyphicon-transfer"></a>
+            <h1>Gear Trade</h1>
+            <hr>
+            <p>
+                The InteractiveOutdoorProgram hosts an effective way of buying, selling, or trading gear. By clicking the sell option, users are able to title their post, write a description, and even post a picture to effectively advertise their gear. By clicking the
+                buy option, users can browse posts made by others to find the gear they are looking for. Make sure you post your contact information in the description to let others know how to contact you when someone would want to buy/trade your equipment.
+            </p>
+            <div class="table-striped">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Age</th>
+                            <th>City</th>
+                            <th>Country</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Anna</td>
+                            <td>Pitt</td>
+                            <td>35</td>
+                            <td>New York</td>
+                            <td>USA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
+    <!-- <div class="btn-group"> -->
+    <a class="btn btn-default" href="{% url 'ION:gearbuy' %}"><span class="glyphicon glyphicon-usd"></span>Buy</a>
+    <a class="btn btn-default" href="{% url 'ION:gearsell' %}"><span class="glyphicon glyphicon-tag"></span>Sell</a>
+    <!-- </div> -->
+</div>
 </div>
 <div class="blog">
     <div class="blogcontainer">
