@@ -1,0 +1,69 @@
+@import 'mixins';
+
+.content {
+  padding-top: 80px;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  color: white;
+  height: auto;
+  min-height: 100vh;
+  // @include backgroundImage(url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg"));
+  @include backgroundImage(url("https://c1.staticflickr.com/8/7351/16448657165_5f16814b0b_k.jpg"));
+}
+
+.content h2 {
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
+  margin: auto;
+  color: white;
+  bottom: 0;
+  /*background-color: rgba(50, 50, 50, 0.7);*/
+}
+
+.secondarycontent {
+    padding-top: 80px;
+    margin: auto;
+    overflow: hidden;
+    width: 100%;
+    color: white;
+    height: auto;
+    min-height: 100vh;
+    @include backgroundImage(url("https://c1.staticflickr.com/8/7351/16448657165_5f16814b0b_k.jpg"));
+}
+
+.secondarycontent h1 {
+    text-align: center;
+    letter-spacing: -2px;
+    font-size: 4.5em;
+    font-weight: 800;
+}
+
+.secondarycontent h2 {
+    text-align: center;
+    color: white;
+    letter-spacing: 10px;
+    font-size: 1.2em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.secondaryform {
+    background-color: #222;
+    margin: auto;
+    width: 80%;
+    color: white;
+    border-radius: 5px;
+    // font-size: 1.2em;
+    // font-weight: 300;
+    // line-spacing: -2px;
+    padding: 30px;
+    // text-align: center;
+}
+
+.secondaryform h1 {
+    font-weight: 600;
+    font-size: 3em;
+    text-align: center;
+}

@@ -1,0 +1,139 @@
+@import "compass/css3";
+@import "mixins";
+@import "signup";
+@import "blog";
+@import "pages";
+@import "index";
+@import "registration";
+@import "geartrade";
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=tel] {
+    height: 28px !important;
+}
+
+.account-image {
+  top: 7px;
+  height: 35px;
+  border-radius: 20px;
+}
+
+.title {
+    left: 0 !important;
+    position: fixed;
+    top: 100px;
+    margin: auto;
+    width: 100%;
+    z-index: 10;
+}
+
+.title.scrolldown {
+  position: absolute;
+  top: 250px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container {
+    color: #ffffff;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.section {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.section:first-child {
+    height: 90vh;
+}
+
+.section:not(:first-child) {
+    padding-top: 125px;
+    padding-bottom: 40px;
+    background-color: #f3f3f3;
+}
+
+
+.contentbody {
+  margin-top: 0;
+  background-color: rgba(200, 200, 200, 0.7);
+  width: 90%;
+  margin: auto;
+  height: auto;
+}
+
+.contentbody p {
+  line-height: 30px;
+  font-size: 16px;
+  color: #fff;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  width: 75%;
+  background-color: rgba(0, 53, 95, 0.5);
+}
+
+.header {
+  text-align: center;
+  color: white;
+  font-size: 60px;
+  line-height: 0.78;
+  font-weight: 400;
+}
+
+
+footer {
+
+    a:hover {
+        color: white !important;
+    }
+
+    div {
+        text-align: center !important;
+    }
+
+    .bs-docs-footer-links {
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+    .bs-docs-footer-links li {
+        display: inline-block;
+    }
+    .bs-docs-footer-links li + li {
+        margin-left: 15px;
+    }
+
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+    background-color: #333;
+}

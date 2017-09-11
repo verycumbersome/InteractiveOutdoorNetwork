@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+{% load static %}
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta name='google-site-verification' content='q5pMYCKHXXdw-TOgAO4i9PMiwcodukNgV0aIPpm_S6Q' />
+    <meta name='viewport' content='width=device-width, initial-scale = 1.0, user-scalable = no'>
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' type='text/css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ' crossorigin='anonymous'>
+    <link href='{% static 'css/main.css' %}' rel='stylesheet' type='text/css' media='screen' />
+    <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon'>
+    <link rel='icon' href='/favicon.ico' type='image/x-icon'>
+
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=' crossorigin='anonymous'></script>
+    <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.js' integrity='sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js' integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb' crossorigin='anonymous'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js' integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn' crossorigin='anonymous'></script>
+    <script type='text/javascript' src='{% static 'javascript/main.js' %}'></script>
+</head>
+
+<nav class='navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse animated slideInDown'>
+    <button class='navbar-toggler navbar-toggler-right' type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation'>
+        <span class='navbar-toggler-icon'></span>
+    </button>
+    <a class='navbar-brand fa fa-leaf' href='{% url 'ION:home' %}'></a>
+    <div class='collapse navbar-collapse' id='navbarNavDropdown'>
+        <ul class='navbar-nav mr-auto'>
+            <li class='nav-item {% block index-tab %}{% endblock %}'>
+                <a class='nav-link' href='{% url 'ION:home' %}'>Home <span class='sr-only'>(current)</span></a>
+            </li>
+            <li class='nav-item {% block iop-images-tab %}{% endblock %}'>
+                <a class='nav-link' href='{% url 'ION:iopimages' %}'>IOP Images</a>
+            </li>
+            <li class='nav-item dropdown {% block people-tab %}{% endblock %}'>
+                <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                    Gear Trade
+                </a>
+                <div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
+                    <a class='dropdown-item' href='{% url 'ION:gearbuy' %}'>Buy</a>
+                    <a class='dropdown-item' href='{% url 'ION:gearsell' %}'>Sell</a>
+                </div>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link {% block blog-tab %}{% endblock %}' href='{% url 'ION:blog' %}'>Blog</a>
+            </li>
+        </ul>
+        <ul class='navbar-nav'>
+            {% if request.user.is_authenticated %}
+                <span class="navbar-text">
+                    Welcome {{request.user}}&nbsp;
+                </span>
+                {% if request.user.is_superuser %}
+                    <li class='nav-item'>
+                        <a class="btn btn-warning" href="{% url 'admin:index' %}">Moderate</a>
+                    </li>
+                {% endif %}
+                <li class='nav-item'>
+                    <a class="btn btn-danger" href="/accounts/logout?next=/"><span class='fa fa-sign-out'></span>Logout</a>
+                </li>
+            {% else %}
+            <span class="navbar-text">
+                Already have an account? &nbsp;
+            </span>
+            <li class='nav-item'>
+                <a class="btn btn-primary" href='{% url 'login' %}'><span class='fa fa-sign-in'> Login</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+<body>
+
+{% block content %}
+{% endblock content %}
+
+
+</body>
+
+<footer>
+    <div class='container'>
+        <ul class='bs-docs-footer-links'>
+            <li>Interactive Outdoor Network 2016-17</li>
+            <li><a href='#about-me'>About</a></li>
+            <li><a href='mailto:matthewsages@gmail.com'>Contact</a></li>
+        </ul>
+        <div class='text-muted'>
+            Site maintained and created by <a href='https://twitter.com/jordanma1998'>@jordanma1998</a>
+        </div>
+        <div class='text-muted'>
+            Follow me on <a href='https://twitter.com/jordanma1998'>Twitter</a> and <a href='https://github.com/verycumbersome'>Github</a>!
+        </div>
+    </div>
+</footer>
+
+</html>

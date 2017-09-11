@@ -1,0 +1,249 @@
+@import "compass/css3";
+@import "mixins";
+
+h1 {
+    // font-family: "Roboto", sans-serif;
+    line-height: 1.20;
+    font-weight: 700;
+    opacity: 1.0;
+    letter-spacing: -0.72px;
+    word-spacing: 0;
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h2 {
+    // font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    font-weight: 600;
+    opacity: 1.0;
+    letter-spacing: -0.72px;
+    word-spacing: 0;
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+h3 {
+    // font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    font-weight: 400;
+    opacity: 0.9;
+    letter-spacing: 0;
+    word-spacing: 0;
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+span, p {
+    font-family: "Open Sans", sans-serif;
+    line-height: 2;
+    font-weight: 400;
+    opacity: 0.7;
+    letter-spacing: -0.06px;
+    word-spacing: 0;
+    text-transform: none;
+    margin-top: 0;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main-content {
+    text-align: center;
+    padding-top: 0px !important;
+    height: 70vh !important;
+    color: black;
+    position: relative;
+    @include backgroundImage(url("https://c1.staticflickr.com/8/7351/16448657165_5f16814b0b_k.jpg"));
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container {
+    color: #ffffff;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.section {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.section:first-child {
+    height: 90vh;
+}
+
+.section:not(:first-child) {
+    padding-top: 125px;
+    padding-bottom: 40px;
+    background-color: #f3f3f3;
+}
+
+.profile-pic {
+    transition: .5s;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.75em;
+    @include box_shadow(1);
+}
+
+.profile-pic:hover {
+    @include box_shadow(4);
+    -webkit-transform: translate3d(0, -5%, 0);
+    transform: translate3d(0, -5%, 0);
+}
+
+@media (max-width: 640px) {
+    .profile-pic {
+        display: none;
+    }
+}
+
+.flip-container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+    margin-right: 15px;
+}
+
+.profile-pic, .front, .back {
+    width: 144px;
+    height: 144px;
+    border-radius: 50% !important;
+}
+
+.card-link:hover {
+    color: black;
+}
+
+.paragraph-text {
+    width: 60%;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.card {
+    padding: 20px;
+}
+
+.autoscroll {
+    z-index: 10000;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+    position: absolute;
+    color: white;
+
+    a {
+        bottom: 0;
+        color: white;
+        text-decoration: none;
+    }
+
+    .scrollbox {
+        top: 0;
+
+        .glyphicon {
+            font-size: 25px;
+        }
+    }
+
+    .scrolldown {
+        font-size: 3em;
+        position: absolute;
+        margin-left: -19px;
+        margin-bottom: -14px;
+    }
+
+    .scrolldownarrow {
+        font-size: 1.3em;
+        z-index: -1;
+        display: block;
+    }
+}
+
+#works {
+
+    a {
+        color: black;
+    }
+
+    a:hover {
+        color: (lighten(rgb(0,53,95), 20%));
+    }
+}
+
+#toolbox {
+    .row {
+        padding-bottom: 30px;
+    }
+    h1 {
+        color: white;
+    }
+
+    background-attachment: fixed;
+    @include backgroundImage("../images/Scenic Southern Oregon 2013  Beautifulvista.jpg");
+}
+
+#resume {
+    .card {
+        border: 0px;
+        padding: 20px;
+        @include transitions(0.5s);
+        @include box_shadow(1);
+    }
+
+    .card:hover {
+        @include box_shadow(3);
+        -webkit-transform: translate3d(0, -0.5%, 0);
+        transform: translate3d(0, -0.5%, 0);
+    }
+}
+
+.endcontent {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    height: 70vh;
+    position: relative;
+    display: inline-block;
+    @include backgroundImage(url("https://c1.staticflickr.com/2/1629/26323803930_c68c65942b_k.jpg"));
+    background-attachment: fixed;
+
+    .fa-leaf {
+
+    }
+
+    .fa {
+        font-size: 3em;
+        color: white;
+        text-decoration: none;
+        @include transitions(0.5s);
+    }
+
+    .social a:hover {
+        color: green;
+    }
+}
