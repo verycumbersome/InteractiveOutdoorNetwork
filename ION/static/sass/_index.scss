@@ -57,9 +57,10 @@ html, body {
 }
 
 .main-content {
+    text-align: center;
     padding-top: 0px !important;
     height: 70vh !important;
-    color: white;
+    color: black;
     position: relative;
     @include backgroundImage(url("https://c1.staticflickr.com/8/7351/16448657165_5f16814b0b_k.jpg"));
     background-attachment: fixed;
@@ -153,6 +154,7 @@ html, body {
     text-align: center;
     bottom: 10px;
     position: absolute;
+    color: white;
 
     a {
         bottom: 0;
@@ -222,67 +224,26 @@ html, body {
 
 .endcontent {
     color: #fff;
-    margin: auto;
     text-align: center;
     padding: 20px;
-    height: 90vh;
+    height: 70vh;
     position: relative;
-    width: 100%;
     display: inline-block;
     @include backgroundImage(url("https://c1.staticflickr.com/2/1629/26323803930_c68c65942b_k.jpg"));
     background-attachment: fixed;
-}
-.endcontent h1 {
-    font-weight: 400;
-    font-size: 5em;
-}
 
-.endcontent .glyphicon.glyphicon-leaf {
-    font-size: 7em;
-    color: #228B22 !important;
-    @include transitions(0.15s);
-    text-decoration: none;
-}
+    .fa-leaf {
 
-.social {
-    margin-top: 30px;
-    font-size: 3em;
-    letter-spacing: 12px;
-    background-color: #333;
-    width: 40vw;
-    border-radius: 20px;
-    margin: auto;
-}
+    }
 
-.social .fa {
-    text-decoration: none !important;
-    color: white !important;
-    @include transitions(0.15s);
-}
+    .fa {
+        font-size: 3em;
+        color: white;
+        text-decoration: none;
+        @include transitions(0.5s);
+    }
 
-.social .fa:hover {
-    color: #228B22 !important;
-}
-
-.endcontent .glyphicon.glyphicon-leaf:hover {
-    color: white !important;
-}
-
-.glyphicon.glyphicon-info-sign {
-    margin-top: 50px;
-    font-size: 75px;
-    color: white !important;
-    text-decoration: none;
-}
-
-.glyphicon.glyphicon-transfer {
-    font-size: 75px;
-    color: white !important;
-    text-decoration: none;
-}
-
-.glyphicon.glyphicon-pencil {
-    font-size: 75px;
-    color: black !important;
-    text-decoration: none;
+    .social a:hover {
+        color: green;
+    }
 }

@@ -31,18 +31,17 @@
             <li class='nav-item {% block index-tab %}{% endblock %}'>
                 <a class='nav-link' href='{% url 'ION:home' %}'>Home <span class='sr-only'>(current)</span></a>
             </li>
+            <li class='nav-item {% block iop-images-tab %}{% endblock %}'>
+                <a class='nav-link' href='{% url 'ION:iopimages' %}'>IOP Images</a>
+            </li>
             <li class='nav-item dropdown {% block people-tab %}{% endblock %}'>
                 <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-              People
-            </a>
+                    Gear Trade
+                </a>
                 <div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>
-                    <a class='dropdown-item' href='#'>Susan Jordan</a>
-                    <a class='dropdown-item' href='#'>Cindy Vance</a>
-                    <a class='dropdown-item' href='#'>April Johnson</a>
+                    <a class='dropdown-item' href='{% url 'ION:gearbuy' %}'>Buy</a>
+                    <a class='dropdown-item' href='{% url 'ION:gearsell' %}'>Sell</a>
                 </div>
-            </li>
-            <li class='nav-item'>
-                <a class='nav-link' href='#'>Practices</a>
             </li>
             <li class='nav-item'>
                 <a class='nav-link {% block blog-tab %}{% endblock %}' href='{% url 'ION:blog' %}'>Blog</a>
@@ -51,7 +50,7 @@
         <ul class='navbar-nav'>
             {% if request.user.is_authenticated %}
                 <span class="navbar-text">
-                    Welcome {{request.user}}
+                    Welcome {{request.user}}&nbsp;
                 </span>
                 {% if request.user.is_superuser %}
                     <li class='nav-item'>
@@ -59,14 +58,14 @@
                     </li>
                 {% endif %}
                 <li class='nav-item'>
-                    <a class="btn btn-danger" href="/accounts/logout?next=/">Logout</a>
+                    <a class="btn btn-danger" href="/accounts/logout?next=/"><span class='fa fa-sign-out'></span>Logout</a>
                 </li>
             {% else %}
             <span class="navbar-text">
-                Already have an account?
+                Already have an account? &nbsp;
             </span>
             <li class='nav-item'>
-                <a class="btn btn-primary" href='{% url 'login' %}'>Login</a>
+                <a class="btn btn-primary" href='{% url 'login' %}'><span class='fa fa-sign-in'> Login</a>
             </li>
             {% endif %}
         </ul>
@@ -78,10 +77,13 @@
 {% block content %}
 {% endblock content %}
 
+
+</body>
+
 <footer>
     <div class='container'>
         <ul class='bs-docs-footer-links'>
-            <li>© 2017 by Jordan Law, P.C.</li>
+            <li>Interactive Outdoor Network 2016-17</li>
             <li><a href='#about-me'>About</a></li>
             <li><a href='mailto:matthewsages@gmail.com'>Contact</a></li>
         </ul>
@@ -93,6 +95,5 @@
         </div>
     </div>
 </footer>
-</body>
 
 </html>

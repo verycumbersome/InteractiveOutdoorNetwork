@@ -1,23 +1,15 @@
 {% extends "base.html" %}
 
+{% block index-tab %}
+    active
+{% endblock %}
+
 {% block content %}
 <div class="main-content section">
-    <!-- <div class="indexcontainer"> -->
-        <div class="title">
-            <svg>
-            <defs>
-                <mask id="titlemask" x="0" y="0" width="100%" height="100%">
-                    <rect id="alpha" x="0" y="0" width="100%" height="100%" />
-                    <text id="title" x="50%" y="0" dy="1.58em">Integrated Outdoor Program</text>
-                    <text id="subtitle" x="50%" y="0" dy="9.8em">Bringing People Together</text>
-                </mask>
-                </defs>
-                <rect id="titlebase" x="0" y="0" width="100%" height="100%"/>
-            </svg>
-        </div>
-    <!-- </div> -->
+    <h1>Interactive Outdoor Program</h1>
+    <h4>Bringing People Together</h4>
     <div class="animated fadeInRight autoscroll">
-        <div class=scrollbox>
+        <div class='scrollbox'>
             <a class="fa fa-square-o scrolldown" href="#about-me"></a>
             <div class='scrolldownarrow'>
                 <a class="fa fa-chevron-down"></a>
@@ -26,7 +18,7 @@
     </div>
 </div>
 <div id='about-us' class='section'>
-    <h1>About Us</h1>
+    <h1><i class="fa fa-info-circle" aria-hidden="true"></i>About Us</h1>
     <p class='paragraph-text'>
         Based in Eugene, Oregon, IOP(Integrated Outdoor Program) is a nature-themed high school
         class, which integrates Physical Education into an English class. This class is unique to
@@ -50,9 +42,13 @@
         gallery to show the fun opportunities that students in this class can have. We hope that the
         InteractiveOutdoorNetwork can let students stay updated as to what goes on in IOP.
     </p>
+    <div class="btn-group">
+        <a href="{% url 'ION:signup' %}" class="btn btn-info" role="button">Get Started Now</a>
+        <a href="{% url 'login' %}" class="btn btn-secondary"><span class="fa fa-sign-in"></span> Login</a>
+    </div>
 </div>
-<div id='works' class='section'>
-    <h1>Gear Trade</h1>
+<div id='geartrade' class='section'>
+    <h1><i class="fa fa-exchange" aria-hidden="true"></i>Gear Trade</h1>
     <p class='paragraph-text'>
     The InteractiveOutdoorProgram hosts an effective way of buying, selling, or
     trading gear. By clicking the sell option, users are able to title their post, write a description,
@@ -61,9 +57,13 @@
     information in the description to let others know how to contact you when someone would want to
     buy/trade your equipment.
     </p>
+    <div class="btn-group">
+        <a class="btn btn-info" href="{% url 'ION:gearbuy' %}"><span class="fa fa-usd"></span>Buy</a>
+        <a class="btn btn-secondary" href="{% url 'ION:gearsell' %}"><span class="fa fa-tag"></span>Sell</a>
+    </div>
 </div>
-<div id='toolkit' class='section'>
-    <h1>Blog</h1>
+<div id='blog' class='section'>
+    <h1><i class="fa fa-pencil" aria-hidden="true"></i>Blog</h1>
     <p class='paragraph-text'>
         Our website has an updated blog feed with messages from the IOP Facebook page to bring
         students without a Facebook account up-to-date information on future dates, activities, and
@@ -72,10 +72,13 @@
         questions with the functionality of the blog or the other utilities present on the
         InteractiveOutdoorProgram.
     </p>
+    <div class="btn-group">
+            <a class="btn btn-info" href="{% url 'ION:blog' %}">Read More</a>
+    </div>
 </div>
-<div class="endcontent">
-    <a class="glyphicon glyphicon-leaf" href="#"></a>
-    <h1>Integrated Outdoor Program</h1>
+<div class="endcontent section">
+    <a class="fa fa-leaf" href="#"></a>
+    <h1>Interactive Outdoor Program</h1>
     <div class="social">
         <a class="fa fa-facebook-official" href="https://www.facebook.com/groups/550583415148325/" target="_blank"></a>
         <a class="fa fa-slack" href="https://interactiveoutdoors.slack.com/" target="_blank"></a>

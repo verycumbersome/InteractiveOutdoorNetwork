@@ -7,24 +7,6 @@
 @import "registration";
 @import "geartrade";
 
-$height-mask: 250px;
-$geartrademenuheight: 100px;
-// To regulate alpha is recommended to use gray scale.
-// Recomiendo utilizar escala de grises
-$darken: 40%;
-$color: rgb(255, 255, 255);
-$color-alpha: darken( $color, $darken);
-
-$darkblue: #003366;
-$darkbluealpha: rgba(0, 51, 102, 0.7);
-
-$forestgreen: #228B22;
-$darkforestgreen: #001400;
-
-$forestgreenalpha: rgba(34, 139, 34, 0.5);
-$darkforestgreenalpha: rgba(13, 59, 2, 0.5);
-
-$color-base: rgb(0, 0, 0);
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -36,79 +18,11 @@ html {
 body {
   font-family: 'Ubuntu', sans-serif;
   margin: 0;
+  padding: 0;
 }
 
 input[type=text], input[type=password], input[type=email], input[type=tel] {
     height: 28px !important;
-}
-
-#login-dp {
-  min-width: 250px;
-  padding: 14px 14px 0;
-  overflow: hidden;
-  color: #111;
-  font-weight: 500;
-  background-color: rgba(255, 255, 255, .5);
-}
-
-#login-dp .help-block {
-  font-size: 12px
-}
-
-#login-dp .bottom {
-  background-color: rgba(255, 255, 255, .8);
-  border-top: 1px solid #ddd;
-  color: #333;
-  clear: both;
-  padding: 14px;
-}
-
-#login-dp .social-buttons {
-  margin: 12px 0
-}
-
-#login-dp .social-buttons a {
-  width: 49%;
-}
-
-#login-dp .form-group {
-  margin-bottom: 10px;
-}
-
-.btn-fb:hover {
-  color: #fff;
-  background-color: #496ebc
-}
-
-.btn-go {
-  color: #fff;
-  background-color: #3b5998;
-}
-
-.btn-go:hover {
-  color: #fff;
-  background-color: #496ebc
-}
-
-.btn-tw {
-  color: #fff;
-  background-color: #55acee;
-}
-
-.btn-tw:hover {
-  color: #fff;
-  background-color: #59b5fa;
-}
-
-@media(max-width: 768px) {
-  #login-dp {
-    background-color: inherit;
-    color: #fff;
-  }
-  #login-dp .bottom {
-    background-color: inherit;
-    border-top: 0 none;
-  }
 }
 
 .account-image {
@@ -119,12 +33,11 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
 
 .title {
     left: 0 !important;
-  position: fixed;
-  top: 100px;
-  margin: auto;
-  width: 100%;
-  height: $height-mask;
-  z-index: 10;
+    position: fixed;
+    top: 100px;
+    margin: auto;
+    width: 100%;
+    z-index: 10;
 }
 
 .title.scrolldown {
@@ -132,58 +45,6 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   top: 250px;
 }
 
-svg {
-  width: 100%;
-  height: inherit;
-  text {
-    text-anchor: middle;
-  }
-  #alpha {
-    fill: $color-alpha;
-    // animation: alpha 10s ease infinite;
-  }
-  #title {
-    letter-spacing: -2px;
-    font-size: 4.5em;
-    font-weight: 1000;
-    // word-break: break-all;
-  }
-  #subtitle {
-    letter-spacing: 10px;
-    font-size: 1.2em;
-    font-weight: 300;
-    text-transform: uppercase;
-  }
-
-  #titlebase {
-    fill: $color-base;
-    mask: url(#titlemask);
-  }
-  #hikingbase {
-    fill: $color-base;
-    mask: url(#hikingmask);
-  }
-  #swimmingbase {
-    fill: $color-base;
-    mask: url(#swimmingmask);
-  }
-  #runningbase {
-    fill: $color-base;
-    mask: url(#runningmask);
-  }
-  #sportsbase {
-    fill: $color-base;
-    mask: url(#sportsmask);
-  }
-  #rockclimbingbase {
-    fill: $color-base;
-    mask: url(#rockclimbingmask);
-  }
-  #skiingbase {
-    fill: $color-base;
-    mask: url(#skiingmask);
-  }
-}
 
 .container {
     display: flex;
@@ -248,78 +109,6 @@ svg {
   font-weight: 400;
 }
 
-#slidein {
-  width: 100%;
-  padding-bottom: 30px;
-  line-height: 0.69;
-  padding-top: 20vh;
-  /*border: 3px solid green;*/
-}
-
-#slidein h1 {
-  color: white;
-  font-size: 70px;
-  line-height: 0.75;
-  font-weight: 400;
-}
-
-
-.separator {
-  margin-top: 0;
-  background-color: $darkforestgreen;
-  font-size: 40px;
-  font-weight: 600;
-  color: white;
-  text-align: center;
-  padding: 10px 0 10px 0;
-}
-
-.separator p {
-  font-size: 18px;
-  // padding: 20px;
-  width: 80%;
-  margin: auto;
-}
-
-#activities {
-  text-align: center;
-  color: white;
-  width: 100%;
-  margin: auto;
-  background-color: black;
-  display: inline-block;
-}
-
-.imgrow {
-  width: 100%;
-  margin: auto;
-  display: inline-block;
-}
-
-.activityimage {
-  display: block;
-  display: inline-block;
-  margin: auto;
-  width: 33%;
-  min-width: 400px;
-  height: 400px;
-
-  // @include maxHeightAndWidth(100%, 300px, 400px, 300px);
-}
-
-.activityimage a {
-  display: block;
-  height: 100%;
-  // border: 3px solid green;
-  text-decoration: none;
-}
-
-
-#missionstatement {
-  width: 80%;
-  background-color: $darkforestgreenalpha;
-  margin: auto;
-}
 
 footer {
 
@@ -346,5 +135,5 @@ footer {
     padding-top: 30px;
     padding-bottom: 30px;
     color: white;
-    background-color: $darkblue;
+    background-color: #333;
 }

@@ -166,22 +166,6 @@ input[type=text], input[type=password] {
   color: black;
 }
 
-/* line 17, ../sass/_signup.scss */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-/* line 27, ../sass/_signup.scss */
-button:hover {
-  background-color: #2d682f;
-}
-
 /* line 31, ../sass/_signup.scss */
 .cancelbtn:hover {
   background-color: black;
@@ -856,9 +840,10 @@ html, body {
 
 /* line 59, ../sass/_index.scss */
 .main-content {
+  text-align: center;
   padding-top: 0px !important;
   height: 70vh !important;
-  color: white;
+  color: black;
   position: relative;
   background-image: url("https://c1.staticflickr.com/8/7351/16448657165_5f16814b0b_k.jpg");
   background-size: cover;
@@ -867,23 +852,23 @@ html, body {
   background-attachment: fixed;
 }
 
-/* line 68, ../sass/_index.scss */
+/* line 69, ../sass/_index.scss */
 .container {
   display: flex;
   flex-direction: column;
 }
 
-/* line 73, ../sass/_index.scss */
+/* line 74, ../sass/_index.scss */
 .text-container {
   color: #ffffff;
 }
 
-/* line 77, ../sass/_index.scss */
+/* line 78, ../sass/_index.scss */
 .row {
   flex-direction: row;
 }
 
-/* line 81, ../sass/_index.scss */
+/* line 82, ../sass/_index.scss */
 .section {
   width: 100%;
   z-index: 1;
@@ -895,19 +880,19 @@ html, body {
   justify-content: center;
 }
 
-/* line 92, ../sass/_index.scss */
+/* line 93, ../sass/_index.scss */
 .section:first-child {
   height: 90vh;
 }
 
-/* line 96, ../sass/_index.scss */
+/* line 97, ../sass/_index.scss */
 .section:not(:first-child) {
   padding-top: 125px;
   padding-bottom: 40px;
   background-color: #f3f3f3;
 }
 
-/* line 102, ../sass/_index.scss */
+/* line 103, ../sass/_index.scss */
 .profile-pic {
   transition: .5s;
   margin-left: 10px;
@@ -916,7 +901,7 @@ html, body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-/* line 110, ../sass/_index.scss */
+/* line 111, ../sass/_index.scss */
 .profile-pic:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   -webkit-transform: translate3d(0, -5%, 0);
@@ -924,12 +909,12 @@ html, body {
 }
 
 @media (max-width: 640px) {
-  /* line 117, ../sass/_index.scss */
+  /* line 118, ../sass/_index.scss */
   .profile-pic {
     display: none;
   }
 }
-/* line 122, ../sass/_index.scss */
+/* line 123, ../sass/_index.scss */
 .flip-container {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
@@ -938,76 +923,77 @@ html, body {
   margin-right: 15px;
 }
 
-/* line 130, ../sass/_index.scss */
+/* line 131, ../sass/_index.scss */
 .profile-pic, .front, .back {
   width: 144px;
   height: 144px;
   border-radius: 50% !important;
 }
 
-/* line 136, ../sass/_index.scss */
+/* line 137, ../sass/_index.scss */
 .card-link:hover {
   color: black;
 }
 
-/* line 140, ../sass/_index.scss */
+/* line 141, ../sass/_index.scss */
 .paragraph-text {
   width: 60%;
   min-width: 200px;
   margin-bottom: 20px;
 }
 
-/* line 146, ../sass/_index.scss */
+/* line 147, ../sass/_index.scss */
 .card {
   padding: 20px;
 }
 
-/* line 150, ../sass/_index.scss */
+/* line 151, ../sass/_index.scss */
 .autoscroll {
   z-index: 10000;
   width: 100%;
   text-align: center;
   bottom: 10px;
   position: absolute;
+  color: white;
 }
-/* line 157, ../sass/_index.scss */
+/* line 159, ../sass/_index.scss */
 .autoscroll a {
   bottom: 0;
   color: white;
   text-decoration: none;
 }
-/* line 163, ../sass/_index.scss */
+/* line 165, ../sass/_index.scss */
 .autoscroll .scrollbox {
   top: 0;
 }
-/* line 166, ../sass/_index.scss */
+/* line 168, ../sass/_index.scss */
 .autoscroll .scrollbox .glyphicon {
   font-size: 25px;
 }
-/* line 171, ../sass/_index.scss */
+/* line 173, ../sass/_index.scss */
 .autoscroll .scrolldown {
   font-size: 3em;
   position: absolute;
   margin-left: -19px;
   margin-bottom: -14px;
 }
-/* line 178, ../sass/_index.scss */
+/* line 180, ../sass/_index.scss */
 .autoscroll .scrolldownarrow {
   font-size: 1.3em;
   z-index: -1;
   display: block;
 }
 
-/* line 187, ../sass/_index.scss */
+/* line 189, ../sass/_index.scss */
 #works a {
   color: black;
 }
-/* line 191, ../sass/_index.scss */
+/* line 193, ../sass/_index.scss */
 #works a:hover {
   color: #006ec5;
 }
 
-/* line 196, ../sass/_index.scss */
+/* line 198, ../sass/_index.scss */
 #toolbox {
   background-attachment: fixed;
   background-image: "../images/Scenic Southern Oregon 2013  Beautifulvista.jpg";
@@ -1015,16 +1001,16 @@ html, body {
   background-repeat: no-repeat;
   background-position: center center;
 }
-/* line 197, ../sass/_index.scss */
+/* line 199, ../sass/_index.scss */
 #toolbox .row {
   padding-bottom: 30px;
 }
-/* line 200, ../sass/_index.scss */
+/* line 202, ../sass/_index.scss */
 #toolbox h1 {
   color: white;
 }
 
-/* line 209, ../sass/_index.scss */
+/* line 211, ../sass/_index.scss */
 #resume .card {
   border: 0px;
   padding: 20px;
@@ -1035,22 +1021,20 @@ html, body {
   transition: 0.5s;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-/* line 216, ../sass/_index.scss */
+/* line 218, ../sass/_index.scss */
 #resume .card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-transform: translate3d(0, -0.5%, 0);
   transform: translate3d(0, -0.5%, 0);
 }
 
-/* line 223, ../sass/_index.scss */
+/* line 225, ../sass/_index.scss */
 .endcontent {
   color: #fff;
-  margin: auto;
   text-align: center;
   padding: 20px;
-  height: 90vh;
+  height: 70vh;
   position: relative;
-  width: 100%;
   display: inline-block;
   background-image: url("https://c1.staticflickr.com/2/1629/26323803930_c68c65942b_k.jpg");
   background-size: cover;
@@ -1058,77 +1042,20 @@ html, body {
   background-position: center center;
   background-attachment: fixed;
 }
-
-/* line 235, ../sass/_index.scss */
-.endcontent h1 {
-  font-weight: 400;
-  font-size: 5em;
-}
-
-/* line 240, ../sass/_index.scss */
-.endcontent .glyphicon.glyphicon-leaf {
-  font-size: 7em;
-  color: #228B22 !important;
-  -o-transition: 0.15s;
-  -ms-transition: 0.15s;
-  -moz-transition: 0.15s;
-  -webkit-transition: 0.15s;
-  transition: 0.15s;
-  text-decoration: none;
-}
-
-/* line 247, ../sass/_index.scss */
-.social {
-  margin-top: 30px;
+/* line 239, ../sass/_index.scss */
+.endcontent .fa {
   font-size: 3em;
-  letter-spacing: 12px;
-  background-color: #333;
-  width: 40vw;
-  border-radius: 20px;
-  margin: auto;
-}
-
-/* line 257, ../sass/_index.scss */
-.social .fa {
-  text-decoration: none !important;
-  color: white !important;
-  -o-transition: 0.15s;
-  -ms-transition: 0.15s;
-  -moz-transition: 0.15s;
-  -webkit-transition: 0.15s;
-  transition: 0.15s;
-}
-
-/* line 263, ../sass/_index.scss */
-.social .fa:hover {
-  color: #228B22 !important;
-}
-
-/* line 267, ../sass/_index.scss */
-.endcontent .glyphicon.glyphicon-leaf:hover {
-  color: white !important;
-}
-
-/* line 271, ../sass/_index.scss */
-.glyphicon.glyphicon-info-sign {
-  margin-top: 50px;
-  font-size: 75px;
-  color: white !important;
+  color: white;
   text-decoration: none;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
-
-/* line 278, ../sass/_index.scss */
-.glyphicon.glyphicon-transfer {
-  font-size: 75px;
-  color: white !important;
-  text-decoration: none;
-}
-
-/* line 284, ../sass/_index.scss */
-.glyphicon.glyphicon-pencil {
-  font-size: 75px;
-  color: black !important;
-  text-decoration: none;
+/* line 246, ../sass/_index.scss */
+.endcontent .social a:hover {
+  color: green;
 }
 
 /* line 3, ../sass/_registration.scss */
@@ -1436,7 +1363,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   padding-bottom: 10px;
 }
 
-/* line 28, ../sass/main.scss */
+/* line 10, ../sass/main.scss */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -1445,202 +1372,58 @@ html {
   text-rendering: optimizelegibility;
 }
 
-/* line 36, ../sass/main.scss */
+/* line 18, ../sass/main.scss */
 body {
   font-family: 'Ubuntu', sans-serif;
   margin: 0;
+  padding: 0;
 }
 
-/* line 41, ../sass/main.scss */
+/* line 24, ../sass/main.scss */
 input[type=text], input[type=password], input[type=email], input[type=tel] {
   height: 28px !important;
 }
 
-/* line 45, ../sass/main.scss */
-#login-dp {
-  min-width: 250px;
-  padding: 14px 14px 0;
-  overflow: hidden;
-  color: #111;
-  font-weight: 500;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-/* line 54, ../sass/main.scss */
-#login-dp .help-block {
-  font-size: 12px;
-}
-
-/* line 58, ../sass/main.scss */
-#login-dp .bottom {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-top: 1px solid #ddd;
-  color: #333;
-  clear: both;
-  padding: 14px;
-}
-
-/* line 66, ../sass/main.scss */
-#login-dp .social-buttons {
-  margin: 12px 0;
-}
-
-/* line 70, ../sass/main.scss */
-#login-dp .social-buttons a {
-  width: 49%;
-}
-
-/* line 74, ../sass/main.scss */
-#login-dp .form-group {
-  margin-bottom: 10px;
-}
-
-/* line 78, ../sass/main.scss */
-.btn-fb:hover {
-  color: #fff;
-  background-color: #496ebc;
-}
-
-/* line 83, ../sass/main.scss */
-.btn-go {
-  color: #fff;
-  background-color: #3b5998;
-}
-
-/* line 88, ../sass/main.scss */
-.btn-go:hover {
-  color: #fff;
-  background-color: #496ebc;
-}
-
-/* line 93, ../sass/main.scss */
-.btn-tw {
-  color: #fff;
-  background-color: #55acee;
-}
-
-/* line 98, ../sass/main.scss */
-.btn-tw:hover {
-  color: #fff;
-  background-color: #59b5fa;
-}
-
-@media (max-width: 768px) {
-  /* line 104, ../sass/main.scss */
-  #login-dp {
-    background-color: inherit;
-    color: #fff;
-  }
-
-  /* line 108, ../sass/main.scss */
-  #login-dp .bottom {
-    background-color: inherit;
-    border-top: 0 none;
-  }
-}
-/* line 114, ../sass/main.scss */
+/* line 28, ../sass/main.scss */
 .account-image {
   top: 7px;
   height: 35px;
   border-radius: 20px;
 }
 
-/* line 120, ../sass/main.scss */
+/* line 34, ../sass/main.scss */
 .title {
   left: 0 !important;
   position: fixed;
   top: 100px;
   margin: auto;
   width: 100%;
-  height: 250px;
   z-index: 10;
 }
 
-/* line 130, ../sass/main.scss */
+/* line 43, ../sass/main.scss */
 .title.scrolldown {
   position: absolute;
   top: 250px;
 }
 
-/* line 135, ../sass/main.scss */
-svg {
-  width: 100%;
-  height: inherit;
-}
-/* line 138, ../sass/main.scss */
-svg text {
-  text-anchor: middle;
-}
-/* line 141, ../sass/main.scss */
-svg #alpha {
-  fill: #999999;
-}
-/* line 145, ../sass/main.scss */
-svg #title {
-  letter-spacing: -2px;
-  font-size: 4.5em;
-  font-weight: 1000;
-}
-/* line 151, ../sass/main.scss */
-svg #subtitle {
-  letter-spacing: 10px;
-  font-size: 1.2em;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-/* line 158, ../sass/main.scss */
-svg #titlebase {
-  fill: black;
-  mask: url(#titlemask);
-}
-/* line 162, ../sass/main.scss */
-svg #hikingbase {
-  fill: black;
-  mask: url(#hikingmask);
-}
-/* line 166, ../sass/main.scss */
-svg #swimmingbase {
-  fill: black;
-  mask: url(#swimmingmask);
-}
-/* line 170, ../sass/main.scss */
-svg #runningbase {
-  fill: black;
-  mask: url(#runningmask);
-}
-/* line 174, ../sass/main.scss */
-svg #sportsbase {
-  fill: black;
-  mask: url(#sportsmask);
-}
-/* line 178, ../sass/main.scss */
-svg #rockclimbingbase {
-  fill: black;
-  mask: url(#rockclimbingmask);
-}
-/* line 182, ../sass/main.scss */
-svg #skiingbase {
-  fill: black;
-  mask: url(#skiingmask);
-}
-
-/* line 188, ../sass/main.scss */
+/* line 49, ../sass/main.scss */
 .container {
   display: flex;
   flex-direction: column;
 }
 
-/* line 193, ../sass/main.scss */
+/* line 54, ../sass/main.scss */
 .text-container {
   color: #ffffff;
 }
 
-/* line 197, ../sass/main.scss */
+/* line 58, ../sass/main.scss */
 .row {
   flex-direction: row;
 }
 
-/* line 201, ../sass/main.scss */
+/* line 62, ../sass/main.scss */
 .section {
   width: 100%;
   z-index: 1;
@@ -1652,19 +1435,19 @@ svg #skiingbase {
   justify-content: center;
 }
 
-/* line 212, ../sass/main.scss */
+/* line 73, ../sass/main.scss */
 .section:first-child {
   height: 90vh;
 }
 
-/* line 216, ../sass/main.scss */
+/* line 77, ../sass/main.scss */
 .section:not(:first-child) {
   padding-top: 125px;
   padding-bottom: 40px;
   background-color: #f3f3f3;
 }
 
-/* line 223, ../sass/main.scss */
+/* line 84, ../sass/main.scss */
 .contentbody {
   margin-top: 0;
   background-color: rgba(200, 200, 200, 0.7);
@@ -1673,7 +1456,7 @@ svg #skiingbase {
   height: auto;
 }
 
-/* line 231, ../sass/main.scss */
+/* line 92, ../sass/main.scss */
 .contentbody p {
   line-height: 30px;
   font-size: 16px;
@@ -1686,7 +1469,7 @@ svg #skiingbase {
   background-color: rgba(0, 53, 95, 0.5);
 }
 
-/* line 243, ../sass/main.scss */
+/* line 104, ../sass/main.scss */
 .header {
   text-align: center;
   color: white;
@@ -1695,108 +1478,32 @@ svg #skiingbase {
   font-weight: 400;
 }
 
-/* line 251, ../sass/main.scss */
-#slidein {
-  width: 100%;
-  padding-bottom: 30px;
-  line-height: 0.69;
-  padding-top: 20vh;
-  /*border: 3px solid green;*/
-}
-
-/* line 259, ../sass/main.scss */
-#slidein h1 {
-  color: white;
-  font-size: 70px;
-  line-height: 0.75;
-  font-weight: 400;
-}
-
-/* line 267, ../sass/main.scss */
-.separator {
-  margin-top: 0;
-  background-color: #001400;
-  font-size: 40px;
-  font-weight: 600;
-  color: white;
-  text-align: center;
-  padding: 10px 0 10px 0;
-}
-
-/* line 277, ../sass/main.scss */
-.separator p {
-  font-size: 18px;
-  width: 80%;
-  margin: auto;
-}
-
-/* line 284, ../sass/main.scss */
-#activities {
-  text-align: center;
-  color: white;
-  width: 100%;
-  margin: auto;
-  background-color: black;
-  display: inline-block;
-}
-
-/* line 293, ../sass/main.scss */
-.imgrow {
-  width: 100%;
-  margin: auto;
-  display: inline-block;
-}
-
-/* line 299, ../sass/main.scss */
-.activityimage {
-  display: block;
-  display: inline-block;
-  margin: auto;
-  width: 33%;
-  min-width: 400px;
-  height: 400px;
-}
-
-/* line 310, ../sass/main.scss */
-.activityimage a {
-  display: block;
-  height: 100%;
-  text-decoration: none;
-}
-
-/* line 318, ../sass/main.scss */
-#missionstatement {
-  width: 80%;
-  background-color: rgba(13, 59, 2, 0.5);
-  margin: auto;
-}
-
-/* line 324, ../sass/main.scss */
+/* line 113, ../sass/main.scss */
 footer {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
   color: white;
-  background-color: #003366;
+  background-color: #333;
 }
-/* line 326, ../sass/main.scss */
+/* line 115, ../sass/main.scss */
 footer a:hover {
   color: white !important;
 }
-/* line 330, ../sass/main.scss */
+/* line 119, ../sass/main.scss */
 footer div {
   text-align: center !important;
 }
-/* line 334, ../sass/main.scss */
+/* line 123, ../sass/main.scss */
 footer .bs-docs-footer-links {
   padding-left: 0;
   margin-bottom: 20px;
 }
-/* line 338, ../sass/main.scss */
+/* line 127, ../sass/main.scss */
 footer .bs-docs-footer-links li {
   display: inline-block;
 }
-/* line 341, ../sass/main.scss */
+/* line 130, ../sass/main.scss */
 footer .bs-docs-footer-links li + li {
   margin-left: 15px;
 }

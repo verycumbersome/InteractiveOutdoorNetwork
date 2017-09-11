@@ -14,19 +14,19 @@ input[type=text], input[type=password] {
     color: black;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
+// button {
+//     background-color: #4CAF50;
+//     color: white;
+//     padding: 14px 20px;
+//     margin: 8px 0;
+//     border: none;
+//     cursor: pointer;
+//     width: 100%;
+// }
 
-button:hover {
-    background-color: darken($submitbtncolor, 20%);
-}
+// button:hover {
+//     background-color: darken($submitbtncolor, 20%);
+// }
 
 .cancelbtn:hover {
     background-color: darken($cancelbtncolor, 20%);
