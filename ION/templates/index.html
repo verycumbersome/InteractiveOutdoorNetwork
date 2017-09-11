@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="content">
+<div class="main-content section">
     <div class="indexcontainer">
         <div class="title">
             <svg>
@@ -23,88 +23,53 @@
         </div>
     </div>
 </div>
-<div class="aboutus">
-    <div class="aboutuscontainer">
-        <a class="glyphicon glyphicon-info-sign"></a>
-        <h1>About Us</h1>
-        <hr>
-        <p>
-            Based in Eugene, Oregon, IOP(Integrated Outdoor Program) is a nature-themed high school
-            class, which integrates Physical Education into an English class. This class is unique to
-            South Eugene High School, and is taught by Jeff Hess and Peter Hoffmeister. IOP runs all
-            three trimesters during the school year, and each trimester represents a theme of nature.
-            The first trimester being Desert themed, the second being Snow themed, and the third being
-            River themed. IOP has been a valued class at South Eugene High School for over 10 years and
-            has created countless memories and experiences for students, as well as inspiring others to
-            explore and learn about the great outdoors. The purpose of this website is to tell IOP
-            students of announcements. This website can also be used by anyone looking to organize a
-            trip or trade their gear. This website has an up to date calendar as well as an updated
-            Twitter feed to remind students about the upcoming days of class. We also have a photo
-            gallery to show the fun opportunities that students in this class can have. We hope that the
-            InteractiveOutdoorNetwork can let students stay updated as to what goes on in IOP.
-        </p>
-        <a href="{% url 'ION:signup' %}" class="btn btn-info" role="button">Get Started Now</a>
-        <a href="{% url 'login' %}" class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-    </div>
+<div id='about-me' class='section'>
+    <h1>About Us</h1>
+    <p class='paragraph-text'>
+        Based in Eugene, Oregon, IOP(Integrated Outdoor Program) is a nature-themed high school
+        class, which integrates Physical Education into an English class. This class is unique to
+        South Eugene High School, and is taught by Jeff Hess and Peter Hoffmeister. IOP runs all
+        three trimesters during the school year, and each trimester represents a theme of nature.
+        The first trimester being Desert themed, the second being Snow themed, and the third being
+        River themed.
+    </p>
+
+    <p class='paragraph-text'>
+        IOP has been a valued class at South Eugene High School for over 10 years and
+        has created countless memories and experiences for students, as well as inspiring others to
+        explore and learn about the great outdoors. The purpose of this website is to tell IOP
+        students of announcements.
+    </p>
+
+    <p class='paragraph-text'>
+        This website can also be used by anyone looking to organize a
+        trip or trade their gear. This website has an up to date calendar as well as an updated
+        Twitter feed to remind students about the upcoming days of class. We also have a photo
+        gallery to show the fun opportunities that students in this class can have. We hope that the
+        InteractiveOutdoorNetwork can let students stay updated as to what goes on in IOP.
+    </p>
 </div>
-<div class="geartrade">
-    <div class="geartradecontainer">
-        <div style="display: inline-block;">
-            <a class="glyphicon glyphicon-transfer"></a>
-            <h1>Gear Trade</h1>
-            <hr>
-            <p>
-                The InteractiveOutdoorProgram hosts an effective way of buying, selling, or trading gear. By clicking the sell option, users are able to title their post, write a description, and even post a picture to effectively advertise their gear. By clicking the
-                buy option, users can browse posts made by others to find the gear they are looking for. Make sure you post your contact information in the description to let others know how to contact you when someone would want to buy/trade your equipment.
-            </p>
-            <div class="table-striped">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Firstname</th>
-                            <th>Lastname</th>
-                            <th>Age</th>
-                            <th>City</th>
-                            <th>Country</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Anna</td>
-                            <td>Pitt</td>
-                            <td>35</td>
-                            <td>New York</td>
-                            <td>USA</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <!-- <div class="btn-group"> -->
-    <a class="btn btn-default" href="{% url 'ION:gearbuy' %}"><span class="glyphicon glyphicon-usd"></span>Buy</a>
-    <a class="btn btn-default" href="{% url 'ION:gearsell' %}"><span class="glyphicon glyphicon-tag"></span>Sell</a>
-    <!-- </div> -->
+<div id='about-me' class='section'>
+    <h1>Gear Trade</h1>
+    <p class='paragraph-text'>
+    The InteractiveOutdoorProgram hosts an effective way of buying, selling, or
+    trading gear. By clicking the sell option, users are able to title their post, write a description,
+    and even post a picture to effectively advertise their gear. By clicking the buy option, users can
+    browse posts made by others to find the gear they are looking for. Make sure you post your contact
+    information in the description to let others know how to contact you when someone would want to
+    buy/trade your equipment.
+    </p>
 </div>
-</div>
-<div class="blog">
-    <div class="blogcontainer">
-        <a class="glyphicon glyphicon-pencil"></a>
-        <h1>Blog</h1>
-        <hr>
-        <p>
+<div id='about-me' class='section'>
+    <h1>Blog</h1>
+    <p class='paragraph-text'>
         Our website has an updated blog feed with messages from the IOP Facebook page to bring
         students without a Facebook account up-to-date information on future dates, activities, and
         general information. The SL’s, as well as Jeff and Pete are the only one’s able to make blog
         posts, so users are aware of the authenticity of each post. Email us if you have any
         questions with the functionality of the blog or the other utilities present on the
-        InteractiveOutdoorProgram.         </p>
-        <div class="btn-group">
-            <a class="btn btn-lg btn-info" href="{% url 'ION:blog' %}">Read More</a>
-        </div>
-    </div>
+        InteractiveOutdoorProgram.
+    </p>
 </div>
 <div class="endcontent">
     <a class="glyphicon glyphicon-leaf" href="#"></a>

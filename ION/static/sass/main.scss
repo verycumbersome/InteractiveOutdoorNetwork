@@ -40,143 +40,6 @@ body {
   margin: 0;
 }
 
-@-webkit-keyframes slideInDown {
-  from {
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-  }
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes slideInDown {
-  from {
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-  }
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@-webkit-keyframes slideInUp {
-  from {
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
-  }
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes slideInUp {
-  from {
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
-  }
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@-webkit-keyframes fadeInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-@-webkit-keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-.slideInDown {
-  -webkit-animation-name: slideInDown;
-  animation-name: slideInDown;
-}
-
-.slideInUp {
-  -webkit-animation-name: slideInUp;
-  animation-name: slideInUp;
-}
-
-.fadeInRight {
-  -webkit-animation-name: fadeInRight;
-  animation-name: fadeInRight;
-}
-
-.fadeInLeft {
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
-}
-
-.animated {
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animated.infinite {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-
-.animated.hinge {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-}
-
 input[type=text], input[type=password], input[type=email], input[type=tel] {
     height: 28px !important;
 }
@@ -323,6 +186,41 @@ svg {
   }
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container {
+    color: #ffffff;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.section {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.section:first-child {
+    height: 90vh;
+}
+
+.section:not(:first-child) {
+    padding-top: 125px;
+    padding-bottom: 40px;
+    background-color: #f3f3f3;
+}
+
+
 .contentbody {
   margin-top: 0;
   background-color: rgba(200, 200, 200, 0.7);
@@ -453,29 +351,6 @@ svg {
   text-decoration: none;
 }
 
-#hiking {
-  @include backgroundImage(url("../images/hiking.jpg"));
-}
-
-#rockclimbing {
-  @include backgroundImage(url("../images/rockclimbing.jpg"));
-}
-
-#running {
-  @include backgroundImage(url("../images/running.jpg"));
-}
-
-#sports {
-  @include backgroundImage(url("../images/sports.jpg"));
-}
-
-#swimming {
-  @include backgroundImage(url("../images/swimming.jpg"));
-}
-
-#skiing {
-  @include backgroundImage(url("../images/skiing.jpg"));
-}
 
 #missionstatement {
   width: 80%;
@@ -483,44 +358,30 @@ svg {
   margin: auto;
 }
 
-.noselect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.noselect-recursive *,
-.noselect-recursive * *,
-.noselect-recursive {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 footer {
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  bottom: 0;
-  width: 100%;
-  margin: auto;
-  position: relative;
-  background-color: $darkforestgreen;
-}
 
-footer a {
-  display: inline;
-  color: white;
-  text-decoration: none;
-  @include transitions(0.25s);
-}
+    a:hover {
+        color: white !important;
+    }
 
-footer a:hover {
-  color: $forestgreen;
+    div {
+        text-align: center !important;
+    }
+
+    .bs-docs-footer-links {
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+    .bs-docs-footer-links li {
+        display: inline-block;
+    }
+    .bs-docs-footer-links li + li {
+        margin-left: 15px;
+    }
+
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+    background-color: rgb(0,53,95);
 }

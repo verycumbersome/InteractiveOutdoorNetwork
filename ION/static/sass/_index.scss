@@ -1,69 +1,188 @@
 @import "compass/css3";
 @import "mixins";
 
-.indexcontainer {
-    // @include backgroundImage(url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg"));
+h1 {
+    // font-family: "Roboto", sans-serif;
+    line-height: 1.20;
+    font-weight: 700;
+    opacity: 1.0;
+    letter-spacing: -0.72px;
+    word-spacing: 0;
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
-.aboutus {
-    font-size: 1.2em;
-    line-height: 120%;
+h2 {
+    // font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    font-weight: 600;
+    opacity: 1.0;
+    letter-spacing: -0.72px;
+    word-spacing: 0;
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+h3 {
+    // font-family: "Roboto", sans-serif;
+    line-height: 1.4;
     font-weight: 400;
-    background-color: #001400;
-    color: white !important;
-    padding: 0;
-    height: auto;
-    text-align: center;
+    opacity: 0.9;
+    letter-spacing: 0;
+    word-spacing: 0;
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
-.aboutuscontainer {
-    width: 70%;
-    min-width: 400px;
-    margin: auto;
-    text-align: center;
-    padding-bottom: 20px;
+span, p {
+    font-family: "Open Sans", sans-serif;
+    line-height: 2;
+    font-weight: 400;
+    opacity: 0.7;
+    letter-spacing: -0.06px;
+    word-spacing: 0;
+    text-transform: none;
+    margin-top: 0;
 }
 
-.geartrade {
-    font-size: 1.2em;
-    color: #fff;
-    background-color: #228B22;
-    margin: auto;
-    text-align: center;
-    padding: 20px;
-    padding-bottom: 200px;
-    position: relative;
+html, body {
     width: 100%;
-    display: inline-block;
+    margin: 0;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.geartradecontainer {
-    width: 70%;
-    min-width: 400px;
-    margin: auto;
-    text-align: center;
-    padding-bottom: 20px;
+.main-content {
+    padding-top: 0px !important;
+    height: 100vh !important;
+    color: white;
+    position: relative;
+    @include backgroundImage(url("https://c1.staticflickr.com/8/7351/16448657165_5f16814b0b_k.jpg"));
+    background-attachment: fixed;
 }
 
-.blog {
-    font-size: 1.2em;
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container {
+    color: #ffffff;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.section {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.section:first-child {
+    height: 90vh;
+}
+
+.section:not(:first-child) {
+    padding-top: 125px;
+    padding-bottom: 40px;
+    background-color: #f3f3f3;
+}
+
+.profile-pic {
+    transition: .5s;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.75em;
+    @include box_shadow(1);
+}
+
+.profile-pic:hover {
+    @include box_shadow(4);
+    -webkit-transform: translate3d(0, -5%, 0);
+    transform: translate3d(0, -5%, 0);
+}
+
+@media (max-width: 640px) {
+    .profile-pic {
+        display: none;
+    }
+}
+
+.flip-container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+    margin-right: 15px;
+}
+
+.profile-pic, .front, .back {
+    width: 144px;
+    height: 144px;
+    border-radius: 50% !important;
+}
+
+.card-link:hover {
     color: black;
-    background-color: white;
-    margin: auto;
-    text-align: center;
-    padding: 20px;
-    padding-bottom: 200px;
-    position: relative;
-    width: 100%;
-    display: inline-block;
 }
 
-.blogcontainer {
-    width: 70%;
-    min-width: 400px;
-    margin: auto;
-    text-align: center;
-    padding-bottom: 20px;
+.paragraph-text {
+    width: 60%;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.card {
+    padding: 20px;
+}
+
+#works {
+
+    a {
+        color: black;
+    }
+
+    a:hover {
+        color: (lighten(rgb(0,53,95), 20%));
+    }
+}
+
+#toolbox {
+    .row {
+        padding-bottom: 30px;
+    }
+    h1 {
+        color: white;
+    }
+
+    background-attachment: fixed;
+    @include backgroundImage("../images/Scenic Southern Oregon 2013  Beautifulvista.jpg");
+}
+
+#resume {
+    .card {
+        border: 0px;
+        padding: 20px;
+        @include transitions(0.5s);
+        @include box_shadow(1);
+    }
+
+    .card:hover {
+        @include box_shadow(3);
+        -webkit-transform: translate3d(0, -0.5%, 0);
+        transform: translate3d(0, -0.5%, 0);
+    }
 }
 
 .endcontent {

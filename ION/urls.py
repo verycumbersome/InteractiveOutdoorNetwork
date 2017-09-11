@@ -6,7 +6,7 @@ from ION import views
 urlpatterns = [
     url(r'^$', views.Main.as_view(), name='home'),
     url(r'^timeline/', views.timeline, name='timeline'),
-    url(r'^signup', views.signup, name='signup'),
+    url(r'^signup/', views.signup, name='signup'),
     url(r'^activities/', views.activities, name='activities'),
     url(r'^iopimages/', views.iopimages, name='iopimages'),
     url(r'^iopimages/sell', views.iopimagespost, name='iopimages'),
