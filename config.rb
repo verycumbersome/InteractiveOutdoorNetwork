@@ -1,2 +1,2 @@
-css_dir =  "/InteractiveOutdoorNetwork/ION/static/css"
-sass_dir = "/InteractiveOutdoorNetwork/ION/static/sass"
+css_dir =  "/ION/static/css"
+sass_dir = "/ION/static/sass"
