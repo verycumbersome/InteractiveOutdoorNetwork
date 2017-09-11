@@ -1,54 +1,62 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
-    <div class='secondarycontent'>
-        <div class='gearbuycontainer'>
-            <h1>Buy Gear</h1>
-            <h2>Here you can buy and sell items</h2>
-            <a href="{% url 'ION:gearsell' %}" class="btn btn-success"><i class="fa fa-usd" aria-hidden="true"></i>Sell Gear</a>
-            <br>
-            {% for post in gearposts %}
-            {% if currentuser == post.user.username %}
-                <a href="{% url 'ION:gearitem' item=post.id %}" class="btn btn-danger" style="position: absolute; margin: -10px 0 0 -3px; z-index: 100;"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></a>
-            {% endif %}
-                <section class='gearpost'>
-                    <a href="{% url 'ION:gearitem' item=post.id %}">
-                        <img src="{{ post.photo.url }}" style="height: 300px; max-width: 100%"/>
-                    </a>
-                    <br>
-                    <a href="{% url 'ION:gearitem' item=post.id %}" class="btn btn-success"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Purchase</a>
-                    <div>
-                        <span>Seller: {{ post.user }}</span>
-                        <br>
-                        <span>Created: {{ post.created_date }}</span>
-                    </div>
-                </section>
-            {% endfor %}
+{% block gear-tab %}
+    active
+{% endblock %}
 
-            {% if gearposts.has_other_pages %}
-            <div>
-              <ul class="pagination">
-                {% if post.has_previous %}
-                  <li><a href="?page={{ gearposts.previous_page_number }}">&laquo;</a></li>
-                {% else %}
-                  <li class="disabled"><span>&laquo;</span></li>
-                {% endif %}
-                {% for i in gearposts.paginator.page_range %}
-                  {% if gearposts.number == i %}
-                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-                  {% else %}
-                    <li><a href="?page={{ i }}">{{ i }}</a></li>
-                  {% endif %}
-                {% endfor %}
-                {% if gearposts.has_next %}
-                  <li><a href="?page={{ gearposts.next_page_number }}">&raquo;</a></li>
-                {% else %}
-                  <li class="disabled"><span>&raquo;</span></li>
-                {% endif %}
-              </ul>
-            </div>
-            {% endif %}
+{% block content %}
+    <div class='section header'>
+        <h1>Buy Gear</h1>
+        <h4>Here you can buy and sell items</h4>
+    </div>
+    <div id='gear-trade' class='section'>
+        <h1>items</h1>
+        <a href="{% url 'ION:gearsell' %}" class="btn btn-success"><i class="fa fa-usd" aria-hidden="true"></i>Sell Gear</a>
+        <br>
+        <div class="card-columns">
+            {% for post in gearposts %}
+                <!-- {% if currentuser == post.user.username %}
+                    <a href="{% url 'ION:gearitem' item=post.id %}" class="btn btn-danger" style="position: absolute; margin: -10px 0 0 -3px; z-index: 100;"><i class="glyphicon glyphicon-remove" aria-hidden="true"></i></a>
+                {% endif %} -->
+                <div class="col-sm-4">
+                    <div class="card" style="width: 20rem;">
+                        <img class="card-img img-fluid" src="{{post.photo.url}}" alt="Card image cap">
+                        <div class="card-block">
+                            <h4 class="card-title">{{post.title}}</h4>
+                            <p class="card-text">{{post.description}}</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
+        <br>
+
+        {% if gearposts.has_other_pages %}
+           <div>
+               <nav>
+             <ul class='pagination'>
+               {% if gearposts.has_previous %}
+                 <li class="page-item"><a class="page-link" href='?page={{ gearposts.previous_page_number }}'>&laquo;</a></li>
+               {% else %}
+                 <li class='page-item disabled'><span class="page-link">&laquo;</span></li>
+               {% endif %}
+               {% for i in gearposts.paginator.page_range %}
+                 {% if gearposts.number == i %}
+                   <li class='page-item active'><span class="page-link">{{ i }} <span class='sr-only'>(current)</span></span></li>
+                 {% else %}
+                   <li class='page-item'><a class="page-link" href='?page={{ i }}'>{{ i }}</a></li>
+                 {% endif %}
+               {% endfor %}
+               {% if gearposts.has_next %}
+                 <li class='page-item'><a class="page-link" href='?page={{ gearposts.next_page_number }}'>&raquo;</a></li>
+               {% else %}
+                 <li class='page-item disabled'><span class="page-link">&raquo;</span></li>
+               {% endif %}
+             </ul>
+         </nav>
+           </div>
+           {% endif %}
     </div>
 {% endblock content %}
