@@ -58,7 +58,7 @@ html, body {
 
 .main-content {
     padding-top: 0px !important;
-    height: 100vh !important;
+    height: 70vh !important;
     color: white;
     position: relative;
     @include backgroundImage(url("https://c1.staticflickr.com/8/7351/16448657165_5f16814b0b_k.jpg"));
@@ -145,6 +145,41 @@ html, body {
 
 .card {
     padding: 20px;
+}
+
+.autoscroll {
+    z-index: 10000;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+    position: absolute;
+
+    a {
+        bottom: 0;
+        color: white;
+        text-decoration: none;
+    }
+
+    .scrollbox {
+        top: 0;
+
+        .glyphicon {
+            font-size: 25px;
+        }
+    }
+
+    .scrolldown {
+        font-size: 3em;
+        position: absolute;
+        margin-left: -19px;
+        margin-bottom: -14px;
+    }
+
+    .scrolldownarrow {
+        font-size: 1.3em;
+        z-index: -1;
+        display: block;
+    }
 }
 
 #works {
