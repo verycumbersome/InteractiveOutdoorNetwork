@@ -1248,91 +1248,8 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   user-select: none;
 }
 
-/* line 4, ../sass/_geartrade.scss */
-.gearbuycontainer {
-  text-align: center;
-}
-
-/* line 8, ../sass/_geartrade.scss */
-.gearbuycontainer h1 {
-  text-align: center;
-  width: 40%;
-  margin: auto;
-}
-
-/* line 15, ../sass/_geartrade.scss */
-#id_description {
-  color: black;
-  resize: none;
-  width: 100%;
-  height: auto;
-}
-
-/* line 22, ../sass/_geartrade.scss */
-.gearpost {
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  background-color: #222;
-  margin: 0.5vh 0.25vw 0.5vh 0.25vw;
-  width: 30%;
-  min-width: 400px;
-  display: inline-block;
-  color: white;
-  border-radius: 5px;
-  font-size: 1.2em;
-  font-weight: 300;
-  line-spacing: -2px;
-  text-align: center;
-}
-/* line 26, ../sass/_geartrade.scss */
-.gearpost:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  -webkit-transform: translateY(-5px);
-  -moz-transform: translateY(-5px);
-  transform: translateY(-5px);
-}
-
-/* line 46, ../sass/_geartrade.scss */
-.gearpost img {
-  padding: 10px;
-}
-
-/* line 50, ../sass/_geartrade.scss */
-.pagination {
-  bottom: 0;
-  position: relative;
-}
-
-/* line 55, ../sass/_geartrade.scss */
-.gearpost h1 {
-  font-weight: 600;
-  font-size: 3em;
-  text-align: center;
-}
-
-/* line 61, ../sass/_geartrade.scss */
-.gearpost h2 {
-  font-weight: 400;
-  font-size: 1.2em !important;
-  text-align: center;
-}
-
-/* line 67, ../sass/_geartrade.scss */
-.gearitem {
-  color: black;
-  text-align: center;
-  background-color: white;
-  margin: auto;
-  border-radius: 5px;
-}
-
-/* line 76, ../sass/_geartrade.scss */
-.gearitem img {
-  margin: 10px;
+/* line 10, ../sass/_geartrade.scss */
+#gear-trade .card {
   -o-transition: 0.5s;
   -ms-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -1340,27 +1257,11 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   transition: 0.5s;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-/* line 81, ../sass/_geartrade.scss */
-.gearitem img:hover {
+/* line 16, ../sass/_geartrade.scss */
+#gear-trade .card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  -webkit-transform: translateY(-5px);
-  -moz-transform: translateY(-5px);
-  transform: translateY(-5px);
-}
-
-/* line 89, ../sass/_geartrade.scss */
-.gearitem p {
-  display: inline-block;
-  font-size: 1.4em;
-}
-
-/* line 95, ../sass/_geartrade.scss */
-.gearitem h2 {
-  margin: auto;
-  color: black !important;
-  width: 80%;
-  font-size: 1.5em;
-  padding-bottom: 10px;
+  -webkit-transform: translate3d(0, -0.5%, 0);
+  transform: translate3d(0, -0.5%, 0);
 }
 
 /* line 10, ../sass/main.scss */
@@ -1471,14 +1372,16 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
 
 /* line 104, ../sass/main.scss */
 .header {
-  text-align: center;
+  background-image: url("https://c1.staticflickr.com/8/7351/16448657165_5f16814b0b_k.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: center;
   color: white;
-  font-size: 60px;
-  line-height: 0.78;
-  font-weight: 400;
+  height: 70vh;
 }
 
-/* line 113, ../sass/main.scss */
+/* line 111, ../sass/main.scss */
 footer {
   text-align: center;
   padding-top: 30px;
@@ -1486,24 +1389,24 @@ footer {
   color: white;
   background-color: #333;
 }
-/* line 115, ../sass/main.scss */
+/* line 113, ../sass/main.scss */
 footer a:hover {
   color: white !important;
 }
-/* line 119, ../sass/main.scss */
+/* line 117, ../sass/main.scss */
 footer div {
   text-align: center !important;
 }
-/* line 123, ../sass/main.scss */
+/* line 121, ../sass/main.scss */
 footer .bs-docs-footer-links {
   padding-left: 0;
   margin-bottom: 20px;
 }
-/* line 127, ../sass/main.scss */
+/* line 125, ../sass/main.scss */
 footer .bs-docs-footer-links li {
   display: inline-block;
 }
-/* line 130, ../sass/main.scss */
+/* line 128, ../sass/main.scss */
 footer .bs-docs-footer-links li + li {
   margin-left: 15px;
 }

@@ -102,13 +102,11 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
 }
 
 .header {
-  text-align: center;
-  color: white;
-  font-size: 60px;
-  line-height: 0.78;
-  font-weight: 400;
+    @include backgroundImage(url("https://c1.staticflickr.com/8/7351/16448657165_5f16814b0b_k.jpg"));
+    background-position: center;
+    color: white;
+    height: 70vh;
 }
-
 
 footer {
 
