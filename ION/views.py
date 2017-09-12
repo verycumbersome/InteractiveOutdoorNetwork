@@ -13,15 +13,19 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .forms import SellGearForm, UserCreate
 from .models import BlogPost, GearPost, PhotoPost
 
+
 class Main(TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'index.html', context=None)
 
+
 def timeline(request):
     return render(request, 'timeline.html', {})
 
+
 def activities(request):
     return render(request, 'activities/activities.html')
+
 
 def iopimages(request):
     photos = PhotoPost.objects.order_by('created_date').reverse()
@@ -36,6 +40,7 @@ def iopimages(request):
         photo_list = paginator.page(paginator.num_pages)
 
     return render(request, 'IOPimages/iopimages.html', {'photo_list':photo_list})
+
 
 def iopimagespost(request):
     if request.method == "POST":
@@ -60,15 +65,25 @@ def blog(request):
 
     paginator = Paginator(posts, 3)
     try:
-        blog_list = paginator.page(page)
+        blog_posts = paginator.page(page)
     except PageNotAnInteger:
-        blog_list = paginator.page(1)
+        blog_posts = paginator.page(1)
     except EmptyPage:
-        blog_list = paginator.page(paginator.num_pages)
+        blog_posts = paginator.page(paginator.num_pages)
 
     return render(request, 'blog.html', {
-        'blog_list':blog_list
+        'blog_posts':blog_posts
     })
+
+
+def blogpost(request, post):
+    if BlogPost.objects.filter(id=post):
+        blogpost = BlogPost.objects.filter(id=post).get()
+    else:
+        return render(request, '404.html', {'blogpost': blogpost})
+
+    return render(request, 'blog/post.html', {'blogpost': blogpost})
+
 
 def geartrade(request):
     gear_posts = GearPost.objects.order_by('created_date').reverse()
@@ -89,6 +104,7 @@ def geartrade(request):
 
     return render(request, 'geartrade/gearbuy.html', {'gearposts':gearposts, 'currentuser':cur_user})
 
+
 def gearsell(request):
     if request.method == "POST":
         form = SellGearForm(request.POST, request.FILES)
@@ -104,6 +120,7 @@ def gearsell(request):
 
     return render(request, 'geartrade/gearsell.html', {'form': form})
 
+
 def gearitem(request, item):
     if GearPost.objects.filter(id=item):
         gearitem = GearPost.objects.filter(id=item).get()
@@ -111,6 +128,7 @@ def gearitem(request, item):
         print 'item not found'
 
     return render(request, 'geartrade/gearitem.html', {'gearitem': gearitem})
+
 
 def signup(request):
     if request.method == "POST":

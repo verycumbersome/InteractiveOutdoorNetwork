@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='section header blogpost'>
+    <h1 class='animated fadeInRight'>{{blogpost.title}}</h1>
+    <h4 class='animated fadeInRight'>Written: {{blogpost.created_date}}</h4>
+</div>
+    <div class='container'>
+
+            <hr>
+        <div class="card">
+            <h3 class="card-title">{{blogpost.title}}</h3>
+            <h6 class="card-subtitle mb-2">posted <strong>{{blogpost.created_date}}</strong></h6>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{blogpost.text}}</li>
+                </ul>
+            <div class="card-block">
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                    <a class="a2a_button_facebook"></a>
+                    <a class="a2a_button_twitter"></a>
+                    <a class="a2a_button_google_plus"></a>
+                </div>
+                <script async src="https://static.addtoany.com/menu/page.js"></script>
+            </div>
+        </div>
+    </div>
+{% endblock %}

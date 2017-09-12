@@ -144,9 +144,9 @@ html, body {
     margin-bottom: 20px;
 }
 
-.card {
-    padding: 20px;
-}
+// .card {
+//     padding: 20px;
+// }
 
 .autoscroll {
     z-index: 10000;
@@ -207,20 +207,20 @@ html, body {
     @include backgroundImage("../images/Scenic Southern Oregon 2013  Beautifulvista.jpg");
 }
 
-#resume {
-    .card {
-        border: 0px;
-        padding: 20px;
-        @include transitions(0.5s);
-        @include box_shadow(1);
-    }
-
-    .card:hover {
-        @include box_shadow(3);
-        -webkit-transform: translate3d(0, -0.5%, 0);
-        transform: translate3d(0, -0.5%, 0);
-    }
-}
+// #resume {
+//     .card {
+//         border: 0px;
+//         padding: 20px;
+//         @include transitions(0.5s);
+//         @include box_shadow(1);
+//     }
+//
+//     .card:hover {
+//         @include box_shadow(3);
+//         -webkit-transform: translate3d(0, -0.5%, 0);
+//         transform: translate3d(0, -0.5%, 0);
+//     }
+// }
 
 .endcontent {
     color: #fff;

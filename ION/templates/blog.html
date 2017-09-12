@@ -1,43 +1,67 @@
 {% extends 'base.html' %}
 {% load markdown_deux_tags %}
 
-{% block content %}
-    <div class="secondarycontent">
-        <h1>Blog</h1>
-        <h2>Stay up to date with the latest IOP news</h2>
-        <section class="blogpost">
-            {% for post in blog_list %}
-                <!-- <div class="blogpostwrapper"> -->
-                    <h1>{{ post.title }}</h1>
-                    <h2>Created: {{ post.created_date }}</h2>
-                    {{ post.text|markdown }}
-                    {{ post.author.email }}
-                <!-- </div> -->
-            {% endfor %}
-        </section>
+{% block blog-tab %}
+    active
+{% endblock %}
 
-        {% if blog_list.has_other_pages %}
-        <div>
-          <ul class="pagination">
-            {% if post.has_previous %}
-              <li><a href="?page={{ blog_list.previous_page_number }}">&laquo;</a></li>
-            {% else %}
-              <li class="disabled"><span>&laquo;</span></li>
-            {% endif %}
-            {% for i in blog_list.paginator.page_range %}
-              {% if blog_list.number == i %}
-                <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-              {% else %}
-                <li><a href="?page={{ i }}">{{ i }}</a></li>
-              {% endif %}
+{% block content %}
+    <div class='section header'>
+        <h1 class='animated fadeInRight'>Blog</h1>
+        <h4 class='animated fadeInRight'>Updates from IOP</h4>
+    </div>
+    <div id='blog-posts' class='container'>
+        <hr>
+        <h3>Posts</h3>
+            {% for post in blog_posts %}
+            <div class='row'>
+                <div class="col-md-8">
+                    <div class="card" style="width: 80vw;">
+                        <h3 class="card-title">{{post.title}}</h3>
+                        <h6 class="card-subtitle mb-2">posted <strong>{{post.created_date}}</strong></h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">{{post.text}}</li>
+                            </ul>
+                        <div class="card-block">
+                            <a href="{% url 'ION:blogpost' post.id %}" class="btn btn-primary">Read More</a>
+                            <div class='social-links'>
+                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                                    <a class="a2a_button_facebook"></a>
+                                    <a class="a2a_button_twitter"></a>
+                                    <a class="a2a_button_google_plus"></a>
+                                </div>
+                                <script async src="https://static.addtoany.com/menu/page.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
-            {% if blog_list.has_next %}
-              <li><a href="?page={{ blog_list.next_page_number }}">&raquo;</a></li>
-            {% else %}
-              <li class="disabled"><span>&raquo;</span></li>
-            {% endif %}
-          </ul>
-        </div>
-        {% endif %}
+
+        {% if blog_posts.has_other_pages %}
+           <div>
+               <nav>
+             <ul class='pagination'>
+               {% if blog_posts.has_previous %}
+                 <li class="page-item"><a class="page-link" href='?page={{ blog_posts.previous_page_number }}'>&laquo;</a></li>
+               {% else %}
+                 <li class='page-item disabled'><span class="page-link">&laquo;</span></li>
+               {% endif %}
+               {% for i in blog_posts.paginator.page_range %}
+                 {% if blog_posts.number == i %}
+                   <li class='page-item active'><span class="page-link">{{ i }} <span class='sr-only'>(current)</span></span></li>
+                 {% else %}
+                   <li class='page-item'><a class="page-link" href='?page={{ i }}'>{{ i }}</a></li>
+                 {% endif %}
+               {% endfor %}
+               {% if blog_posts.has_next %}
+                 <li class='page-item'><a class="page-link" href='?page={{ blog_posts.next_page_number }}'>&raquo;</a></li>
+               {% else %}
+                 <li class='page-item disabled'><span class="page-link">&raquo;</span></li>
+               {% endif %}
+             </ul>
+         </nav>
+           </div>
+           {% endif %}
     </div>
 {% endblock content %}

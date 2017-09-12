@@ -2,37 +2,41 @@
 @import "mixins";
 
 .blogpost {
-    background-color: rgba(0, 0, 0, 0.4) !important;
-    width: 80%;
-    margin: auto;
-    color: white;
-    border-radius: 4px;
-    font-size: 1.2em;
-    font-weight: 300;
-    line-spacing: -2px;
-    padding-bottom: 30px;
-    padding: 15px;
-    text-align: center;
+    height: 50vh !important;
 }
 
-// .blogpostwrapper {
-//     text-align: center;
-//     width: 70%;
-//     margin: auto;
-//     background-color: black;
-//     border-radius: 4px;
-//     padding: 10px;
-// }
+#blog-posts {
+    .row {
+        padding-bottom: 20px;
+    }
 
-.blogpost h1 {
-    font-weight: 600;
-    font-size: 3em;
-    text-align: center;
-}
+    .card {
+        // height: 50vh;
+        max-width: 100%;
+        border: 0px;
+        padding: 20px;
+        @include transitions(0.5s);
+        @include box_shadow(1);
+    }
 
-.blogpost h2 {
-    font-size: 1.5em;
-    font-weight: 400;
-    font-size: 1.2em !important;
-    text-align: center;
+    .card:hover {
+        @include box_shadow(3);
+        -webkit-transform: translate3d(0, -0.5%, 0);
+        transform: translate3d(0, -0.5%, 0);
+    }
+
+    .card-title {
+        word-wrap: break-word;
+    }
+
+    .list-group-item {
+        overflow: hidden;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .social-links {
+        float: right;
+    }
 }

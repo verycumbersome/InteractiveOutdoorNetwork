@@ -5,17 +5,17 @@
     // height: 50vh !important;
 }
 
-#gear-trade {
-
-    .card {
-        @include transitions(0.5s);
-        @include box_shadow(1);
-        // height: 40vh;
-    }
-
-    .card:hover {
-        @include box_shadow(3);
-        -webkit-transform: translate3d(0, -0.5%, 0);
-        transform: translate3d(0, -0.5%, 0);
-    }
-}
+// #gear-trade {
+//
+//     .card {
+//         @include transitions(0.5s);
+//         @include box_shadow(1);
+//         // height: 40vh;
+//     }
+//
+//     .card:hover {
+//         @include box_shadow(3);
+//         -webkit-transform: translate3d(0, -0.5%, 0);
+//         transform: translate3d(0, -0.5%, 0);
+//     }
+// }
