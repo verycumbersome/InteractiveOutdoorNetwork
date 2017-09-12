@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django_markdown.models import MarkdownField
 from django.db import models
 from django.utils import timezone
-from django.contrib.auth.models import User
 
-import uuid
-import firebasemanager
+import os
+
 
 class BlogPost(models.Model):
     author = models.ForeignKey('auth.User')
@@ -17,6 +15,7 @@ class BlogPost(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class GearPost(models.Model):
     user = models.ForeignKey('auth.User')
@@ -31,7 +30,8 @@ class GearPost(models.Model):
 
     def delete(self, *args, **kwargs):
         os.rmdir(os.path.join(settings.MEDIA_ROOT, self.docfile.name))
-        super(Document,self).delete(*args,**kwargs)
+        super(Document, self).delete(*args, **kwargs)
+
 
 class PhotoPost(models.Model):
     title = models.CharField(max_length=50)

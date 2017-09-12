@@ -3,14 +3,11 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
-from django.http import HttpResponse
-from django.template import loader
 from django.contrib.auth import login
 from django.contrib.auth.models import User
-from django.utils import timezone
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-from .forms import SellGearForm, UserCreate
+from .forms import SellGearForm, UserCreate, IOPimagesForm
 from .models import BlogPost, GearPost, PhotoPost
 
 
@@ -39,7 +36,7 @@ def iopimages(request):
     except EmptyPage:
         photo_list = paginator.page(paginator.num_pages)
 
-    return render(request, 'IOPimages/iopimages.html', {'photo_list':photo_list})
+    return render(request, 'IOPimages/iopimages.html', {'photo_list': photo_list})
 
 
 def iopimagespost(request):
@@ -54,8 +51,7 @@ def iopimagespost(request):
     else:
         form = IOPimagesForm()
 
-
-    return render(request, 'IOPimages/iopimages_post.html', {'form': form})
+        return render(request, 'IOPimages/iopimages_post.html', {'form': form})
 
 
 def blog(request):
@@ -72,7 +68,7 @@ def blog(request):
         blog_posts = paginator.page(paginator.num_pages)
 
     return render(request, 'blog.html', {
-        'blog_posts':blog_posts
+        'blog_posts': blog_posts
     })
 
 
@@ -102,7 +98,7 @@ def geartrade(request):
     except EmptyPage:
         gearposts = paginator.page(paginator.num_pages)
 
-    return render(request, 'geartrade/gearbuy.html', {'gearposts':gearposts, 'currentuser':cur_user})
+    return render(request, 'geartrade/gearbuy.html', {'gearposts': gearposts, 'currentuser': cur_user})
 
 
 def gearsell(request):
@@ -116,7 +112,6 @@ def gearsell(request):
             return redirect('/geartrade/buy', pk=post.pk)
     else:
         form = SellGearForm()
-
 
     return render(request, 'geartrade/gearsell.html', {'form': form})
 

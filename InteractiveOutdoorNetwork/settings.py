@@ -57,7 +57,7 @@ ROOT_URLCONF = 'InteractiveOutdoorNetwork.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['ION/registration',],
+        'DIRS': ['ION/registration', ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
