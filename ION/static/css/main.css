@@ -90,31 +90,31 @@
     transform: none;
   }
 }
-/* line 147, ../sass/_mixins.scss */
+/* line 157, ../sass/_mixins.scss */
 .slideInDown {
   -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
 }
 
-/* line 152, ../sass/_mixins.scss */
+/* line 162, ../sass/_mixins.scss */
 .slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
 }
 
-/* line 157, ../sass/_mixins.scss */
+/* line 167, ../sass/_mixins.scss */
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
 
-/* line 162, ../sass/_mixins.scss */
+/* line 172, ../sass/_mixins.scss */
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
 
-/* line 167, ../sass/_mixins.scss */
+/* line 177, ../sass/_mixins.scss */
 .animated {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
@@ -122,19 +122,19 @@
   animation-fill-mode: both;
 }
 
-/* line 174, ../sass/_mixins.scss */
+/* line 184, ../sass/_mixins.scss */
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-/* line 179, ../sass/_mixins.scss */
+/* line 189, ../sass/_mixins.scss */
 .animated.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 
-/* line 185, ../sass/_mixins.scss */
+/* line 195, ../sass/_mixins.scss */
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -144,7 +144,7 @@
   user-select: none;
 }
 
-/* line 194, ../sass/_mixins.scss */
+/* line 204, ../sass/_mixins.scss */
 .noselect-recursive *,
 .noselect-recursive * *,
 .noselect-recursive {
@@ -293,31 +293,31 @@ input[type=text], input[type=password] {
     transform: none;
   }
 }
-/* line 147, ../sass/_mixins.scss */
+/* line 157, ../sass/_mixins.scss */
 .slideInDown {
   -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
 }
 
-/* line 152, ../sass/_mixins.scss */
+/* line 162, ../sass/_mixins.scss */
 .slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
 }
 
-/* line 157, ../sass/_mixins.scss */
+/* line 167, ../sass/_mixins.scss */
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
 
-/* line 162, ../sass/_mixins.scss */
+/* line 172, ../sass/_mixins.scss */
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
 
-/* line 167, ../sass/_mixins.scss */
+/* line 177, ../sass/_mixins.scss */
 .animated {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
@@ -325,19 +325,19 @@ input[type=text], input[type=password] {
   animation-fill-mode: both;
 }
 
-/* line 174, ../sass/_mixins.scss */
+/* line 184, ../sass/_mixins.scss */
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-/* line 179, ../sass/_mixins.scss */
+/* line 189, ../sass/_mixins.scss */
 .animated.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 
-/* line 185, ../sass/_mixins.scss */
+/* line 195, ../sass/_mixins.scss */
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -347,7 +347,7 @@ input[type=text], input[type=password] {
   user-select: none;
 }
 
-/* line 194, ../sass/_mixins.scss */
+/* line 204, ../sass/_mixins.scss */
 .noselect-recursive *,
 .noselect-recursive * *,
 .noselect-recursive {
@@ -494,31 +494,31 @@ input[type=text], input[type=password] {
     transform: none;
   }
 }
-/* line 147, ../sass/_mixins.scss */
+/* line 157, ../sass/_mixins.scss */
 .slideInDown {
   -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
 }
 
-/* line 152, ../sass/_mixins.scss */
+/* line 162, ../sass/_mixins.scss */
 .slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
 }
 
-/* line 157, ../sass/_mixins.scss */
+/* line 167, ../sass/_mixins.scss */
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
 
-/* line 162, ../sass/_mixins.scss */
+/* line 172, ../sass/_mixins.scss */
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
 
-/* line 167, ../sass/_mixins.scss */
+/* line 177, ../sass/_mixins.scss */
 .animated {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
@@ -526,19 +526,19 @@ input[type=text], input[type=password] {
   animation-fill-mode: both;
 }
 
-/* line 174, ../sass/_mixins.scss */
+/* line 184, ../sass/_mixins.scss */
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-/* line 179, ../sass/_mixins.scss */
+/* line 189, ../sass/_mixins.scss */
 .animated.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 
-/* line 185, ../sass/_mixins.scss */
+/* line 195, ../sass/_mixins.scss */
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -548,7 +548,7 @@ input[type=text], input[type=password] {
   user-select: none;
 }
 
-/* line 194, ../sass/_mixins.scss */
+/* line 204, ../sass/_mixins.scss */
 .noselect-recursive *,
 .noselect-recursive * *,
 .noselect-recursive {
@@ -728,31 +728,31 @@ input[type=text], input[type=password] {
     transform: none;
   }
 }
-/* line 147, ../sass/_mixins.scss */
+/* line 157, ../sass/_mixins.scss */
 .slideInDown {
   -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
 }
 
-/* line 152, ../sass/_mixins.scss */
+/* line 162, ../sass/_mixins.scss */
 .slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
 }
 
-/* line 157, ../sass/_mixins.scss */
+/* line 167, ../sass/_mixins.scss */
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
 
-/* line 162, ../sass/_mixins.scss */
+/* line 172, ../sass/_mixins.scss */
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
 
-/* line 167, ../sass/_mixins.scss */
+/* line 177, ../sass/_mixins.scss */
 .animated {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
@@ -760,19 +760,19 @@ input[type=text], input[type=password] {
   animation-fill-mode: both;
 }
 
-/* line 174, ../sass/_mixins.scss */
+/* line 184, ../sass/_mixins.scss */
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-/* line 179, ../sass/_mixins.scss */
+/* line 189, ../sass/_mixins.scss */
 .animated.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 
-/* line 185, ../sass/_mixins.scss */
+/* line 195, ../sass/_mixins.scss */
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -782,7 +782,7 @@ input[type=text], input[type=password] {
   user-select: none;
 }
 
-/* line 194, ../sass/_mixins.scss */
+/* line 204, ../sass/_mixins.scss */
 .noselect-recursive *,
 .noselect-recursive * *,
 .noselect-recursive {
@@ -992,33 +992,7 @@ html, body {
   display: block;
 }
 
-/* line 189, ../sass/_index.scss */
-#works a {
-  color: black;
-}
-/* line 193, ../sass/_index.scss */
-#works a:hover {
-  color: #006ec5;
-}
-
-/* line 198, ../sass/_index.scss */
-#toolbox {
-  background-attachment: fixed;
-  background-image: "../images/Scenic Southern Oregon 2013  Beautifulvista.jpg";
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-/* line 199, ../sass/_index.scss */
-#toolbox .row {
-  padding-bottom: 30px;
-}
-/* line 202, ../sass/_index.scss */
-#toolbox h1 {
-  color: white;
-}
-
-/* line 225, ../sass/_index.scss */
+/* line 201, ../sass/_index.scss */
 .endcontent {
   color: #fff;
   text-align: center;
@@ -1032,7 +1006,15 @@ html, body {
   background-position: center center;
   background-attachment: fixed;
 }
-/* line 239, ../sass/_index.scss */
+/* line 211, ../sass/_index.scss */
+.endcontent .fa-leaf {
+  color: #228B22 !important;
+}
+/* line 215, ../sass/_index.scss */
+.endcontent .fa-leaf:hover {
+  color: white !important;
+}
+/* line 219, ../sass/_index.scss */
 .endcontent .fa {
   font-size: 3em;
   color: white;
@@ -1043,9 +1025,9 @@ html, body {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-/* line 246, ../sass/_index.scss */
+/* line 226, ../sass/_index.scss */
 .endcontent .social a:hover {
-  color: green;
+  color: #228B22;
 }
 
 /* line 3, ../sass/_registration.scss */
@@ -1172,31 +1154,31 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
     transform: none;
   }
 }
-/* line 147, ../sass/_mixins.scss */
+/* line 157, ../sass/_mixins.scss */
 .slideInDown {
   -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
 }
 
-/* line 152, ../sass/_mixins.scss */
+/* line 162, ../sass/_mixins.scss */
 .slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
 }
 
-/* line 157, ../sass/_mixins.scss */
+/* line 167, ../sass/_mixins.scss */
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
 
-/* line 162, ../sass/_mixins.scss */
+/* line 172, ../sass/_mixins.scss */
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
 
-/* line 167, ../sass/_mixins.scss */
+/* line 177, ../sass/_mixins.scss */
 .animated {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
@@ -1204,19 +1186,19 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   animation-fill-mode: both;
 }
 
-/* line 174, ../sass/_mixins.scss */
+/* line 184, ../sass/_mixins.scss */
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-/* line 179, ../sass/_mixins.scss */
+/* line 189, ../sass/_mixins.scss */
 .animated.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 
-/* line 185, ../sass/_mixins.scss */
+/* line 195, ../sass/_mixins.scss */
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -1226,7 +1208,7 @@ input[type=text], input[type=email], input[type=password], input[type=number] {
   user-select: none;
 }
 
-/* line 194, ../sass/_mixins.scss */
+/* line 204, ../sass/_mixins.scss */
 .noselect-recursive *,
 .noselect-recursive * *,
 .noselect-recursive {
@@ -1255,18 +1237,29 @@ body {
 }
 
 /* line 24, ../sass/main.scss */
+a {
+  color: #228B22;
+  text-decoration: none !important;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* line 30, ../sass/main.scss */
 input[type=text], input[type=password], input[type=email], input[type=tel] {
   height: 28px !important;
 }
 
-/* line 28, ../sass/main.scss */
+/* line 34, ../sass/main.scss */
 .account-image {
   top: 7px;
   height: 35px;
   border-radius: 20px;
 }
 
-/* line 34, ../sass/main.scss */
+/* line 40, ../sass/main.scss */
 .title {
   left: 0 !important;
   position: fixed;
@@ -1276,29 +1269,29 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   z-index: 10;
 }
 
-/* line 43, ../sass/main.scss */
+/* line 49, ../sass/main.scss */
 .title.scrolldown {
   position: absolute;
   top: 250px;
 }
 
-/* line 49, ../sass/main.scss */
+/* line 55, ../sass/main.scss */
 .container {
   display: flex;
   flex-direction: column;
 }
 
-/* line 54, ../sass/main.scss */
+/* line 60, ../sass/main.scss */
 .text-container {
   color: #ffffff;
 }
 
-/* line 58, ../sass/main.scss */
+/* line 64, ../sass/main.scss */
 .row {
   flex-direction: row;
 }
 
-/* line 62, ../sass/main.scss */
+/* line 68, ../sass/main.scss */
 .section {
   width: 100%;
   z-index: 1;
@@ -1310,19 +1303,19 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   justify-content: center;
 }
 
-/* line 73, ../sass/main.scss */
+/* line 79, ../sass/main.scss */
 .section:first-child {
   height: 90vh;
 }
 
-/* line 77, ../sass/main.scss */
+/* line 83, ../sass/main.scss */
 .section:not(:first-child) {
   padding-top: 125px;
   padding-bottom: 40px;
   background-color: #f3f3f3;
 }
 
-/* line 84, ../sass/main.scss */
+/* line 90, ../sass/main.scss */
 .contentbody {
   margin-top: 0;
   background-color: rgba(200, 200, 200, 0.7);
@@ -1331,7 +1324,7 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   height: auto;
 }
 
-/* line 92, ../sass/main.scss */
+/* line 98, ../sass/main.scss */
 .contentbody p {
   line-height: 30px;
   font-size: 16px;
@@ -1344,7 +1337,7 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   background-color: rgba(0, 53, 95, 0.5);
 }
 
-/* line 104, ../sass/main.scss */
+/* line 110, ../sass/main.scss */
 .header {
   background-image: url("https://c1.staticflickr.com/8/7351/16448657165_5f16814b0b_k.jpg");
   background-size: cover;
@@ -1355,7 +1348,7 @@ input[type=text], input[type=password], input[type=email], input[type=tel] {
   height: 70vh;
 }
 
-/* line 111, ../sass/main.scss */
+/* line 117, ../sass/main.scss */
 footer {
   text-align: center;
   padding-top: 30px;
@@ -1363,24 +1356,24 @@ footer {
   color: white;
   background-color: #333;
 }
-/* line 113, ../sass/main.scss */
+/* line 119, ../sass/main.scss */
 footer a:hover {
   color: white !important;
 }
-/* line 117, ../sass/main.scss */
+/* line 123, ../sass/main.scss */
 footer div {
   text-align: center !important;
 }
-/* line 121, ../sass/main.scss */
+/* line 127, ../sass/main.scss */
 footer .bs-docs-footer-links {
   padding-left: 0;
   margin-bottom: 20px;
 }
-/* line 125, ../sass/main.scss */
+/* line 131, ../sass/main.scss */
 footer .bs-docs-footer-links li {
   display: inline-block;
 }
-/* line 128, ../sass/main.scss */
+/* line 134, ../sass/main.scss */
 footer .bs-docs-footer-links li + li {
   margin-left: 15px;
 }

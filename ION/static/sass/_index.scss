@@ -184,42 +184,18 @@ html, body {
     }
 }
 
-#works {
-
-    a {
-        color: black;
-    }
-
-    a:hover {
-        color: (lighten(rgb(0,53,95), 20%));
-    }
-}
-
-#toolbox {
-    .row {
-        padding-bottom: 30px;
-    }
-    h1 {
-        color: white;
-    }
-
-    background-attachment: fixed;
-    @include backgroundImage("../images/Scenic Southern Oregon 2013  Beautifulvista.jpg");
-}
-
-// #resume {
-//     .card {
-//         border: 0px;
-//         padding: 20px;
-//         @include transitions(0.5s);
-//         @include box_shadow(1);
-//     }
+// #about-us {
+//     background-color: rgb(41, 43, 44);
+//     color: white;
+// }
 //
-//     .card:hover {
-//         @include box_shadow(3);
-//         -webkit-transform: translate3d(0, -0.5%, 0);
-//         transform: translate3d(0, -0.5%, 0);
-//     }
+// #geartrade {
+//     background-color: $forestgreen;
+//     color: white;
+// }
+//
+// #blog {
+//
 // }
 
 .endcontent {
@@ -233,7 +209,11 @@ html, body {
     background-attachment: fixed;
 
     .fa-leaf {
+        color: $forestgreen !important;
+    }
 
+    .fa-leaf:hover {
+        color: white !important;
     }
 
     .fa {
@@ -244,6 +224,6 @@ html, body {
     }
 
     .social a:hover {
-        color: green;
+        color: $forestgreen;
     }
 }

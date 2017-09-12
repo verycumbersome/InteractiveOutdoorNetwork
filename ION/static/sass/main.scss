@@ -21,6 +21,12 @@ body {
   padding: 0;
 }
 
+a {
+    color: $forestgreen;
+    text-decoration: none !important;
+    @include transitions(0.5s);
+}
+
 input[type=text], input[type=password], input[type=email], input[type=tel] {
     height: 28px !important;
 }
