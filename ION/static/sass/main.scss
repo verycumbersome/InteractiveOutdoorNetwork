@@ -109,6 +109,7 @@ a {
 .header {
     @include backgroundImage(url("https://c1.staticflickr.com/8/7351/16448657165_5f16814b0b_k.jpg"));
     background-position: center;
+    text-align: center;
     color: white;
     height: 70vh;
 }

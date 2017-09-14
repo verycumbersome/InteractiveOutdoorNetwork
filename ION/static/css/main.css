@@ -1306,11 +1306,12 @@ a {
   background-repeat: no-repeat;
   background-position: center center;
   background-position: center;
+  text-align: center;
   color: white;
   height: 70vh;
 }
 
-/* line 116, ../sass/main.scss */
+/* line 117, ../sass/main.scss */
 footer {
   text-align: center;
   padding-top: 30px;
@@ -1318,24 +1319,24 @@ footer {
   color: white;
   background-color: #333;
 }
-/* line 118, ../sass/main.scss */
+/* line 119, ../sass/main.scss */
 footer a:hover {
   color: white !important;
 }
-/* line 122, ../sass/main.scss */
+/* line 123, ../sass/main.scss */
 footer div {
   text-align: center !important;
 }
-/* line 126, ../sass/main.scss */
+/* line 127, ../sass/main.scss */
 footer .bs-docs-footer-links {
   padding-left: 0;
   margin-bottom: 20px;
 }
-/* line 130, ../sass/main.scss */
+/* line 131, ../sass/main.scss */
 footer .bs-docs-footer-links li {
   display: inline-block;
 }
-/* line 133, ../sass/main.scss */
+/* line 134, ../sass/main.scss */
 footer .bs-docs-footer-links li + li {
   margin-left: 15px;
 }

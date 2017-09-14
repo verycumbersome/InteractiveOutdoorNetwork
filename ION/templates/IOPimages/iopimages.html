@@ -1,46 +1,57 @@
 {% extends 'base.html' %}
 
-{% block content %}
-    <div class="secondarycontent">
-        <div class="gearbuycontainer">
-            <h1>IOP Images</h1>
-            <h2>A Photo Gallery for IOP</h2>
-            {% for photo in photo_list %}
-                <section class='gearpost'>
-                    <img src="{{ photo.photo.url }}" style="height: 400px; max-width: 100%"/>
-                    <br>
-                        {{ photo.title }}
-                    <div>
-                        <span>Photographer: {{ photo.author }}</span>
-                        <br>
-                        <span>Uploaded: {{ photo.created_date }}</span>
-                    </div>
-                </section>
-            {% endfor %}
+{% block iop-images-tab %}active{% endblock %}
 
-            {% if photo_list.has_other_pages %}
-            <div>
-              <ul class="pagination">
-                {% if photo.has_previous %}
-                  <li><a href="?page={{ photo_list.previous_page_number }}">&laquo;</a></li>
-                {% else %}
-                  <li class="disabled"><span>&laquo;</span></li>
-                {% endif %}
-                {% for i in photo_list.paginator.page_range %}
-                  {% if photo_list.number == i %}
-                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-                  {% else %}
-                    <li><a href="?page={{ i }}">{{ i }}</a></li>
-                  {% endif %}
-                {% endfor %}
-                {% if photo_list.has_next %}
-                  <li><a href="?page={{ photo_list.next_page_number }}">&raquo;</a></li>
-                {% else %}
-                  <li class="disabled"><span>&raquo;</span></li>
-                {% endif %}
-              </ul>
-            </div>
-            {% endif %}
+{% block content %}
+    <div class='section header'>
+        <h1 class='animated fadeInRight'>IOP Images</h1>
+        <h4 class='animated fadeInRight'>Images from IOP</h4>
+    </div>
+    <div id='gear-trade' class='section'>
+        <h1>Images</h1>
+        <br>
+        <div class="card-group">
+            {% for photo in photo_list %}
+                    <div class="card" style="width: 20rem;">
+                        <div class="card-header">
+                            {{photo.title}}
+                        </div>
+                        <img class="card-img img-fluid" src="{{ photo.photo.url }}" alt="Card image cap">
+                        <div class="card-block">
+                            <h4 class="card-title">{{photo.title}}</h4>
+                            <p class="card-text">{{photo.description}}</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Posted: {{photo.created_date}}</small>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            {% endfor %}
         </div>
+        <br>
+
+        {% if photo_list.has_other_pages %}
+        <div>
+            <nav>
+                <ul class='pagination'>
+                    {% if photo_list.has_previous %}
+                        <li class="page-item"><a class="page-link" href='?page={{ photo_list.previous_page_number }}'>&laquo;</a></li>
+                    {% else %}
+                        <li class='page-item disabled'><span class="page-link">&laquo;</span></li>
+                    {% endif %} {% for i in photo_list.paginator.page_range %} {% if photo_list.number == i %}
+                        <li class='page-item active'><span class="page-link">{{ i }} <span class='sr-only'>(current)</span></span>
+                        </li>
+                    {% else %}
+                        <li class='page-item'><a class="page-link" href='?page={{ i }}'>{{ i }}</a></li>
+                    {% endif %} {% endfor %} {% if photo_list.has_next %}
+                        <li class='page-item'><a class="page-link" href='?page={{ photo_list.next_page_number }}'>&raquo;</a></li>
+                    {% else %}
+                        <li class='page-item disabled'><span class="page-link">&raquo;</span></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    {% endif %}
     </div>
 {% endblock content %}
