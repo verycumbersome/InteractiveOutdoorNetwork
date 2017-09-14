@@ -120,7 +120,7 @@ def gearitem(request, item):
     if GearPost.objects.filter(id=item):
         gearitem = GearPost.objects.filter(id=item).get()
     else:
-        print 'item not found'
+        # print 'item not found'
 
     return render(request, 'geartrade/gearitem.html', {'gearitem': gearitem})
 
