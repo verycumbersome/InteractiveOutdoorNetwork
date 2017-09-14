@@ -4,7 +4,6 @@
 @import "blog";
 @import "pages";
 @import "index";
-@import "registration";
 @import "geartrade";
 
 html {
@@ -27,9 +26,9 @@ a {
     @include transitions(0.5s);
 }
 
-input[type=text], input[type=password], input[type=email], input[type=tel] {
-    height: 28px !important;
-}
+// input[type=text], input[type=password], input[type=email], input[type=tel] {
+//     height: 28px !important;
+// }
 
 .account-image {
   top: 7px;

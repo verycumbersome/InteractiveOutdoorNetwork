@@ -2,9 +2,13 @@
 {% load static %}
 
 {% block content %}
-    <div class="secondarycontent">
+    <div class="section header">
+        <h1 class='animated fadeInRight'>Sign Up</h1>
+        <h4 class='animated fadeInRight'>Create your account here</h4>
+    </div>
+    <div class='container'>
         <h1>Sign Up</h1>
-        <form class="secondaryform" name="signup" method="post">
+        <form class="" name="signup" method="post">
             <div class="signupform">
                 {% csrf_token %}
 

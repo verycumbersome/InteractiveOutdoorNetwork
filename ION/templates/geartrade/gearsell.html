@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class='secondarycontent'>
-        <h1>Sell Gear</h1>
-        <form method="POST" class="secondaryform" enctype="multipart/form-data">
+    <div class='section header'>
+        <h1 class='animated fadeInRight'>Sell Gear</h1>
+        <h4 class='animated fadeInRight'>List items to sell</h4>
+    </div>
+    <div class='container'>
+        <form method="POST" class="" enctype="multipart/form-data">
             {% csrf_token %}
 
             {{ form.title.label_tag }}
