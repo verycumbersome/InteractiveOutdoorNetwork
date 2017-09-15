@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.utils import timezone
+from django.db.models.signals import pre_delete
+from django.dispatch.dispatcher import receiver
 
 import os
 
@@ -40,3 +42,13 @@ class PhotoPost(models.Model):
 
     def __str__(self):
         return self.title
+
+@receiver(pre_delete, sender=GearPost)
+def delete_gearpost(sender, instance, **kwargs):
+    # Pass false so FileField doesn't save the model.
+    instance.photo.delete(False)
+
+@receiver(pre_delete, sender=PhotoPost)
+def delete_photopost(sender, instance, **kwargs):
+    # Pass false so FileField doesn't save the model.
+    instance.photo.delete(False)
