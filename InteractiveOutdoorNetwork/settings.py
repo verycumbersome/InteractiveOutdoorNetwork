@@ -29,6 +29,8 @@ ALLOWED_HOSTS = [u'verycumbersome.pythonanywhere.com',
                 'interactive-outdoor-program.herokuapp.com',
                 '127.0.0.1',
                 'localhost',
+                'www.iop.press',
+                'iop.press',
                 ]
 
 # Application definition
